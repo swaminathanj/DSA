@@ -1,7 +1,4 @@
-# Data Structures and Algorithms
-### Dr. Swaminathan J
-
-## Linked List
+## 1. Linked List
 
 ### Limitations of arrays
   - size is static and bounded, dynamic resizing not possible
@@ -75,7 +72,7 @@ class LinkedList {
 
 ---
 
-## Circular Linked List
+## 2. Circular Linked List
 
 ### What is it?
   - Last node links back to first node
@@ -96,7 +93,7 @@ class LinkedList {
 
 ---
 
-## Doubly Linked List
+## 3. Doubly Linked List
 
 ### What is it?
   - Contains pointer to first node **head** and last **tail** node
@@ -125,7 +122,7 @@ class LinkedList {
  
 ---
 
-## Stack
+## 4. Stack
 
 ### What is it?
   - A data structure that holds pointer (top) to a chained link of nodes
@@ -167,7 +164,7 @@ class LinkedList {
 
 ---
 
-## Queue
+## 5. Queue
 
 ### What is it?
   - A data structure that holds pointers (front, rear) to the first and last nodes of chained link of nodes
@@ -202,7 +199,7 @@ class LinkedList {
 
 ---
 
-## Binary tree
+## 6. Binary tree
 
 ### What is it?
   - A non-linear representation of nodes where each node links to 0, 1 or 2 child nodes
@@ -241,7 +238,7 @@ class LinkedList {
 
 ---
 
-## Binary Heap
+## 7. Binary Heap
 
 ### Types
   - Min heap
@@ -298,7 +295,7 @@ class LinkedList {
   4. Last stone weight
   5. K closest points to origin
 
-## Binary Search Tree
+## 8. Binary Search Tree
 
 ### What is it?
   - A binary tree in which a node's value is greater than its left and smaller than its right
@@ -379,7 +376,7 @@ class BST {
   9. Count the number of internal and leaf nodes of the tree
   10. Check if the tree is complete, perfect
 
-## AVL Tree
+## 9. AVL Tree
 
 ### What is it?
   - A binary search tree which is height-balanced
