@@ -8,8 +8,8 @@
 ### What is a linked list?
   - A data structure that holds a pointer **head** to a chained link of nodes.
   - Each node contains 2 parts:
-   1. **data**: holds the data
-   2. **next**: holds link to the next node
+    1. **data**: holds the data
+    2. **next**: holds link to the next node
 
 ### Visualizing linked list
 ![Linked list](vll.png)
