@@ -1,9 +1,3 @@
-Aum Amma
-
-% Data Structures and Algorithms
-% Dr. Swaminathan J
-% date
-
 # Data Structures and Algorithms
 ### Dr. Swaminathan J
 
