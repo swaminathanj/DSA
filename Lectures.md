@@ -29,26 +29,27 @@
 ### Implementing linked list
 ```
 class Node {  
-  - int data;  
-  - Node next;  
-.  
-  - Node(int d);  
-  - get();  
+  int data;  
+  Node next;  
+ 
+  Node(int d);  
+  getData(); 
+  getNext();
 }
 ```
 
 ```
 class LinkedList {  
-  - Node head;  
-.  
-  - createHead(); // creates first node  
-  - insertFirst(int key); // returns new head  
-  - insert(int pos, int key);  
-  - insert(int key);  
-  - deleteHead(); // delete last remaining node  
-  - delete(int pos);  
-  - search(int key); // returns position  
-  - size();  
+  Node head;  
+  
+  createHead(); // creates first node  
+  insertFirst(int key); // returns new head  
+  insert(int pos, int key);  
+  insert(int key);  
+  deleteHead(); // delete last remaining node  
+  delete(int pos);  
+  search(int key); // returns position  
+  size();  
 }
 ```
 
