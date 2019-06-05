@@ -69,7 +69,7 @@ class LinkedList {
   10. Check if a linked list has a cycle
 
 ### ArrayList in Collections
-  - When to use LinkedList or ArrayList
+  - When to use LinkedList or ArrayList?
 
 ---
 
@@ -85,19 +85,22 @@ class LinkedList {
    - Can reach the first node from the last node
 
 ### Operations
-   - Same as that of linked list
-   - rotate right **k** times
-   - rotate left = rotate right **size - k** times
+   - insert
+   - delete
+   - search
+   - Rotate right **k** times
+   - Rotate left = rotate right **size - k** times
 
 ### Implementation changes needed
-  - insert last needs modification
+  - insert and delete needs modification to set the **next** back to head
+  - search needs modification to stop traversal as soon as **next** points to head
 
 ---
 
 ## 3. Doubly Linked List
 
 ### What is it?
-  - Contains pointer to first node **head** and last **tail** node
+  - Contains pointer to first node **head**
   - Each node contains 3 parts:
    1. **data**: holds the data
    2. **prev**: holds pointer to previous node
@@ -115,11 +118,7 @@ class LinkedList {
   - search
 
 ### Implementation changes needed
-  - insert
-  - delete
-  - search
-  - create first node
-  - delete last remaining node
+  - insert and delete needs modification to set both **prev** and **next**
  
 ---
 
@@ -135,7 +134,8 @@ class LinkedList {
 ![Stack](vstack.png)
 
 ### Properties
-  - LIFO: Last-In-First-Outinsert and delete at one end only
+  - LIFO: Last-In-First-Out
+  - insert and delete at one end only
 
 ### Operations
   - push
@@ -143,10 +143,27 @@ class LinkedList {
   - peek
 
 ### Implementation
-  - push: insert node at the end
-  - pop: delete from the end
-  - peek: check the end element without removing it
-  - Extend linked list and write wrapper methods for push & pop
+```
+class Node {  
+  int data;  
+  Node next;  
+ 
+  Node(int d);  
+  getData(); 
+  getNext();
+}
+```
+
+```
+class Stack {  
+  Node top;  
+  
+  push(int key);  
+  int pop();   
+  int peek();  
+  size();  
+}
+```
 
 ### Stack in Collections
   - Examples
