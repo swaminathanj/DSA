@@ -102,9 +102,9 @@ class LinkedList {
 ### What is it?
   - Contains pointer to first node **head**
   - Each node contains 3 parts:
-   1. **data**: holds the data
-   2. **prev**: holds pointer to previous node
-   3. **next**: holds pointer to next node
+    1. **data**: holds the data
+    2. **prev**: holds pointer to previous node
+    3. **next**: holds pointer to next node
 
 ### Visualization
 ![Doubly Linked list](vdll.png)
@@ -125,7 +125,7 @@ class LinkedList {
 ## 4. Stack
 
 ### What is it?
-  - A data structure that holds pointer (top) to a chained link of nodes
+  - A data structure that holds pointer (**top**) to a chained link of nodes
   - A new node is pushed onto the stack, and it becomes the new top
   - Delete pops the top node from the stack, the below node becomes the top
   - It can be seen as restricted linked list that supports insert last and delete last
@@ -382,7 +382,7 @@ class MinHeap {
  - To search faster
  - It takes O(n) time to search in a linked list
  - BST provides a way to reduce search time to O(logn)
-  - Not always though
+   - Not always though!!!
 
 ### Visualization
 ![Binary Search Tree](vbst.png)
