@@ -251,13 +251,13 @@ class Queue {
 
 ### Traversals
   - Level-order: Level-by-level from top to bottom, at each level left to right
-   - **25 48 16 11 37 64 76 83 51 93**
+    - **25 48 16 11 37 64 76 83 51 93**
   - Preorder: visit(node), preorder(left), preorder(right)
-   - **25 48 11 76 83 37 51 16 64 93**
+    - **25 48 11 76 83 37 51 16 64 93**
   - Inorder: inorder(left), visit(node), inorder(right)
-   - **76 11 83 48 37 51 25 16 93 64**
+    - **76 11 83 48 37 51 25 16 93 64**
   - Postorder: postorder(left), postorder(right), visit(node)
-   - **76 83 11 51 37 48 93 64 16 25**
+    - **76 83 11 51 37 48 93 64 16 25**
 
 ### Operations
   - insert
