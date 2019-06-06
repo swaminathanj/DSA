@@ -13,6 +13,7 @@
 
 ### Visualizing linked list
 ![Linked list](vll.png)
+
 ### Properties of linked list
   - No random access.
   - To reach a node, always start from the head and traverse.
@@ -262,6 +263,9 @@ class Queue {
   - insert
   - delete
   - search
+  - preorder
+  - inorder
+  - postorder
 
 ### Implementation
 
@@ -271,26 +275,26 @@ class Node {
   - Node left;  
   - Node right;  
 .  
-  - Node(int d);  
-  - search(int d);  
-  - insert(int d);  
-  - delete(int d);  
-  - preorder(Node n);  
-  - inorder(Node n);  
-  - postorder(Node n);  
+  Node(int d);  
+  boolean search(int d);  
+  void insert(int d);  
+  void delete(int d);  
+  void preorder(Node n);  
+  void inorder(Node n);  
+  void postorder(Node n);  
 }
 ```
 
 ```
 class BinaryTree {  
-  - Node root;  
-.  
-  - search(int d) { root.search(d); }  // 
-  - insert(int d) { root.insert(d); }  // Implementation depends on the type of binary tree
-  - delete(int d) { root.delete(d); }  // Implementation depends on the type of binary tree
-  - preorder() { preorder(root); }  
-  - inorder() { inorder(root); }  
-  - postorder() { postorder(root); }  
+  Node root;  
+ 
+  boolean search(int d) { root.search(d); }   
+  void insert(int d) { root.insert(d); }  // Implementation depends on the type of binary tree
+  void delete(int d) { root.delete(d); }  // Implementation depends on the type of binary tree
+  void preorder() { preorder(root); }  
+  void inorder() { inorder(root); }  
+  void postorder() { postorder(root); }  
 }
 ```
 
@@ -417,7 +421,7 @@ class Node {
 ```
 
 ```
-class BST {  
+class BST extend Binary Tree {  
   Node root;  
  
   search(int d) { root.search(); }  
@@ -474,13 +478,38 @@ class BST {
   - rlrotate
 
 ### Implementation
-  - Include balance to Node class
-  - LL rotation
-  - LR rotation
-  - RL rotation
-  - RR rotation
-  - insert
-  - delete
-  - search
+```
+class Node {  
+  int data;  
+  Node left;  
+  Node right;  
+  
+  Node(int d);  
+  search(int d);  
+  insert(int d);  
+  delete(int d);  
+  preorder(Node n);  
+  inorder(Node n);  
+  postorder(Node n);  
+}
+```
+
+```
+class AVLTree extend BST {  
+  Node root;  
+
+  void llRotate(Node n);
+  void rrRotate(Node n);
+  void lrRotate(Node n);
+  void rlRotate(Node n);
+  boolean search(int d) { root.search(); }  
+  void insert(int d) { root.insert(); }  
+  void delete(int d) { root.delete(); }  
+  void preorder() { preorder(root); }  
+  void inorder() { inorder(root); }  
+  void postorder() { postorder(root); }  
+}
+```
+
 
 ### Problems
