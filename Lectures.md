@@ -91,8 +91,8 @@ class LinkedList {
    - Rotate left = rotate right **size - k** times
 
 ### Implementation changes needed
-  - insert and delete needs modification to set the **next** back to head
-  - search needs modification to stop traversal as soon as **next** points to head
+  - insert and delete needs modification to set the **next** back to **head**
+  - search needs modification to stop traversal as soon as **next** points to **head**
 
 ---
 
@@ -133,8 +133,8 @@ class LinkedList {
 ![Stack](vstack.png)
 
 ### Properties
-  - LIFO: Last-In-First-Out
-  - insert and delete at one end only
+  - **LIFO**: Last-In-First-Out
+  - Insert and delete at one end only
 
 ### Operations
   - push
@@ -157,7 +157,7 @@ class Node {
 class Stack {  
   Node top;  
   
-  push(int key);  
+  void push(int key);  
   int pop();   
   int peek();  
   int size();  
@@ -171,8 +171,8 @@ class Stack {
   1. Reverse
   2. Check palindrome
   3. Balanced parantheses
-  4. infix to prefix
-  5. infix to postfix
+  4. Infix to prefix
+  5. Infix to postfix
   6. Min stack
   7. Basic calculator*
   8. Decode string
@@ -193,8 +193,8 @@ class Stack {
 ![Queue](vqueue.png)
 
 ### Properties
-  - FIFO: First-In-First-Out
-  - insert at one end and remove from the other end
+  - **FIFO**: First-In-First-Out
+  - Insert at one end and remove from the other end
 
 ### Operations
   - enqueue
@@ -202,9 +202,28 @@ class Stack {
   - peek
 
 ### Implementation
-  - enqueue: insert node at the end
-  - dequeue: remove node from the beginning
-  - peek: check the front node without removing it
+```
+class Node {  
+  int data;  
+  Node next;  
+ 
+  Node(int d);  
+  int getData(); 
+  Node getNext();
+}
+```
+
+```
+class Queue {  
+  Node front;  
+  Node rear;
+  
+  void enqueue(int key);  
+  int dequeue();   
+  int peek();  
+  int size();  
+}
+```
 
 ### ArrayDeque in Collections
   - Examples
@@ -231,13 +250,13 @@ class Stack {
 
 ### Traversals
   - Level-order: Level-by-level from top to bottom, at each level left to right
-   - **1 2 3 4 5 6 7 8 9 10 11 13 14**
+   - **25 48 16 11 37 64 76 83 51 93**
   - Preorder: visit(node), preorder(left), preorder(right)
-   - **1 2 4 8 9 5 10 11 3 6 13 7 14**
+   - **25 48 11 76 83 37 51 16 64 93**
   - Inorder: inorder(left), visit(node), inorder(right)
-   - **8 4 9 2 10 5 11 1 6 13 3 14 7**
+   - **76 11 83 48 37 51 25 16 93 64**
   - Postorder: postorder(left), postorder(right), visit(node)
-   - **8 9 4 10 11 5 2 13 6 14 7 3 1**
+   - **76 83 11 51 37 48 93 64 16 25**
 
 ### Operations
   - insert
@@ -245,9 +264,35 @@ class Stack {
   - search
 
 ### Implementation
-  - insert: depends on the type of binary tree
-  - delete: depends on the type of binary tree
-  - search: one of the traversal methods, depends on type of binary tree
+
+```
+class Node {  
+  - int data;  
+  - Node left;  
+  - Node right;  
+.  
+  - Node(int d);  
+  - search(int d);  
+  - insert(int d);  
+  - delete(int d);  
+  - preorder(Node n);  
+  - inorder(Node n);  
+  - postorder(Node n);  
+}
+```
+
+```
+class BinaryTree {  
+  - Node root;  
+.  
+  - search(int d) { root.search(d); }  // 
+  - insert(int d) { root.insert(d); }  // Implementation depends on the type of binary tree
+  - delete(int d) { root.delete(d); }  // Implementation depends on the type of binary tree
+  - preorder() { preorder(root); }  
+  - inorder() { inorder(root); }  
+  - postorder() { postorder(root); }  
+}
+```
 
 ### Applications
   - Expression tree
