@@ -317,15 +317,18 @@ class BinaryTree {
 
 ### Properties
   - Access starts from the root
-  - Min Heap property: parent &lt; left, right
-   - Min element at the root
-  - Max Heap property: parent &gt; left, right
-   - Max element at the root
+  - Min Heap property: **parent &lt; left, right**
+    - Min element at the root
+  - Max Heap property: **parent &gt; left, right**
+    - Max element at the root
   - No constraints between left and right
   - Can be implemented as array for fast access
 
 ### Traversal
-  - Level-order (due to array implementation)
+  - Level-order (array implementation suits this)
+  - parent(i) = (i-1)/2
+  - left(i) = 2i + 1
+  - right(i) = 2i + 2
   
 ![Heap-array correspondence](vheaparray.png)
 
@@ -334,14 +337,23 @@ class BinaryTree {
   - getMin (or getMax)
 
 ### Implementation
-  - Defining min heap using array
-  - getLeft
-  - getRight 
-  - getParent
-  - buildHeap
-  - insert
-  - fixHeap
-  - getMin
+
+```
+class MinHeap {
+  int[] arr;
+  int root;
+  int size;
+  
+  MinHeap() { arr = int[100]; root = 0; size = 0; }
+  int getParent(int i) { return (i-1)/2; }
+  int getLeft(int i) { return 2*i + 1; }
+  int getRight(int i) { return 2*i + 2; }
+  void buildHeap();
+  void insert(int key);
+  void fixHeap();
+  int getMin();
+}
+```
 
 ### Applications
   - Heap sort
@@ -392,39 +404,41 @@ class BinaryTree {
 
 ```
 class Node {  
-  - int data;  
-  - Node left;  
-  - Node right;  
-.  
-  - Node(int d);  
-  - search(int d);  
-  - insert(int d);  
-  - delete(int d);  
-  - preorder(Node n);  
-  - inorder(Node n);  
-  - postorder(Node n);  
+  int data;  
+  Node left;  
+  Node right;  
+  
+  Node(int d);  
+  search(int d);  
+  insert(int d);  
+  delete(int d);  
+  preorder(Node n);  
+  inorder(Node n);  
+  postorder(Node n);  
 }
 ```
 
 ```
 class BST {  
-  - Node root;  
-.  
-  - search(int d) { root.search(); }  
-  - insert(int d) { root.insert(); }  
-  - delete(int d) { root.delete(); }  
-  - preorder() { preorder(root); }  
-  - inorder() { inorder(root); }  
-  - postorder() { postorder(root); }  
+  Node root;  
+ 
+  search(int d) { root.search(); }  
+  insert(int d) { root.insert(); }  
+  delete(int d) { root.delete(); }  
+  preorder() { preorder(root); }  
+  inorder() { inorder(root); }  
+  postorder() { postorder(root); }  
 }
 ```
 
-  - search: traverse recursively taking appropriate path at each level until search element is found or leaf node is reached
-  - insert: traverse recursively taking appropriate path at each level until point of insertion identified
-  - delete: search, remove the node, replace it with the node containing next higher element
-  - preorder: starting from root, traverse in node, preorder(left), preorder(right) manner
-  - inorder: starting from root traverse in inorder(left), node, inorder(right) manner
-  - postorder: starting from root traverse in postorder(left), postorder(right), node manner
+### Additional Information
+
+  - **search**: traverse recursively taking appropriate path at each level until node containing search element is found or leaf node is reached
+  - **insert**: traverse recursively taking appropriate path at each level until point of insertion identified
+  - **delete**: search, remove the node, replace it with the node containing next higher element
+  - **preorder**: starting from root, traverse in node, preorder(left), preorder(right) manner
+  - **inorder**: starting from root traverse in inorder(left), node, inorder(right) manner
+  - **postorder**: starting from root traverse in postorder(left), postorder(right), node manner
 
 ### Problems
   1. Compute height of the tree
@@ -449,7 +463,8 @@ class BST {
   - Height balanced: The height of the left and right subtrees differ by at most 1
 
 ### Traversal
-  - Usually inorder ### for retrieving sorted sequence
+  - Usually inorder 
+    - for retrieving sorted sequence
   - Other traversals are also common
 
 ### Operations
