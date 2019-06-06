@@ -277,8 +277,8 @@ class Node {
 .  
   Node(int d);  
   boolean search(int d);  
-  void insert(int d);  
-  void delete(int d);  
+  boolean insert(int d);  
+  boolean delete(int d);  
   void preorder(Node n);  
   void inorder(Node n);  
   void postorder(Node n);  
@@ -290,8 +290,8 @@ class BinaryTree {
   Node root;  
  
   boolean search(int d) { root.search(d); }   
-  void insert(int d) { root.insert(d); }  // Implementation depends on the type of binary tree
-  void delete(int d) { root.delete(d); }  // Implementation depends on the type of binary tree
+  boolean insert(int d) { root.insert(d); }  // Implementation depends on the type of binary tree
+  boolean delete(int d) { root.delete(d); }  // Implementation depends on the type of binary tree
   void preorder() { preorder(root); }  
   void inorder() { inorder(root); }  
   void postorder() { postorder(root); }  
@@ -411,12 +411,12 @@ class Node {
   Node right;  
   
   Node(int d);  
-  search(int d);  
-  insert(int d);  
-  delete(int d);  
-  preorder(Node n);  
-  inorder(Node n);  
-  postorder(Node n);  
+  boolean search(int d);  
+  boolean insert(int d);  
+  boolean delete(int d);  
+  void preorder(Node n);  
+  void inorder(Node n);  
+  void postorder(Node n);  
 }
 ```
 
@@ -424,12 +424,12 @@ class Node {
 class BST extend Binary Tree {  
   Node root;  
  
-  search(int d) { root.search(); }  
-  insert(int d) { root.insert(); }  
-  delete(int d) { root.delete(); }  
-  preorder() { preorder(root); }  
-  inorder() { inorder(root); }  
-  postorder() { postorder(root); }  
+  boolean search(int d) { root.search(); }  
+  boolean insert(int d) { root.insert(); }  
+  boolean delete(int d) { root.delete(); }  
+  void preorder() { preorder(root); }  
+  void inorder() { inorder(root); }  
+  void postorder() { postorder(root); }  
 }
 ```
 
@@ -485,12 +485,12 @@ class Node {
   Node right;  
   
   Node(int d);  
-  search(int d);  
-  insert(int d);  
-  delete(int d);  
-  preorder(Node n);  
-  inorder(Node n);  
-  postorder(Node n);  
+  boolean search(int d);  
+  boolean insert(int d);  
+  boolean delete(int d);  
+  void preorder(Node n);  
+  void inorder(Node n);  
+  void postorder(Node n);  
 }
 ```
 
@@ -503,8 +503,8 @@ class AVLTree extend BST {
   void lrRotate(Node n);
   void rlRotate(Node n);
   boolean search(int d) { root.search(); }  
-  void insert(int d) { root.insert(); }  
-  void delete(int d) { root.delete(); }  
+  boolean insert(int d) { root.insert(); }  
+  boolean delete(int d) { root.delete(); }  
   void preorder() { preorder(root); }  
   void inorder() { inorder(root); }  
   void postorder() { postorder(root); }  
@@ -513,3 +513,4 @@ class AVLTree extend BST {
 
 
 ### Problems
+  1. Median of two sorted arrays
