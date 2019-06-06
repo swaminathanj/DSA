@@ -396,9 +396,7 @@ class MinHeap {
   - insert
   - delete
   - search
-  - preorder
-  - inorder
-  - postorder
+  - preorder, inorder, postorder
 
 ### Implementation
 
@@ -468,9 +466,12 @@ class BST {
   - Other traversals are also common
 
 ### Operations
-  - insert
-  - delete
-  - search
+  - insert, delete, search
+  - preorder, inorder, postorder
+  - llrotate
+  - lrrotate
+  - lrrotate
+  - rlrotate
 
 ### Implementation
   - Include balance to Node class
