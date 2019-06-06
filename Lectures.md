@@ -264,12 +264,12 @@ class Stack {
 
 ### What is min heap?
   - A binary tree in which each node's value is less than that of its left and right nodes
+![Min Heap](vminheap.png)
 
 ### What is max heap?
   - A binary tree in which each node's value is greater than that of its left and right nodes
 
-### Visualization
-![Min Heap and Max Heap](vheap.png)
+![Max Heap](vmaxheap.png)
 
 ### Properties
   - Access starts from the root
