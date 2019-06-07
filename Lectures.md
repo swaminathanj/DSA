@@ -33,8 +33,8 @@ class Node {
   Node next;  
  
   Node(int d);  
-  getData(); 
-  getNext();
+  int getData(); 
+  Node getNext();
 }
 ```
 
@@ -42,14 +42,14 @@ class Node {
 class LinkedList {  
   Node head;  
   
-  createHead(); // creates first node  
-  insertFirst(int key); // returns new head  
-  insert(int pos, int key);  
-  insert(int key);  
-  deleteHead(); // delete last remaining node  
-  delete(int pos);  
-  search(int key); // returns position  
-  size();  
+  Node createHead(); // creates first node  
+  boolean insertFirst(int key); // returns new head  
+  void insert(int pos, int key);  
+  void insert(int key);  
+  void deleteHead(); // delete last remaining node  
+  boolean delete(int pos);  
+  boolean search(int key); // returns position  
+  int size();  
 }
 ```
 
