@@ -43,7 +43,7 @@ class LinkedList {
   Node head;  
   
   Node createHead(); // creates first node  
-  boolean insertFirst(int key); // returns new head  
+  Node insertFirst(int key); // returns new head  
   void insert(int pos, int key);  
   void insert(int key);  
   void deleteHead(); // delete last remaining node  
