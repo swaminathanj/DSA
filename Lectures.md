@@ -38,10 +38,10 @@ class Node {
 class LinkedList {  
   Node head;  
   
-  void insert(int pos, int key);  // O(n)
-  void insert(int key);  // O(n)
-  boolean delete(int pos);  // O(n)
-  boolean search(int key); // returns position  
+  void insert(int pos, int key);
+  void insert(int key);
+  boolean delete(int pos);
+  int search(int key); // returns position  
   int size();  
 }
 ```
