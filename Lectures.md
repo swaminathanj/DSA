@@ -31,10 +31,6 @@
 class Node {  
   int data;  
   Node next;  
- 
-  Node(int d);  
-  int getData(); 
-  Node getNext();
 }
 ```
 
@@ -42,12 +38,9 @@ class Node {
 class LinkedList {  
   Node head;  
   
-  Node createHead(); // creates first node  
-  Node insertFirst(int key); // returns new head  
-  void insert(int pos, int key);  
-  void insert(int key);  
-  void deleteHead(); // delete last remaining node  
-  boolean delete(int pos);  
+  void insert(int pos, int key);  // O(n)
+  void insert(int key);  // O(n)
+  boolean delete(int pos);  // O(n)
   boolean search(int key); // returns position  
   int size();  
 }
@@ -56,7 +49,7 @@ class LinkedList {
 ### LinkedList in Collections
   - Examples
 
-### Problems on linked list (use Collections' LinkedList)
+### Problems on linked list
   1. In a single traversal find the middle element/position
   2. Create a sorted list as you read elements (sort a linked list)
   3. Merge two sorted lists into one
@@ -128,7 +121,7 @@ class LinkedList {
   - A data structure that holds pointer (**top**) to a chained link of nodes
   - A new node is pushed onto the stack, and it becomes the new top
   - Delete pops the top node from the stack, the below node becomes the top
-  - It can be seen as restricted linked list that supports insert last and delete last
+  - It can be seen as restricted linked list that supports insert first (last) and delete first (last)
 
 ### Visualization
 ![Stack](vstack.png)
@@ -147,10 +140,6 @@ class LinkedList {
 class Node {  
   int data;  
   Node next;  
- 
-  Node(int d);  
-  int getData(); 
-  Node getNext();
 }
 ```
 
