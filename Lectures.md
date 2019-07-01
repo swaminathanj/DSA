@@ -161,8 +161,8 @@ class Stack {
   1. Reverse
   2. Check palindrome
   3. Balanced parantheses
-  4. Infix to prefix
-  5. Infix to postfix
+  4. Postfix to infix
+  5. Prefix to infix
   6. Min stack
   7. Basic calculator*
   8. Decode string
