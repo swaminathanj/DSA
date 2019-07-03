@@ -43,6 +43,8 @@ class LinkedList {
   boolean delete(int pos);
   int search(int key); // returns position  
   int size();  
+  void insertFirst(int key);
+  void deleteFirst();
 }
 ```
 
@@ -161,8 +163,8 @@ class Stack {
   1. Reverse
   2. Check palindrome
   3. Balanced parantheses
-  4. Postfix to infix
-  5. Prefix to infix
+  4. Postfix evaluation
+  5. Infix to postfix
   6. Min stack
   7. Basic calculator*
   8. Decode string
