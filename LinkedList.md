@@ -208,5 +208,56 @@ class LLTest {
 }
 ```
 
+## 6. Implement insert method which inserts a node at a particular position
+The search method scans through the linked list to find if a given key is present. If so, it returns the position. If not, it returns -1.
+
+``` java
+// Node.java  - same as above
+```
+
+``` java
+// LinkedList.java
+
+class LinkedList {
+    Node head; 
+
+    void insert(int key) { ... }    
+    void print() { ... }    
+    int search(int key) { ... }
+    
+        void insert(int pos, int key) {
+        Node temp = new Node();  // create the new node
+        temp.data = key;
+
+        Node curr = head;  // Navigate to prior node
+        for (int i=0; i < pos-1; i++)
+            curr = curr.next;
+                
+        temp.next = curr.next;
+        curr.next = temp;
+    }
+}
+
+
+```
+
+``` java
+// LLTest.java 
+
+class LLTest {
+    public static void main(String[] args) {
+        LinkedList l = new LinkedList();
+        l.insert(5);  // 5 becomes the head
+        l.insert(20);
+        l.insert(12);
+        l.insert(25);
+        l.print(); // prints 5 20 12 25
+        
+        l.insert(2,30);
+        l.print(); // prints 5 20 30 12 25
+    }
+}
+```
+
 
 
