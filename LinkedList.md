@@ -247,7 +247,7 @@ class LinkedList {
 class LLTest {
     public static void main(String[] args) {
         LinkedList l = new LinkedList();
-        l.insert(5);  // 5 becomes the head
+        l.insert(5);  
         l.insert(20);
         l.insert(12);
         l.insert(25);
@@ -255,7 +255,7 @@ class LLTest {
         
         l.insert(2,30);
         l.print(); // prints 5 20 30 12 25
-        l.insert(0,50);
+        l.insert(0,50);  // 50 becomes the head
         l.print(); // prints 50 5 20 30 12 25
     }
 }
