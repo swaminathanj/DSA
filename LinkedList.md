@@ -111,7 +111,7 @@ class LLTest {
 ```
 
 ## 4. LinkedList with insert and print methods
-The print method prints the contents of the linked list.
+The printis a utility method that prints the contents of the linked list. Defining this can come handy in displaying the state of the linked list.
 
 ``` java
 // Node.java
