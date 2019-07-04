@@ -59,7 +59,7 @@ class LLTest {
 }
 ```
 
-## LinkedList with insert method
+## 3. LinkedList with insert method
 The insert method handles 2 cases.
   - Case 1: head is null in which case insert creates a head
   - Case 2: head is not null in which case insert adds a new node to the end
@@ -110,7 +110,7 @@ class LLTest {
 }
 ```
 
-## LinkedList with print method
+## 4. LinkedList with insert and print methods
 The print method prints the contents of the linked list.
 
 ``` java
