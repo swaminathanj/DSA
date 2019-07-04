@@ -229,7 +229,7 @@ class LinkedList {
         Node temp = new Node();  // create the new node
         temp.data = key;
 
-        if (pos == 0) { // head is reassigned
+        if (pos == 0) {  // insert it at the front & make it the head
             temp.next = head;
             head = temp;
         }
