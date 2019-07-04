@@ -59,6 +59,8 @@ class LLTest {
 }
 ```
 
+Since the LinkedList does not support any functions, there is nothing much that can be done with it except for creating an instance.
+
 ## 3. LinkedList with insert method
 The insert method handles 2 cases.
   - Case 1: head is null in which case insert creates a head
