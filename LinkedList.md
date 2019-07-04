@@ -113,15 +113,10 @@ class LLTest {
 ```
 
 ## 4. LinkedList with insert and print methods
-The printis a utility method that prints the contents of the linked list. Defining this can come handy in displaying the state of the linked list.
+The print is a utility method that prints the contents of the linked list. Defining this can come handy in displaying the state of the linked list.
 
 ``` java
-// Node.java
-
-class Node {
-    int data;
-    Node next;
-}
+// Node.java  - same as above
 ```
 
 ``` java
@@ -130,19 +125,7 @@ class Node {
 class LinkedList {
     Node head; 
 
-    void insert(int key) {
-        Node temp = new Node();
-        temp.data = key;
- 
-        if (head == null)  // case 1
-            head = temp;
-        else {             // case 2
-            Node curr = head;
-            while (curr.next != null) // Reach till end
-                curr = curr.next;            
-            curr.next = temp;
-        }
-    }
+    void insert(int key) { ... }
     
     void print() {
         Node curr = head;
