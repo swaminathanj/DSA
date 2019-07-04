@@ -28,3 +28,34 @@ class NodeTest {
     }
 }
 ```
+
+## 2. Define a LinkedList
+
+``` java
+// Node.java
+
+class Node {
+    int data;
+    Node next;
+}
+```
+
+``` java
+// LinkedList.java
+
+class LinkedList {
+    Node head; 
+}
+```
+
+``` java
+// LLTest.java 
+
+class LLTest {
+    public static void main(String[] args) {
+        LinkedList l = new LinkedList();
+
+    }
+}
+```
+
