@@ -54,7 +54,7 @@ class LinkedList {
 class LLTest {
     public static void main(String[] args) {
         LinkedList l = new LinkedList();
-
+                            // This program prints nothing
     }
 }
 ```
