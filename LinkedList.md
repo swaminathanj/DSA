@@ -229,12 +229,18 @@ class LinkedList {
         Node temp = new Node();  // create the new node
         temp.data = key;
 
-        Node curr = head;  // Navigate to prior node
-        for (int i=0; i < pos-1; i++)
-            curr = curr.next;
+        if (pos == 0) { // head is reassigned
+            temp.next = head;
+            head = temp;
+        }
+        else {
+            Node curr = head;  // Navigate to prior node
+            for (int i=0; i < pos-1; i++)
+                curr = curr.next;
                 
-        temp.next = curr.next;
-        curr.next = temp;
+            temp.next = curr.next;
+            curr.next = temp;
+        }
     }
 }
 
