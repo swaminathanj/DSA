@@ -255,6 +255,8 @@ class LLTest {
         
         l.insert(2,30);
         l.print(); // prints 5 20 30 12 25
+        l.insert(0,50);
+        l.print(); // prints 50 5 20 30 12 25
     }
 }
 ```
