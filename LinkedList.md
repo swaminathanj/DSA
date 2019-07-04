@@ -201,6 +201,9 @@ class LLTest {
         l.insert(12);
         l.insert(25);
         l.print(); // prints 5 20 12 25
+        
+        System.out.println( l.search(12) ); // prints 2
+        System.out.println( l.search(15) ); // prints -1       
     }
 }
 ```
