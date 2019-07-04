@@ -21,7 +21,7 @@ class NodeTest {
 
         Node m = new Node();
         m.data = 11;
-        n.next = m;  // Make m next to n
+        n.next = m;  // Make m next node of n
 
         System.out.println(n.data);  // prints 7
         System.out.println(n.next.data);  // prints 11
