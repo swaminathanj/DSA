@@ -112,7 +112,7 @@ class LLTest {
 }
 ```
 
-## 4. LinkedList with insert and print methods
+## 4. Add a print method to LinkedList
 The print is a utility method that prints the contents of the linked list. Defining this can come handy in displaying the state of the linked list.
 
 ``` java
@@ -133,6 +133,7 @@ class LinkedList {
             System.out.print(curr.data + " ");
             curr = curr.next;
         }
+        System.out.println();
     }
 }
 
@@ -153,5 +154,56 @@ class LLTest {
     }
 }
 ```
+
+## 5. Implement a search method
+The search method scans through the linked list to find if a given key is present. If so, it returns the position. If not, it returns -1.
+
+``` java
+// Node.java  - same as above
+```
+
+``` java
+// LinkedList.java
+
+class LinkedList {
+    Node head; 
+
+    void insert(int key) { ... }    
+    void print() { ... }
+    
+    int search(int key) {
+        Node curr = head;
+        int pos = 0;
+
+        while (curr != null) {  // Search till the end 
+            if ( curr.data == key)  // if key is found
+                return pos;
+            else {          // continue if key is not found
+                curr = curr.next;
+                pos++;
+            }
+        }
+        return -1;  // key was never found       
+    }
+}
+
+
+```
+
+``` java
+// LLTest.java 
+
+class LLTest {
+    public static void main(String[] args) {
+        LinkedList l = new LinkedList();
+        l.insert(5);  // 5 becomes the head
+        l.insert(20);
+        l.insert(12);
+        l.insert(25);
+        l.print(); // prints 5 20 12 25
+    }
+}
+```
+
 
 
