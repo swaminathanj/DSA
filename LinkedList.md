@@ -110,3 +110,63 @@ class LLTest {
 }
 ```
 
+## LinkedList with print method
+The print method prints the contents of the linked list.
+
+``` java
+// Node.java
+
+class Node {
+    int data;
+    Node next;
+}
+```
+
+``` java
+// LinkedList.java
+
+class LinkedList {
+    Node head; 
+
+    void insert(int key) {
+        Node temp = new Node();
+        temp.data = key;
+ 
+        if (head == null)  // case 1
+            head = temp;
+        else {             // case 2
+            Node curr = head;
+            while (curr.next != null) // Reach till end
+                curr = curr.next;            
+            curr.next = temp;
+        }
+    }
+    
+    void print() {
+        Node curr = head;
+        while (curr != null) {
+            System.out.print(curr.data + " ");
+            curr = curr.next;
+        }
+    }
+}
+
+
+```
+
+``` java
+// LLTest.java 
+
+class LLTest {
+    public static void main(String[] args) {
+        LinkedList l = new LinkedList();
+        l.insert(5);  // 5 becomes the head
+        l.insert(20);
+        l.insert(12);
+        l.insert(25);
+        l.print(); // prints 5 20 12 25
+    }
+}
+```
+
+
