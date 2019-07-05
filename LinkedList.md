@@ -227,7 +227,7 @@ class LinkedList {
     void print() { ... }    
     int search(int key) { ... }
     
-        void insert(int pos, int key) {
+    void insert(int pos, int key) {
         Node temp = new Node();  // create the new node
         temp.data = key;
 
@@ -236,17 +236,15 @@ class LinkedList {
             head = temp;
         }
         else {
-            Node curr = head;  // Navigate to prior node
-            for (int i=0; i < pos-1; i++)
+            Node curr = head;  
+            for (int i=0; i < pos-1; i++) // Navigate to prior node
                 curr = curr.next;
                 
-            temp.next = curr.next;
+            temp.next = curr.next;  // Adjust the links appropriately
             curr.next = temp;
         }
     }
 }
-
-
 ```
 
 ``` java
@@ -269,5 +267,61 @@ class LLTest {
 }
 ```
 
+## Implement delete method to delete a node containing a given key
 
+The delete method first searches for the node with the given key and then removes it.
 
+``` java
+// Node.java  - same as above
+```
+
+``` java
+// LinkedList.java
+
+class LinkedList {
+    Node head; 
+
+    void insert(int key) { ... }    
+    void print() { ... }    
+    int search(int key) { ... }    
+    void insert(int pos, int key) { ... }
+
+    void delete(int key) {
+        int pos = search(key); // find the pos of the key
+        
+        if (pos == -1) // key not found, so nothing to delete
+            ; // do nothing
+            
+        if (pos == 0)  // first node to be deleted, second node becomes the head
+            head = head.next;
+                
+        // Navigate till the prior node of the to-be-deleted node
+        Node curr = head;
+        for (int i=0; i<pos-1; i++)
+            curr = curr.next;
+        
+        // temp is the node to be deleted (next to curr)
+        Node temp = curr.next;
+        curr.next = temp.next; // reassign the links
+        temp.next = null;
+    }
+}
+```
+
+``` java
+// LLTest.java 
+
+class LLTest {
+    public static void main(String[] args) {
+        LinkedList l = new LinkedList();
+        l.insert(5);  
+        l.insert(20);
+        l.insert(12);
+        l.insert(25);
+        l.print(); // prints 5 20 12 25
+        
+        l.delete(12);
+        l.print(); // prints 5 20 25
+    }
+}
+```
