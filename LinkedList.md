@@ -321,7 +321,9 @@ class LLTest {
         l.print(); // prints 5 20 12 25
         
         l.delete(12);
-        l.print(); // prints 5 20 25
+        l.print();  // prints 5 20 25
+        l.delete(30); // 30 not in the list, nothing is removed
+        l.print();  // prints 5 20 25
     }
 }
 ```
