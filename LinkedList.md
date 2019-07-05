@@ -290,11 +290,13 @@ class LinkedList {
         int pos = search(key); // find the pos of the key
         
         if (pos == -1) // key not found, so nothing to delete
-            ; // do nothing
+            return;
             
-        if (pos == 0)  // first node to be deleted, second node becomes the head
+        if (pos == 0)  { // first node to be deleted, second node becomes the head
             head = head.next;
-                
+            return;
+        }
+               
         // Navigate till the prior node of the to-be-deleted node
         Node curr = head;
         for (int i=0; i<pos-1; i++)
