@@ -158,6 +158,8 @@ class Stack {
 }
 ```
 
+For the implementation of stack and its applications, please refer to [Stack and its applications](Stack.md).
+
 ### Stack in Collections
   - Examples
 
