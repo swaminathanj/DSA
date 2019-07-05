@@ -444,7 +444,7 @@ class LLTest {
 }
 ```
 
-## Add a insertSort() method that inserts elements in sorted manner
+## 10. Add a insertSort() method that inserts elements in sorted manner
 
 ``` java
 // Node.java  - same as above
