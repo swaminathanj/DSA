@@ -330,7 +330,7 @@ class LLTest {
 }
 ```
 
-## Special methods to insert and delete first node
+## 8. Special methods to insert and delete first node
 
 ``` java
 // Node.java  - same as above
