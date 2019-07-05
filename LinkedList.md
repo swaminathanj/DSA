@@ -495,7 +495,7 @@ class LLSortTest {
         l.insertSort(12);
         l.insertSort(25);
         l.insertSort(10);
-        l.print();
+        l.print();  // prints 5 10 12 20 25
     }
 }
 ```
