@@ -2,7 +2,7 @@
 
 ## Stack implementation
 
-The stack implementation extends the LinkedList.
+We implement a Stack as an extension of LinkedList. One can implement Stack from the scratch too.
 
 ``` java
 class Stack extends LinkedList {
