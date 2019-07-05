@@ -267,7 +267,7 @@ class LLTest {
 }
 ```
 
-## Implement delete method to delete a node containing a given key
+## 7. Implement delete method to delete a node containing a given key
 
 The delete method first searches for the node with the given key and then removes it.
 
