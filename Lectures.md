@@ -48,6 +48,8 @@ class LinkedList {
 }
 ```
 
+For a step-by-step implementation of LinkedList, please refer to [Linked List implementation step-by-step](LinkedList.md).
+
 ### LinkedList in Collections
   - Examples
 
