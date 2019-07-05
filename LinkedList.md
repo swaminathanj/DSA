@@ -329,3 +329,63 @@ class LLTest {
     }
 }
 ```
+
+## Special methods to insert and delete first node
+
+``` java
+// Node.java  - same as above
+```
+
+``` java
+// LinkedList.java
+
+class LinkedList {
+    Node head; 
+
+    void insert(int key) { ... }    
+    void print() { ... }    
+    int search(int key) { ... }    
+    void insert(int pos, int key) { ... }
+    void delete(int key) { ... }
+    
+    void insertFirst(int key) {
+        Node temp = new Node();
+        temp.data = key;
+
+        temp.next = head;
+        head = temp;
+    }
+
+    void deleteFirst() {
+        head = head.next;
+    }
+}
+```
+
+``` java
+// LLTest.java 
+
+class LLTest {
+    public static void main(String[] args) {
+        LinkedList l = new LinkedList();
+        l.insert(5);  
+        l.insert(20);
+        l.insert(12);
+        l.insert(25);
+        l.print(); // prints 5 20 12 25        
+        l.delete(12);
+        l.print();  // prints 5 20 25
+        l.delete(30); // 30 not in the list, nothing is removed
+        l.print();  // prints 5 20 25
+        
+        l.insertFirst(100);
+        l.print();  // prints 100 5 20 25
+        l.insertFirst(110);
+        l.print();  // prints 110 100 5 20 25
+        l.deleteFirst();
+        l.print();  // prints 100 5 20 25
+        l.deleteFirst();
+        l.print();  // prints 5 20 25
+    }
+}
+```
