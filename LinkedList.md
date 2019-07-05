@@ -443,3 +443,59 @@ class LLTest {
     }
 }
 ```
+
+## Add a insertSort() method that inserts elements in sorted manner
+
+``` java
+// Node.java  - same as above
+```
+
+``` java
+// LinkedList.java
+
+class LinkedList {
+    Node head; 
+
+    void insert(int key) { ... }    
+    void print() { ... }    
+    int search(int key) { ... }    
+    void insert(int pos, int key) { ... }
+    void delete(int key) { ... }
+    void insertFirst(int key) { ... }
+    void deleteFirst() { ...  }
+    int size() { ... }
+    
+    void insertSort(int key) {
+        if (head == null) {
+            head = new Node();
+            head.data = key;
+            return;
+        }
+
+        // Find the position to insert
+        Node curr = head;
+        int pos = 0;
+        while (curr != null && curr.data < key) {
+            curr = curr.next;
+            pos++;
+        }
+        insert(pos, key); // Insert at that position
+    }    
+}
+```
+
+``` java
+// LLSortTest.java
+
+class LLSortTest {
+    public static void main(String[] args) {
+        LinkedList l = new LinkedList();
+        l.insertSort(5);
+        l.insertSort(20);
+        l.insertSort(12);
+        l.insertSort(25);
+        l.insertSort(10);
+        l.print();
+    }
+}
+```
