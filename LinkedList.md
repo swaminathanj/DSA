@@ -389,3 +389,57 @@ class LLTest {
     }
 }
 ```
+
+## 9. Adding a size() method to count the number the nodes in LinkedList
+
+``` java
+// Node.java  - same as above
+```
+
+``` java
+// LinkedList.java
+
+class LinkedList {
+    Node head; 
+
+    void insert(int key) { ... }    
+    void print() { ... }    
+    int search(int key) { ... }    
+    void insert(int pos, int key) { ... }
+    void delete(int key) { ... }
+    void insertFirst(int key) { ... }
+    void deleteFirst() { ...  }
+    
+    int size() {
+        Node curr = head;
+        int count = 0;
+        while (curr != null) {
+            curr = curr.next;
+            count++;
+        }
+        return count;
+    }    
+}
+```
+
+``` java
+// LLTest.java 
+
+class LLTest {
+    public static void main(String[] args) {
+        LinkedList l = new LinkedList();
+        l.insert(5);
+        l.insert(20);
+        l.insert(12);
+        l.insert(25);
+        l.print();
+        System.out.println( l.size() );
+
+        l.delete(12);
+        l.print();  // prints 5 20 25
+        l.delete(30); // 30 not in the list, nothing is removed
+        l.print();  // prints 5 20 25
+        System.out.println( l.size() );
+    }
+}
+```
