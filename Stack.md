@@ -16,7 +16,7 @@ class Stack extends LinkedList {
             throw new Exception("Stack is empty");
             
         int val = head.data;
-        head = head.next;
+        deleteFirst();
         return val;
     }
     
