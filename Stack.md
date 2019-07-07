@@ -261,7 +261,7 @@ public class PostFixEval {
                break;
 
            default: // Must be an integer, push it on stack
-               s.push( Integer.parseInt(tokens[i]) );
+               s.push( Integer.parseInt( tokens[i]) );
            }
        }
        return s.peek();
