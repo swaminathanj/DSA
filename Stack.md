@@ -90,8 +90,11 @@ public class Reverse {
 
 ## Execution:
 CMD> javac Reverse.java
+
 CMD> java Reverse
+
 25 38 67 93 46 18 75 (CTRL+D)
+
 75 18 46 93 67 38 25
 
 **Note**: CTRL+D is pressed to signify the end of input.
