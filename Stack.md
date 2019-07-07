@@ -39,6 +39,8 @@ class Stack extends LinkedList {
 ```
 
 ``` java
+// StackTest.java
+
 class StackTest {
     public static void main(String[] args) {
         Stack s = new Stack();
@@ -59,3 +61,37 @@ class StackTest {
     }
 }
 ```
+
+## Stack Application 1: Reversing the input
+
+Problem: Given a series of integers as input, the problem is to output the integers in reverse order.
+
+Solution idea: As you read the input, push them onto the stack. Now, pop them out one-by-one and print them. Since stack holds LIFO property, popping the elements amounts to reverse.
+
+``` java
+import java.util.Scanner;
+
+public class Reverse {
+    public static void main(String[] args) {
+        // Read the integer series from the terminal
+        // As you read push them onto the stack
+        Scanner sc = new Scanner(System.in);
+        Stack s = new Stack();
+        
+        while ( sc.hasNext() )  // As long as input exists
+            s.push( sc.nextInt() ); // read and push onto the stack
+        
+        // Now pop the elements and print them
+        while ( !s.isEmpty() )  // As long as stack in not empty
+            System.out.println( s.pop() );  // pop them out and print them  
+    }
+}
+```
+
+## Execution:
+CMD> javac Reverse.java
+CMD> java Reverse
+25 38 67 93 46 18 75 (CTRL+D)
+75 18 46 93 67 38 25
+
+**Note**: CTRL+D is pressed to signify the end of input.
