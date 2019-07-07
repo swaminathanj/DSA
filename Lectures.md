@@ -48,7 +48,7 @@ class LinkedList {
 }
 ```
 
-For a step-by-step implementation of LinkedList, please refer to [Linked List implementation step-by-step](LinkedList.md).
+#### For a step-by-step implementation of LinkedList, please refer to [Linked List implementation step-by-step](LinkedList.md).
 
 ### LinkedList in Collections
   - Examples
@@ -158,7 +158,7 @@ class Stack {
 }
 ```
 
-For the implementation of stack and its applications, please refer to [Stack and its applications](Stack.md).
+#### For the implementation of stack and its applications, please refer to [Stack and its applications](Stack.md).
 
 ### Stack in Collections
   - Examples
