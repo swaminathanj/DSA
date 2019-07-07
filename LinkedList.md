@@ -499,3 +499,69 @@ class LLSortTest {
     }
 }
 ```
+
+## 11. Merge two linked lists
+
+``` java
+// Node.java  - same as above
+```
+
+``` java
+// LinkedList.java
+
+class LinkedList {
+    Node head; 
+
+    void insert(int key) { ... }    
+    void print() { ... }    
+    int search(int key) { ... }    
+    void insert(int pos, int key) { ... }
+    void delete(int key) { ... }
+    void insertFirst(int key) { ... }
+    void deleteFirst() { ...  }
+    int size() { ... }    
+    void insertSort(int key) { ... }
+
+    void merge(LinkedList ll) {
+    
+        if (this.head == null) {  // this is optional 
+            this.head = ll.head;
+            return;
+        }
+           
+        // Reach till the end of 'this' list
+        Node curr = this.head;
+        while (curr.next != null)
+            curr = curr.next;
+        
+        // Attach l's head to the end of 'this' list
+        curr.next = ll.head;
+    }
+}
+```
+
+``` java
+// LLMergeTest.java
+
+class LLMergeTest {
+    public static void main(String[] args) {
+        LinkedList first = new LinkedList();
+        first.insert(5);
+        first.insert(20);
+        first.insert(15);
+        first.insert(25);
+        first.insert(10);
+        first.print();  // prints 5 20 15 25 10
+        
+        LinkedList second = new LinkedList();
+        second.insert(50);
+        second.insert(85);
+        second.insert(60);
+        second.insert(75);
+        second.print();  // prints 50 85 60 75
+        
+        first.merge(second);  // second attached to the end of first
+        first.print();  // prints 5 20 15 25 10 50 85 60 75 
+    }
+}
+```
