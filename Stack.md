@@ -149,7 +149,7 @@ public class Palindrome {
 
 ## Stack Application 3: Balanced Parentheses
 
-  - **Problem**: Given a series of integers made up of 0's and 1's, 0 signifying open parenthesis '(' and 1 signifying close parenthesis ')', the goal is check if parentheses are balanced. i.e. every 0 should have an equivalent 1 and vice-versa.
+  - **Problem**: Given a series of integers made up of 0's and 1's, 0 signifying open parenthesis '(' and 1 signifying close parenthesis ')', the goal is check if parentheses are balanced. i.e. every 0 should be followed by an equivalent 1. And every 1 should be preceded by an equivalent 0.
   - **Examples**:
      - 0 1 Balanced
      - 1 0 Not balanced
