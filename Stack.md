@@ -174,9 +174,13 @@ public class BalancedParentheses {
                     s.push(input);
                     break;
             case 1:  // closed parenthesis
-                if ( !s.isEmpty() && s.peek() == 0 )
+                if ( s.isEmpty() ) { // 1 seen without 0
+                    System.out.println("Not balanced");
+                    return;
+                }
+                else if ( s.peek() == 0 ) // 1 matches with a 0
                     s.pop();
-                else {
+                else {  // Some other is encountered
                     System.out.println("Not balanced");
                     return;
                 }
@@ -185,7 +189,7 @@ public class BalancedParentheses {
         }
         if ( s.isEmpty() )
             System.out.println("Balanced");
-        else
+        else   // 0 seen with no matching 1
             System.out.println("Not balanced");
     }
 }
