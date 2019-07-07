@@ -145,3 +145,39 @@ public class Palindrome {
     // How will you modify it to handle odd lengthed series?
 }
 ```
+
+## Stack Application 3: Balanced Parentheses
+
+``` java
+// BalancedParentheses.java
+
+import java.util.Scanner;
+
+public class BalancedParentheses {
+    public static void main(String[] args) {
+        Stack s = new Stack();
+        Scanner sc = new Scanner(System.in);
+  
+        while ( sc.hasNext() ) {
+            int input = sc.nextInt();
+            switch( input ) {
+            case 0:  // open parenthesis
+                    s.push(input);
+                    break;
+            case 1:  // closed parenthesis
+                if ( !s.isEmpty() && s.peek() == 0 )
+                    s.pop();
+                else {
+                    System.out.println("Not balanced");
+                    return;
+                }
+                break;
+            }
+        }
+        if ( s.isEmpty() )
+            System.out.println("Balanced");
+        else
+            System.out.println("Not balanced");
+    }
+}
+```
