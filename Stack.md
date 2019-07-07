@@ -148,6 +148,15 @@ public class Palindrome {
 
 ## Stack Application 3: Balanced Parentheses
 
+  - **Problem**: Given a series of integers made up of 0's and 1's, 0 signifying open parenthesis '(' and 1 signifying close parenthesis ')', the goal is check if parentheses are balanced. i.e. every 0 should have an equivalent 1 and vice-versa.
+  - **Examples**:
+     - 0 1 Balanced
+     - 1 0 Not balanced
+     - 0 0 1 0 1 1 Balanced
+     - 0 1 0 1 0 Not balanced
+     - 0 1 0 1 1 Not balanced
+  - **Solution**: Whenever 0 is encountered, push it onto stack. When 1 is encountered, check for the matching 0 on top of the stack. 
+
 ``` java
 // BalancedParentheses.java
 
@@ -181,3 +190,17 @@ public class BalancedParentheses {
     }
 }
 ```
+
+**Note**: In this example, we have dealt with only one type of parentheses i.e. '(' and ')'. A more general version of the problem involves checking balance of multiple types of parenthesis. Examples below:
+
+  - ( ) \[ { } ] Balanced
+  - ( { ) } Not balanced
+  
+Improve the implementation to deal with these cases. You can use the integer mapping for different types of parentheses as follows:
+
+  - ( -> 0
+  - ) -> 1
+  - \[ -> 2
+  - ] -> 3
+  - { -> 4
+  - } -> 5
