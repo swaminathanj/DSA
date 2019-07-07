@@ -64,9 +64,9 @@ class StackTest {
 
 ## Stack Application 1: Reversing the input
 
-Problem: Given a series of integers as input, the problem is to output the integers in reverse order.
+  - **Problem**: Given a series of integers as input, the problem is to output the integers in reverse order.
 
-Solution idea: As you read the input, push them onto the stack. Now, pop them out one-by-one and print them. Since stack holds LIFO property, popping the elements amounts to reverse.
+  - **Solution idea**: As you read the input, push them onto the stack. Now, pop them out one-by-one and print them. Since stack holds LIFO property, popping the elements amounts to reverse.
 
 ``` java
 import java.util.Scanner;
@@ -93,7 +93,7 @@ CMD> javac Reverse.java
 
 CMD> java Reverse
 
-25 38 67 93 46 18 75 (CTRL+D)
+25 38 67 93 46 18 75 CTRL+D
 
 75 18 46 93 67 38 25
 
