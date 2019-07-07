@@ -180,12 +180,11 @@ public class BalancedParentheses {
                 }
                 else if ( s.peek() == 0 ) // 1 matches with a 0
                     s.pop();
-                else {  // Some other is encountered
-                    System.out.println("Not balanced");
-                    return;
-                }
                 break;
-            }
+            default: // Some other char is encountered
+                System.out.println("Not balanced");
+                return;
+             }
         }
         if ( s.isEmpty() )
             System.out.println("Balanced");
