@@ -65,9 +65,11 @@ class StackTest {
 ## Stack Application 1: Reversing the input
 
   - **Problem**: Given a series of integers as input, the problem is to output the integers in reverse order.
-  - **Solution idea**: As you read the input, push them onto the stack. Now, pop them out one-by-one and print them. Since stack holds LIFO property, popping the elements amounts to reverse.
+  - **Solution idea**: As you read the input, push them onto the stack. Now, pop them out one-by-one and print them. Since stack holds LIFO property, popping the elements amounts to reversal of input.
 
 ``` java
+// Reverse.java
+
 import java.util.Scanner;
 
 public class Reverse {
@@ -97,3 +99,9 @@ CMD> java Reverse
 75 18 46 93 67 38 25
 
 **Note**: CTRL+D is pressed to signify the end of input.
+
+## Stack Application 2: Check Palindrome
+
+  - **Problem**: Given an integer series as input, check if it is palindromic.
+  - **Example**: 10 20 30 40 40 30 20 10 is palindromic integer series while 10 20 30 40 10 is not
+  - **Solution**: Push half the series onto stack. While processing the second half check if he same integer exists on the stack. If so, pop and proceed. If not, exit with false.
