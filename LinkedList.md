@@ -500,7 +500,7 @@ class LLSortTest {
 }
 ```
 
-## 11. Merge two linked lists
+## 11. Append one linked list to the other
 
 ``` java
 // Node.java  - same as above
@@ -522,7 +522,7 @@ class LinkedList {
     int size() { ... }    
     void insertSort(int key) { ... }
 
-    void merge(LinkedList ll) {
+    void append(LinkedList ll) {
     
         if (this.head == null) {  // 'this' keyword is optional 
             this.head = ll.head;
@@ -560,7 +560,7 @@ class LLMergeTest {
         second.insert(75);
         second.print();  // prints 50 85 60 75
         
-        first.merge(second);  // second attached to the end of first
+        first.append(second);  // second attached to the end of first
         first.print();  // prints 5 20 15 25 10 50 85 60 75 
     }
 }
