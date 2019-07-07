@@ -121,15 +121,15 @@ public class Palindrome {
         System.out.println( p.check(b) );  // prints false
     }
 
-    public boolean check(int[] a) {
+    public boolean check(int[] arr) {
         Stack s = new Stack();
 
-        int mid = a.length/2;
+        int mid = arr.length/2;
         for (int i=0; i<mid; i++) // Push first half onto stack
-            s.push( a[i] );
+            s.push( arr[i] );
 
-        for (int j=mid; j<a.length; j++) {
-            if ( a[j] == s.peek() )
+        for (int j=mid; j<arr.length; j++) {
+            if ( arr[j] == s.peek() )
                 s.pop();
             else
                 return false;
