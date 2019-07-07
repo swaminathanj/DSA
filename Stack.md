@@ -115,10 +115,10 @@ public class Palindrome {
         Palindrome p = new Palindrome();
 
         int[] a = {10, 20, 30, 30, 20, 10};
-        System.out.println( p.check(a) );
+        System.out.println( p.check(a) );  // prints true
 
         int[] b = {10, 20, 30, 10, 20, 30};
-        System.out.println( p.check(b) );
+        System.out.println( p.check(b) );  // prints false
     }
 
     public boolean check(int[] a) {
