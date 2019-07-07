@@ -94,7 +94,7 @@ CMD> javac Reverse.java
 
 CMD> java Reverse
 
-25 38 67 93 46 18 75 CTRL+D
+25 38 67 93 46 18 75 (CTRL+D)
 
 75 18 46 93 67 38 25
 
@@ -105,3 +105,43 @@ CMD> java Reverse
   - **Problem**: Given an integer series as input, check if it is palindromic.
   - **Example**: 10 20 30 40 40 30 20 10 is palindromic integer series while 10 20 30 40 10 is not
   - **Solution**: Push half the series onto stack. While processing the second half check if he same integer exists on the stack. If so, pop and proceed. If not, exit with false.
+  
+``` java
+// Palindrome.java
+
+public class Palindrome {
+
+    public static void main(String[] args) {
+        Palindrome p = new Palindrome();
+
+        int[] a = {10, 20, 30, 30, 20, 10};
+        System.out.println( p.check(a) );
+
+        int[] b = {10, 20, 30, 10, 20, 30};
+        System.out.println( p.check(b) );
+    }
+
+    public boolean check(int[] a) {
+        Stack s = new Stack();
+
+        int mid = a.length/2;
+        for (int i=0; i<mid; i++) // Push first half onto stack
+            s.push( a[i] );
+
+        for (int j=mid; j<a.length; j++) {
+            if ( a[j] == s.peek() )
+                s.pop();
+            else
+                return false;
+        }
+
+        if ( s.isEmpty() ) // Confirm if stack is empty
+            return true;
+        else
+            return false;
+    }
+
+    // This program only works for even lengthed series
+    // How will you modify it to handle odd lengthed series?
+}
+```
