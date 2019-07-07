@@ -118,4 +118,20 @@ public class LinkedList {
         
         insert(pos, key);
     }
+    
+    void append(LinkedList ll) {
+    
+        if (this.head == null) {  // 'this' keyword is optional 
+            this.head = ll.head;
+            return;
+        }
+           
+        // Reach till the end of 'this' list
+        Node curr = this.head;
+        while (curr.next != null)
+            curr = curr.next;
+        
+        // Attach l's head to the end of 'this' list
+        curr.next = ll.head;
+    }    
 }
