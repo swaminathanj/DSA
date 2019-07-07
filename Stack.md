@@ -104,7 +104,7 @@ CMD> java Reverse
 
   - **Problem**: Given an integer series as input, check if it is palindromic.
   - **Example**: 10 20 30 40 40 30 20 10 is palindromic integer series while 10 20 30 40 10 is not
-  - **Solution**: Push half the series onto stack. While processing the second half check if he same integer exists on the stack. If so, pop and proceed. If not, exit with false.
+  - **Solution**: Push half the series onto stack. While processing the second half check if the same integer exists on top of the stack. If so, pop and proceed. If not, exit with false. At the end, stack should be empty.
   
 ``` java
 // Palindrome.java
