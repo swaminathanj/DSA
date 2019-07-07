@@ -524,7 +524,7 @@ class LinkedList {
 
     void merge(LinkedList ll) {
     
-        if (this.head == null) {  // this is optional 
+        if (this.head == null) {  // 'this' keyword is optional 
             this.head = ll.head;
             return;
         }
