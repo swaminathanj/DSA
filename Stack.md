@@ -79,11 +79,11 @@ public class Reverse {
         Scanner sc = new Scanner(System.in);
         Stack s = new Stack();
         
-        while ( sc.hasNext() )  // As long as input exists
+        while ( sc.hasNext() )  // As long as input is incoming
             s.push( sc.nextInt() ); // read and push onto the stack
         
         // Now pop the elements and print them
-        while ( !s.isEmpty() )  // As long as stack in not empty
+        while ( !s.isEmpty() )  // As long as stack is not empty
             System.out.println( s.pop() );  // pop them out and print them  
     }
 }
