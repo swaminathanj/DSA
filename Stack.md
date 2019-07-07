@@ -5,24 +5,26 @@
 We implement a Stack as an extension of LinkedList. One can implement Stack from the scratch too.
 
 ``` java
+// Stack.java
+
 class Stack extends LinkedList {
 
     void push(int key) {
         insertFirst(key); // Merely calls LinkedList's method to achieve it
     }
     
-    int pop() {
+    int pop() throws RuntimeException {
         if ( isEmpty() ) // i.e. stack is empty
-            throw new Exception("Stack is empty");
+            throw new RuntimeException("Stack is empty");
             
-        int val = head.data;
+        int top = head.data;
         deleteFirst();
-        return val;
+        return top;
     }
     
-    int peek() {
+    int peek() throws RuntimeException {
         if ( isEmpty() ) // i.e. stack is empty
-            throw new Exception("Stack is empty");
+            throw new RuntimeException("Stack is empty");
 
         return head.data;
     }
