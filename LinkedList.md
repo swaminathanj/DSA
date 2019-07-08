@@ -534,7 +534,7 @@ class LinkedList {
         while (curr.next != null)
             curr = curr.next;
         
-        // Attach l's head to the end of 'this' list
+        // Attach ll's head to the end of 'this' list
         curr.next = ll.head;
     }
 }
