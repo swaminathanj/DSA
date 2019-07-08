@@ -541,9 +541,9 @@ class LinkedList {
 ```
 
 ``` java
-// LLMergeTest.java
+// LLAppendTest.java
 
-class LLMergeTest {
+class LLAppendTest {
     public static void main(String[] args) {
         LinkedList first = new LinkedList();
         first.insert(5);
