@@ -14,7 +14,7 @@ class Stack extends LinkedList {
     }
     
     int pop() throws RuntimeException {
-        if ( isEmpty() ) // i.e. stack is empty
+        if ( isEmpty() )
             throw new RuntimeException("Stack is empty");
             
         int top = head.data;
@@ -23,7 +23,7 @@ class Stack extends LinkedList {
     }
     
     int peek() throws RuntimeException {
-        if ( isEmpty() ) // i.e. stack is empty
+        if ( isEmpty() )
             throw new RuntimeException("Stack is empty");
 
         return head.data;
