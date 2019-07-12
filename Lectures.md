@@ -470,7 +470,7 @@ class BST extend Binary Tree {
   - llrotate
   - lrrotate
   - lrrotate
-  - rlrotate
+  - rrrotate
 
 ### Implementation
 ```
