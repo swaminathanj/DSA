@@ -54,16 +54,16 @@ class LinkedList {
   - Examples
 
 ### Problems on linked list
-  1. In a single traversal find the middle element/position
-  2. Create a sorted list as you read elements (sort a linked list)
-  3. Merge two sorted lists into one
-  4. Rotate a linked list by k positions
-  5. Remove duplicates from a sorted list (shrink the list)
-  6. Partition list based on > and <= x (based on pivot, odd/even)
-  7. Union of two linked lists keep duplicates (remove duplicates)
-  8. Intersection of two linked lists
-  9. Reverse a linked list
-  10. Check if a linked list has a cycle
+  1. [In a single traversal find the middle element/position](https://leetcode.com/problems/middle-of-the-linked-list/)
+  2. [Design linked list](https://leetcode.com/problems/middle-of-the-linked-list/)
+  3. [Merge two sorted lists into one](https://leetcode.com/problems/merge-two-sorted-lists/)
+  4. [Rotate a linked list by k positions](https://leetcode.com/problems/rotate-list/)
+  5. [Remove duplicates from a sorted list](https://leetcode.com/problems/remove-duplicates-from-sorted-list/)
+  6. [Partition list based on > and <= x](https://leetcode.com/problems/partition-list/)
+  7. [Remove linked list elements](https://leetcode.com/problems/remove-linked-list-elements/)
+  8. [Intersection of two linked lists](https://leetcode.com/problems/intersection-of-two-linked-lists/)
+  9. [Reverse a linked list](https://leetcode.com/problems/reverse-linked-list/)
+  10. [Check if a linked list has a cycle](https://leetcode.com/problems/linked-list-cycle/)
 
 ### ArrayList in Collections
   - When to use LinkedList or ArrayList?
