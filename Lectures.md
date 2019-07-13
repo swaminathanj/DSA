@@ -238,7 +238,11 @@ class Queue {
 
 ### ArrayDeque in Collections
   - Examples
-
+  - [Javadoc page](https://docs.oracle.com/javase/7/docs/api/java/util/ArrayDeque.html)
+  - [Examples from javatpoint](https://www.javatpoint.com/java-deque-arraydeque)
+  - [Examples from geeksfofgeeks](https://www.geeksforgeeks.org/arraydeque-in-java/)
+  - [Examples from baeldung](https://www.baeldung.com/java-array-deque)
+  
 ### Problems from Leetcode
   1. [Task scheduler](https://leetcode.com/problems/task-scheduler/)
   2. [Stack using queue](https://leetcode.com/problems/implement-stack-using-queues/)
