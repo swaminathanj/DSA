@@ -366,7 +366,7 @@ class MinHeap {
 ### PriorityQueue in Collections
   - Examples
 
-### Problems
+### Problems from Leetcode
   1. [Kth largest element in an array](https://leetcode.com/problems/number-of-recent-calls/)
   2. [Top K frequent elements](https://leetcode.com/problems/top-k-frequent-elements/)
   3. [Sort chars by frequency](https://leetcode.com/problems/sort-characters-by-frequency/)
