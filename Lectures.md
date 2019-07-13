@@ -367,11 +367,16 @@ class MinHeap {
   - Examples
 
 ### Problems
-  1. Kth largest element in an array
-  2. Top K frequent elements
-  3. Split array into consecutive subsequences
-  4. Last stone weight
-  5. K closest points to origin
+  1. [Kth largest element in an array])(https://leetcode.com/problems/number-of-recent-calls/
+  2. [Top K frequent elements](https://leetcode.com/problems/top-k-frequent-elements/)
+  3. [Sort chars by frequency](https://leetcode.com/problems/sort-characters-by-frequency/)
+  4. [Split array into consecutive subsequences](https://leetcode.com/problems/split-array-into-consecutive-subsequences/)
+  5. [Top k frequent words](https://leetcode.com/problems/top-k-frequent-words)
+  6. [Last stone weight](https://leetcode.com/problems/last-stone-weight)
+  7. [K closest points to origin](https://leetcode.com/problems/k-closest-points-to-origin)
+  8. [Distant bar codes](https://leetcode.com/problems/distant-barcodes)
+  9. [Kth largest element in a stream](https://leetcode.com/problems/kth-largest-element-in-a-stream)
+  10. [Network delay time](https://leetcode.com/problems/network-delay-time)
 
 ## 8. Binary Search Tree
 
