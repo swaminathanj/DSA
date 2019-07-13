@@ -271,10 +271,10 @@ class Queue {
 
 ```
 class Node {  
-  - int data;  
-  - Node left;  
-  - Node right;  
-.  
+  int data;  
+  Node left;  
+  Node right;  
+  
   Node(int d);  
   boolean search(int d);  
   boolean insert(int d);  
@@ -367,7 +367,7 @@ class MinHeap {
   - Examples
 
 ### Problems
-  1. [Kth largest element in an array])(https://leetcode.com/problems/number-of-recent-calls/
+  1. [Kth largest element in an array](https://leetcode.com/problems/number-of-recent-calls/
   2. [Top K frequent elements](https://leetcode.com/problems/top-k-frequent-elements/)
   3. [Sort chars by frequency](https://leetcode.com/problems/sort-characters-by-frequency/)
   4. [Split array into consecutive subsequences](https://leetcode.com/problems/split-array-into-consecutive-subsequences/)
