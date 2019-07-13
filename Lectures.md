@@ -53,7 +53,7 @@ class LinkedList {
 ### LinkedList in Collections
   - Examples
 
-### Problems on linked list
+### Problems from Leetcode
   1. [In a single traversal find the middle element/position](https://leetcode.com/problems/middle-of-the-linked-list/)
   2. [Design linked list](https://leetcode.com/problems/middle-of-the-linked-list/)
   3. [Merge two sorted lists into one](https://leetcode.com/problems/merge-two-sorted-lists/)
@@ -163,7 +163,7 @@ class Stack {
 ### Stack in Collections
   - Examples
 
-### Problems
+### Problems from Leetcode
   1. [Reverse](https://leetcode.com/problems/validate-stack-sequences/)
   2. Check palindrome
   3. [Balanced parantheses](https://leetcode.com/problems/valid-parentheses/)
@@ -226,7 +226,7 @@ class Queue {
 ### ArrayDeque in Collections
   - Examples
 
-### Problems
+### Problems from Leetcode
   1. [Task scheduler](https://leetcode.com/problems/task-scheduler/)
   2. [Stack using queue](https://leetcode.com/problems/implement-stack-using-queues/)
   3. [Queue using stack](https://leetcode.com/problems/implement-queue-using-stacks/)
