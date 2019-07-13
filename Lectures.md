@@ -237,7 +237,6 @@ class Queue {
 #### For the implementation of queue in its different forms, please refer to [Queue implementation](Queue.md).
 
 ### ArrayDeque in Collections
-  - Examples
   - [Javadoc page](https://docs.oracle.com/javase/7/docs/api/java/util/ArrayDeque.html)
   - [Examples from javatpoint](https://www.javatpoint.com/java-deque-arraydeque)
   - [Examples from geeksfofgeeks](https://www.geeksforgeeks.org/arraydeque-in-java/)
@@ -381,7 +380,10 @@ class MinHeap {
   - Implement priority queue
 
 ### PriorityQueue in Collections
-  - Examples
+  - [Javadoc page](https://docs.oracle.com/javase/7/docs/api/java/util/PriorityQueue.html)
+  - [Examples from javatpoint](https://www.javatpoint.com/java-priorityqueue)
+  - [Examples from geeksfofgeeks](https://www.geeksforgeeks.org/priority-queue-class-in-java-2/)
+  - [Examples from callicoder](https://www.callicoder.com/java-priority-queue/)
 
 ### Problems from Leetcode
   1. [Kth largest element in an array](https://leetcode.com/problems/number-of-recent-calls/)
