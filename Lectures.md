@@ -223,14 +223,16 @@ class Queue {
 
 #### For the implementation of queue in its different forms, please refer to [Queue implementation](Queue.md).
 
-
 ### ArrayDeque in Collections
   - Examples
 
 ### Problems
-  - Task scheduler
-  - Stack using queue
-  - Queue using stack
+  1. [Task scheduler](https://leetcode.com/problems/task-scheduler/)
+  2. [Stack using queue](https://leetcode.com/problems/implement-stack-using-queues/)
+  3. [Queue using stack](https://leetcode.com/problems/implement-queue-using-stacks/)
+  4. [Circular Queue](https://leetcode.com/problems/design-circular-queue/)
+  5. [Circular Deque](https://leetcode.com/problems/design-circular-deque/)
+  6. [Number of recent calls](https://leetcode.com/problems/number-of-recent-calls/)
 
 ---
 
