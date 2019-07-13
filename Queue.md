@@ -267,11 +267,13 @@ public class CircularQueueTest {
         System.out.println( c.size() );  // prints 5
         System.out.println( c.getFront() ); // prints 10
         c.dequeue();
-        System.out.println( c.size() );  // prints 4
+        c.enqueue(60);
+        System.out.println( c.size() );  // prints 5
         c.dequeue();
-        c.print();  // prints 30 40 50
+        c.print();  // prints 30 40 50 60
         c.dequeue();
         System.out.println( c.getFront() );  // prints 40
+        c.dequeue();
         c.dequeue();
         c.dequeue();
         System.out.println( c.size() ); // prints 0
