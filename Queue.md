@@ -5,6 +5,8 @@
 In a queue, elements are added at one end (last) and removed from the other end (first). FIFO property.
 
 ``` java
+// Queue.java
+
 public class Queue extends LinkedList {
 
     public void enqueue(int key) {
@@ -40,6 +42,8 @@ public class Queue extends LinkedList {
 ```
 
 ``` java
+// QueueTest.java
+
 public class QueueTest {
     public static void main(String[] args) {
         Queue q = new Queue();
