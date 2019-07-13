@@ -51,7 +51,7 @@ class LinkedList {
 #### For a step-by-step implementation of LinkedList, please refer to [Linked List implementation step-by-step](LinkedList.md).
 
 ### LinkedList in Collections
-  - [Javadoc](https://docs.oracle.com/javase/7/docs/api/java/util/LinkedList.html)
+  - [Javadoc page](https://docs.oracle.com/javase/7/docs/api/java/util/LinkedList.html)
   - [Examples from javatpoint](https://www.javatpoint.com/java-linkedlist)
   - [Examples from geeksfofgeeks](https://www.geeksforgeeks.org/linked-list-in-java/)
   - [Examples from callicoder](https://www.callicoder.com/java-linkedlist/)
@@ -69,7 +69,14 @@ class LinkedList {
   10. [Check if a linked list has a cycle](https://leetcode.com/problems/linked-list-cycle/)
 
 ### ArrayList in Collections
-  - When to use LinkedList or ArrayList?
+  - [Javadoc page](https://docs.oracle.com/javase/8/docs/api/java/util/ArrayList.html)
+  - [Examples from javatpoint](https://www.javatpoint.com/java-arraylist)
+  - [Examples from geeksforgeeks](https://www.geeksforgeeks.org/arraylist-in-java/)
+  - [Examples from callicoder](https://www.callicoder.com/java-arraylist/)
+
+### When to use LinkedList or ArrayList?
+  - When inserts/deletes are more, use LinkedList
+  - Otherwise ArrayList
 
 ---
 
