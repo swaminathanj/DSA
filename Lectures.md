@@ -429,9 +429,9 @@ class Node {
 class BST extend Binary Tree {  
   Node root;  
  
-  boolean search(int d) { root.search(); }  
-  boolean insert(int d) { root.insert(); }  
-  boolean delete(int d) { root.delete(); }  
+  boolean search(int d) { root.search(d); }  
+  boolean insert(int d) { root.insert(d); }  
+  boolean delete(int d) { root.delete(d); }  
   void preorder() { preorder(root); }  
   void inorder() { inorder(root); }  
   void postorder() { postorder(root); }  
@@ -507,9 +507,9 @@ class AVLTree extend BST {
   void rrRotate(Node n);
   void lrRotate(Node n);
   void rlRotate(Node n);
-  boolean search(int d) { root.search(); }  
-  boolean insert(int d) { root.insert(); }  
-  boolean delete(int d) { root.delete(); }  
+  boolean search(int d) { root.search(d); }  
+  boolean insert(int d) { root.insert(d); }  
+  boolean delete(int d) { root.delete(d); }  
   void preorder() { preorder(root); }  
   void inorder() { inorder(root); }  
   void postorder() { postorder(root); }  
