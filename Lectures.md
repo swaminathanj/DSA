@@ -221,6 +221,9 @@ class Queue {
 }
 ```
 
+#### For the implementation of queue in its different forms, please refer to [Queue implementation](Queue.md).
+
+
 ### ArrayDeque in Collections
   - Examples
 
