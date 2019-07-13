@@ -51,7 +51,10 @@ class LinkedList {
 #### For a step-by-step implementation of LinkedList, please refer to [Linked List implementation step-by-step](LinkedList.md).
 
 ### LinkedList in Collections
-  - Examples
+  - [Javadoc](https://docs.oracle.com/javase/7/docs/api/java/util/LinkedList.html)
+  - [Examples from javatpoint](https://www.javatpoint.com/java-linkedlist)
+  - [Examples from geeksfofgeeks](https://www.geeksforgeeks.org/linked-list-in-java/)
+  - [Examples from callicoder](https://www.callicoder.com/java-linkedlist/)
 
 ### Problems from Leetcode
   1. [In a single traversal find the middle element/position](https://leetcode.com/problems/middle-of-the-linked-list/)
