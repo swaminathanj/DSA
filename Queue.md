@@ -151,8 +151,8 @@ The **deleteRear** and **rear** methods do not check if the Deque is empty. Add 
 ## Implementing Array-based Circular Queue
 
 Array based implementation of circular queue is common for two reasons.
-  1. Array-based implementation is lot faster to access compared to LinkedList based implementation.
-  2. In the context of queue, in most practical scenarios, working with bounded sized buffer/queue are more common than the need for infinitely-sized queue.
+  1. Array-based implementation is lot faster than LinkedList based implementation.
+  2. In practical scenarios, working with bounded sized buffer/queue is more common than the need for infinitely-sized queue.
 
 ``` java
 // CircularQueue.java
