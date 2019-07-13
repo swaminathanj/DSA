@@ -171,7 +171,10 @@ class Stack {
 #### For the implementation of stack and its applications, please refer to [Stack and its applications](Stack.md).
 
 ### Stack in Collections
-  - Examples
+  - [Javadoc page](https://docs.oracle.com/javase/7/docs/api/java/util/Stack.html)
+  - [Examples from javatpoint](https://www.javatpoint.com/data-structure-stack)
+  - [Examples from geeksfofgeeks](https://www.geeksforgeeks.org/stack-class-in-java/)
+  - [Examples from callicoder](https://www.callicoder.com/java-stack/)
 
 ### Problems from Leetcode
   1. [Reverse](https://leetcode.com/problems/validate-stack-sequences/)
