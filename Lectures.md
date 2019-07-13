@@ -164,16 +164,16 @@ class Stack {
   - Examples
 
 ### Problems
-  1. Reverse
+  1. [Reverse](https://leetcode.com/problems/validate-stack-sequences/)
   2. Check palindrome
-  3. Balanced parantheses
-  4. Postfix evaluation
-  5. Infix to postfix
-  6. Min stack
-  7. Basic calculator*
-  8. Decode string
-  9. Backspace string compare
-  10. Score of parantheses
+  3. [Balanced parantheses](https://leetcode.com/problems/valid-parentheses/)
+  4. [Postfix evaluation](https://leetcode.com/problems/evaluate-reverse-polish-notation/)
+  5. [Basic calculator - Infix to postfix + postfix evaluation](https://leetcode.com/problems/basic-calculator/)
+  6. [Min stack](https://leetcode.com/problems/min-stack/)
+  7. [Remove k digits](https://leetcode.com/problems/validate-stack-sequences/)
+  8. [Decode string](https://leetcode.com/problems/decode-string/)
+  9. [Backspace string compare](https://leetcode.com/problems/backspace-string-compare/)
+  10. [Score of parantheses](https://leetcode.com/problems/score-of-parentheses/)
 
 ---
 
