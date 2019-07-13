@@ -69,10 +69,10 @@ public class QueueTest {
 Doubly-Ended-Queue is an enhanced implementation of the queue wherein insertion and deletion can be done at both ends. Thus, Deque supports superset of operations in comparison to Queue.
 
 Here, we will implement Deque by extending Queue. It supports insertFront, insertRear, deleteFront, deleteRear and rear methods. 
-  - The insertRear and deleteFront methods call enqueue and dequeue methods of Queue. 
-  - The insertFront method calls insertFirst of LinkedList.
-  - The deleteLast method needs to be implemented completely since no such method exists in LinkedList
-  - The rear method provides the element at the rear node.
+  - The **insertRear** and **deleteFront** methods call **enqueue** and **dequeue** methods of Queue respectively. 
+  - The **insertFront** method calls **insertFirst** of LinkedList.
+  - The **deleteLast** method needs to be implemented completely since no such method exists in LinkedList
+  - The **rear** method provides the element at the rear node.
   
   ``` java
   // Deque.java
@@ -126,6 +126,7 @@ public class Deque extends Queue {
   ```
 ``` java
 // DequeTest.java
+
 public class DequeTest {
     public static void main(String[] args) {
         Deque d = new Deque();
@@ -144,3 +145,5 @@ public class DequeTest {
     }
 }
 ```
+
+The **deleteRear** and **rear** methods do not check if the Deque is empty. Add this check and take appropriate action in the event that Deque is empty.
