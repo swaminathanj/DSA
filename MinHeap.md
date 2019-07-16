@@ -23,9 +23,9 @@ public class MinHeap {
 ```
 
 ``` java
-MinHeapTest.java
+MinHeapInitTest.java
 
-public class MinHeapTest {
+public class MinHeapInitTest {
 
     public static void main(String[] args) {
         int[] keys = {5, 3, 8, 6, 2, 1, 7, 9, 4, 0};
