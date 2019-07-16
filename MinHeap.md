@@ -34,3 +34,13 @@ public class MinHeapInitTest {
     }
 }
 ```
+
+## 2. Add methods to get parent, left child and right children
+
+## 3. Add method to swap elements at given indices
+
+## 4. Add method to check if swap is required
+
+## 5. Add method to fix heap underneath a node
+
+## 6. Add method to build heap
