@@ -1,8 +1,8 @@
 # MinHeap Implementation step-by-step
 
-## Define MinHeap, initialize and print
+## 1. Define MinHeap, initialize and print
 
-As a first step, we define an array based MinHeap, a constructor that takes an array to initialize the heap and a print method that outputs the contents of the heap.
+As a first step, we define an array based MinHeap, a constructor that takes an array passed as argument to initialize the heap and a print method that outputs the contents of the heap.
 
 ``` java
 // MinHeap.java
