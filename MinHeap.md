@@ -126,7 +126,7 @@ public class MinHeapTest {
 }
 ```
 
-## 3. Add methods to check heap property at a specific node and swap elements
+## 3. Add methods to check heap property of a node and swap elements
 
 ## 4. Add method to check if swap is required
 
