@@ -40,7 +40,7 @@ public class MinHeap {
 ```
 
 ``` java
-MinHeapInitTest.java
+// MinHeapInitTest.java
 
 public class MinHeapInitTest {
 
