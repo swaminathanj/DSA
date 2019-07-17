@@ -113,19 +113,15 @@ public class MinHeapTest {
         System.out.println( m.parent(8) );  // prints 3
         System.out.println( m.get(m.parent(5)) );  // prints 6
 
-        int l = m.left(3);
-        if (l != -1)  // print only if left child exists
-            System.out.println( m.get(l) );  // prints 9 
-        l = m.left(5);
-        if (l != -1)  // print only if left child exists
-            System.out.println( m.get(l) );  // unreachable 
+        if (m.left(3) != -1)  // print only if left child exists
+            System.out.println( m.get(m.left(3)) );  // prints 9 
+        if (m.left(5) != -1)  // print only if left child exists
+            System.out.println( m.get(m.left(5) );  // unreachable
 
-        int r = m.right(3);
-        if (r != -1)  // print only if right child exists
-            System.out.println( m.get(r) );  // prints 4 
-        r = m.left(5);
-        if (r != -1)  // print only if right child exists
-            System.out.println( m.get(4) );  // unreachable 
+        if (m.right(3) != -1)  // print only if right child exists
+            System.out.println( m.get(m.right(3)) );  // prints 4 
+        if (m.right(5) != -1)  // print only if right child exists
+            System.out.println( m.get(m.right(5)) );  // unreachable 
     }
 }
 ```
