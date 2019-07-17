@@ -49,6 +49,7 @@ public class MinHeapInitTest {
         MinHeap m = new MinHeap(keys);
         m.print();  // prints the above array
         System.out.println(m); // does same job as m.print();
+                               // automatically invokes toString of m
         System.out.println( m.get(3) );  // prints 6 - data at index 3
     }
 }
@@ -56,7 +57,80 @@ public class MinHeapInitTest {
 
 ## 2. Add methods to get parent, left child and right children
 
-## 3. Add method to swap elements at given indices
+Implement methods to compute the indices of parent, left child and right child, given an index i. Corner cases to be dealt appropriately.
+
+``` java
+// MinHeap.java
+
+public class MinHeap {
+    int[] arr;
+
+    public MinHeap(int[] keys) { ... }
+    public void print()  { ... }
+    public String toString() { ... }
+    public int get(int i) { ... }
+    
+    /** Given index i, retrieve the index of its parent */
+    public int parent(int i) {
+        // Two cases to handle - root and non-root cases
+        if (i == 0) // root node
+            return 0;
+        else 
+            return (i-1)/2;
+        /* Note: if i==0, (i-1)/2 = -1/2 = 0. 
+           So last statement alone is enough */
+    }
+
+    public int left(int i) {
+        // Two cases to handle - internal and leaf nodes
+        if ( 2*i+1 < arr.length ) // 1. internal node
+            return 2*i+1;
+        else                      // 2. leaf node
+            return -1;
+    }
+
+    public int right(int i) {
+        // Two cases to handle - internal and leaf nodes
+        if ( 2*i+2 < arr.length ) // 1. internal node
+            return 2*i+2;
+        else                      // 2. leaf node
+            return -1;
+    }
+}
+```
+
+``` java
+// MinHeapTest.java
+
+public class MinHeapTest {
+
+    public static void main(String[] args) {
+        int[] keys = {5, 3, 8, 6, 2, 1, 7, 9, 4, 0};
+        MinHeap m = new MinHeap(keys);
+        
+        System.out.println( m.parent(0) );  // prints 0
+        System.out.println( m.get(m.parent(0)) );  // prints 5
+        System.out.println( m.parent(8) );  // prints 3
+        System.out.println( m.get(m.parent(5)) );  // prints 6
+
+        int l = m.left(3);
+        if (l != -1)  // print only if left child exists
+            System.out.println( m.get(l) );  // prints 9 
+        l = m.left(5);
+        if (l != -1)  // print only if left child exists
+            System.out.println( m.get(l) );  // unreachable 
+
+        int r = m.right(3);
+        if (r != -1)  // print only if right child exists
+            System.out.println( m.get(r) );  // prints 4 
+        r = m.left(5);
+        if (r != -1)  // print only if right child exists
+            System.out.println( m.get(4) );  // unreachable 
+    }
+}
+```
+
+## 3. Add methods to check heap property at a specific node and swap elements
 
 ## 4. Add method to check if swap is required
 
