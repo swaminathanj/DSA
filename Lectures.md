@@ -375,6 +375,8 @@ class MinHeap {
 }
 ```
 
+#### For a step-by-step implementation of MinHeap (a.k.a PriorityQueue), please refer to [Min Heap implementation step-by-step](MinHeap.md).
+
 ### Applications
   - Heap sort
   - Implement priority queue
