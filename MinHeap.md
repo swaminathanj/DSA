@@ -1,6 +1,6 @@
 # MinHeap Implementation step-by-step
 
-## 1. Define MinHeap, initialize, getter, printer and toString methods
+## 1. Define MinHeap, add initialize, getter, printer and toString methods
 
 As a first step, we define an array based MinHeap, a constructor that takes an array passed as argument to initialize the heap and a print method that outputs the contents of the heap. We override toString to stringify the object and a getter method to get the value at a specific index.
 
