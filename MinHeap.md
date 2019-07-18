@@ -384,6 +384,7 @@ public class MinHeap {
             return -1;
     }
 
+    /** check indices i, left(i) & right(i) and return the index with smallest element */
     public int checkProperty(int i) {
         if (left(i) == -1 && right(i) == -1)
             return i;
@@ -405,12 +406,14 @@ public class MinHeap {
             return right(i);
     }
 
+    /** Swap the elements at indices i and j */
     void exchange(int i, int j) {
         int temp = arr[i];
         arr[i] = arr[j];
         arr[j] = temp;
     }
 
+    /** Ensures the entire subtree under index i is fixed */
     void fixHeap(int i) {
         int j = checkProperty(i);
         if (i == j)
@@ -421,12 +424,14 @@ public class MinHeap {
         }
     }
 
-    void buildHeap() {
+   /** Start fixing from last parent till root */
+   void buildHeap() {
         for (int i=(size-2)/2; i>=0; i--) {
             fixHeap(i);
 		}
     }
 
+    /** Retrieve the minimum element - that is at root (index 0) */
     int extractMin() {
         int val = arr[0]; // First copy the value at root
         arr[0] = arr[size-1]; // Bring last element to root
