@@ -273,7 +273,6 @@ The minimum element is sitting at the root. i.e. index 0. Once the element at in
 
 public class MinHeap {
     int[] arr;
-    int size; // Tracks the current size of the heap
 
     public MinHeap(int[] keys) { ... }
     public void print()  { ... }
@@ -314,5 +313,147 @@ public class MinHeapTest {
     }
 }
 ```
-**Note**: The extractMin causes the heap size to reduce by one. This implies, the last element of the arr is invalid. The print method, in its current implementation, will print it. Since there is no way to shrink arr, a way to handle this scenario is to define an attribute size to track the current heap size. As extractMin is called each time, the size is decremented. The print function can be modified to print elements upto size and not till arr.length. In fact, all methods that use arr.length must be modified to use **size** instead of arr.length. i.e. **print, toString, left, right, buildHeap and extractMin**.
+**Note**: The extractMin causes the heap size to reduce by one. This implies, the last element of the arr is invalid. The print method, in its current implementation, will print it. Since there is no way to shrink arr, a way to handle this scenario is to define an attribute **size** to track the current heap size. As extractMin is called each time, the size is decremented. The print function can be modified to print elements upto size and not till arr.length. In fact, all methods that use arr.length must be modified to use **size** instead of arr.length. i.e. **print, toString, left, right, buildHeap and extractMin**. The size can be initialized to arr.length in the constructor.
 
+## 6. Replace arr.length references to size
+
+The complete program with references to arr.length replaced by size is given below.
+
+``` java
+// MinHeap.java
+
+public class MinHeap {
+    int[] arr;
+    int size; // Tracks the size of the heap
+
+    /** Initializes the array object */
+    public MinHeap(int[] keys) {
+        arr = keys;  // Make arr point to keys array
+		size = arr.length; // initialize size to arr.length
+    }
+
+    /** An utility method to print contents of MinHeap object */
+    public void print()  {
+        System.out.print(arr[0]);
+        for (int i=1; i<size; i++)
+            System.out.print(" " + arr[i]);
+        System.out.println();
+    }
+
+    /** This function is used to stringfy the object */
+    public String toString() {
+        StringBuffer sb = new StringBuffer();
+        sb.append(arr[0]);
+        for (int i=1; i< size; i++)
+            sb.append(" " + arr[i]);
+        //sb.append("\n");
+        return sb.toString();
+    }
+
+    /** Retrieve the value at index i */
+    public int get(int i) {
+        return arr[i];
+    }
+
+    /** Given index i, retrieve the index of its parent */
+    public int parent(int i) {
+        // Two cases to handle - root and non-root cases
+        if (i == 0) // root node
+            return 0;
+        else 
+            return (i-1)/2;
+        /* Note: if i==0, (i-1)/2 = -1/2 = 0. 
+           So last statement alone is enough */
+    }
+
+    /** Given index i, retrieve the index of its left child */
+    public int left(int i) {
+        // Two cases to handle - internal and leaf nodes
+        if ( 2*i+1 < size ) // 1. internal node
+            return 2*i+1;
+        else                // 2. leaf node
+            return -1;
+    }
+
+    /** Given index i, retrieve the index of its right child */
+    public int right(int i) {
+        // Two cases to handle - internal and leaf nodes
+        if ( 2*i+2 < size ) // 1. internal node
+            return 2*i+2;
+        else                // 2. leaf node
+            return -1;
+    }
+
+    public int checkProperty(int i) {
+        if (left(i) == -1 && right(i) == -1)
+            return i;
+        else if (right(i) == -1) {
+            if (arr[i] < arr[left(i)])
+                return i;
+            else
+                return left(i);
+        }
+        else if (arr[i] < arr[left(i)] && arr[i] < arr[right(i)])
+            return i;
+        else if (arr[i] > arr[left(i)] && arr[i] < arr[right(i)])
+            return left(i);
+        else if (arr[i] < arr[left(i)] && arr[i] > arr[right(i)])
+            return right(i);
+        else if (arr[left(i)] < arr[right(i)])
+            return left(i);
+        else
+            return right(i);
+    }
+
+    void exchange(int i, int j) {
+        int temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
+    }
+
+    void fixHeap(int i) {
+        int j = checkProperty(i);
+        if (i == j)
+            return;
+        else {
+            exchange(i,j);
+            fixHeap(j);
+        }
+    }
+
+    void buildHeap() {
+        for (int i=(size-2)/2; i>=0; i--) {
+            fixHeap(i);
+		}
+    }
+
+    int extractMin() {
+        int val = arr[0]; // First copy the value at root
+        arr[0] = arr[size-1]; // Bring last element to root
+		fixHeap(0); // Fix the heap from the root
+		size--;
+
+        return val;
+    }
+}
+```
+
+``` java
+// MinHeapTest.java
+
+public class MinHeapTest {
+
+    public static void main(String[] args) {
+        int[] keys = {5, 3, 8, 6, 2, 1, 7, 9, 4, 0};
+        MinHeap m = new MinHeap(keys);
+        m.print();  // prints the above array
+
+        m.buildHeap();
+        m.print();
+
+        System.out.println( m.extractMin() ); // prints 0
+        m.print(); // prints 1 2 5 4 3 8 7 9 6
+                   // only 9 elements are printed
+    }
+}
+```
