@@ -2,7 +2,7 @@
 
 ## 1. Define MinHeap, add initialize, getter, printer and toString methods
 
-As a first step, we define an array based MinHeap, a constructor that takes an array passed as argument to initialize the heap and a print method that outputs the contents of the heap. We override toString to stringify the object and a getter method to get the value at a specific index.
+As a first step, we define an array based MinHeap, a **constructor** that takes an array passed as argument to initialize the heap and a **print** method that outputs the contents of the heap. We override **toString** to stringify the object and a **getter** method to get the value at a specific index.
 
 ``` java
 // MinHeap.java
@@ -55,7 +55,7 @@ public class MinHeapInitTest {
 }
 ```
 
-## 2. Add methods to get parent, left child and right children
+## 2. Add methods to get parent, left child and right child
 
 Implement methods to compute the indices of parent, left child and right child, given an index i. With 0-based indexing,
   - parent of node at index i is located at index (i-1)/2.
