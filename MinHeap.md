@@ -264,7 +264,7 @@ public class MinHeapTest {
 }
 ```
 
-## 5. Add method extractMin to retrieve the (minimum) element
+## 5. Add method extractMin to retrieve the minimum element
 
 The minimum element is sitting at the root. i.e. index 0. Once the element at index 0 (root) is removed, the last element of the heap is put in the root's position. Since, this will cause the heap property to be lost at the root level, fixHeap(0) can be called to ensure the tree is turned into a heap once again. In other words, fixHeap(0) triggers some exchanges leading to the next minimum element reaching the root and the heap property satisfied by all nodes. 
 
@@ -289,7 +289,7 @@ public class MinHeap {
     int extractMin() {
         int val = arr[0];  // First copy the value at root
         arr[0] = arr[arr.length-1];  // Bring last element to root
-		fixHeap(0);  // Fix the heap from the root
+	fixHeap(0);  // Fix the heap from the root
 
         return val;
     }    
@@ -329,7 +329,7 @@ public class MinHeap {
     /** Initializes the array object */
     public MinHeap(int[] keys) {
         arr = keys;  // Make arr point to keys array
-		size = arr.length; // initialize size to arr.length
+	size = arr.length; // initialize size to arr.length
     }
 
     /** An utility method to print contents of MinHeap object */
@@ -426,17 +426,17 @@ public class MinHeap {
 
    /** Start fixing from last parent till root */
    void buildHeap() {
-        for (int i=(size-2)/2; i>=0; i--) {
+        for (int i=(size-2)/2; i>=0; i--) 
             fixHeap(i);
-		}
     }
 
     /** Retrieve the minimum element - that is at root (index 0) */
     int extractMin() {
         int val = arr[0]; // First copy the value at root
+	
         arr[0] = arr[size-1]; // Bring last element to root
-		fixHeap(0); // Fix the heap from the root
-		size--;
+	fixHeap(0); // Fix the heap from the root
+	size--;  // Decrement the size
 
         return val;
     }
