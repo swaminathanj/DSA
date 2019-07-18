@@ -144,6 +144,70 @@ Two methods checkHeap(i) and exchange(i,j) are added. **checkHeap(i)** checks if
     
 **exchange(i,j)** swaps the elements at indices i and j if check(i) returned j such that j != i.
 
+``` java
+// MinHeap.java
+
+public class MinHeap {
+    int[] arr;
+
+    public MinHeap(int[] keys) { ... }
+    public void print()  { ... }
+    public String toString() { ... }
+    public int get(int i) { ... }
+    public int parent(int i) { ... }
+    public int left(int i) { ... }
+    public int right(int i) { ... }
+
+    /** check indices i, left(i) & right(i) and return the index with smallest element */
+    public int checkProperty(int i) {
+        if (left(i) == -1 && right(i) == -1)
+            return i;
+        else if (right(i) == -1) {
+            if (arr[i] < arr[left(i)])
+                return i;
+            else
+                return left(i);
+        }
+        else if (arr[i] < arr[left(i)] && arr[i] < arr[right(i)])
+            return i;
+        else if (arr[i] > arr[left(i)] && arr[i] < arr[right(i)])
+            return left(i);
+        else if (arr[i] < arr[left(i)] && arr[i] > arr[right(i)])
+            return right(i);
+        else if (arr[left(i)] < arr[right(i)])
+            return left(i);
+        else
+            return right(i);
+    }
+
+    /** Swap the elements at indices i and j */
+    void exchange(int i, int j) {
+        int temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
+    }
+}
+```
+
+``` java
+// MinHeapTest.java
+
+public class MinHeapTest {
+    public static void main(String[] args) {
+        int[] keys = {5, 3, 8, 6, 2, 1, 7, 9, 4, 0};
+        MinHeap m = new MinHeap(keys);
+        m.print();  // 5 3 8 6 2 1 7 9 4 0
+
+        int j = m.checkProperty(0);
+        if (j != 0)
+            m.exchange(0,j);
+            
+        m.print(); // prints 3 5 8 6 2 1 7 9 4 0
+        System.out.println( m.checkProperty(2) );  // prints 5   
+    }
+}
+```
+
 ## 4. Add method to fix heap underneath a given node
 
 ## 5. Add method to build heap
