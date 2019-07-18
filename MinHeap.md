@@ -136,7 +136,7 @@ public class MinHeapTest {
 ```
 
 ## 3. Add methods to check heap property of a node and exchange elements
-Two methods checkHeap(i) and exchanged(i,j) are added.
+Two methods checkHeap(i) and exchange(i,j) are added.
 
   1. **checkHeap(i)** checks if the element at indices i, left(i) and right(i) to determine which the index of the the smallest element.
   
