@@ -57,7 +57,15 @@ public class MinHeapInitTest {
 
 ## 2. Add methods to get parent, left child and right children
 
-Implement methods to compute the indices of parent, left child and right child, given an index i. Corner cases to be dealt appropriately.
+Implement methods to compute the indices of parent, left child and right child, given an index i. With 0-based indexing,
+  - parent of node at index i is located at index (i-1)/2.
+  - left child of node at index i is located at index (2i+1).
+  - right child of node at index i is located at index (2i+2).
+
+Corner cases:
+  - **root** (located at index 0) does not have parent
+  - **leaf** (located at indices greater (n-1)/2 where n is the number of nodes) does not have both left and right children
+  - The internal node at index (n-1)/2 may have left child only if n is even.
 
 ``` java
 // MinHeap.java
