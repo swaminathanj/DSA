@@ -208,6 +208,63 @@ public class MinHeapTest {
 }
 ```
 
-## 4. Add method to fix heap underneath a given node
+## 4. Add a method to build heap
 
-## 5. Add method to build heap
+Now only thing left to build heap is to start fixing the nodes which do not adhere to heap property. Two points to remember at this stage.
+
+  1. Leaf nodes need no fixing since they don't have children. Given that there are n nodes, only nodes the 0 to (n-2)/2 needs to be fixed. Rest will be leaf nodes. The last node is at index n-1. This implies its parent can be found at index (n-1-1)/2 = (n-2)/2.
+  2. Any exchange at higher level nodes can cause the subtree under them to become lose the heap property, one exchange is not sufficient. To this end, we define a **fixHeap** method to ensure the entire subtree under a node is fixed recursively.
+
+``` java
+// MinHeap.java
+
+public class MinHeap {
+    int[] arr;
+
+    public MinHeap(int[] keys) { ... }
+    public void print()  { ... }
+    public String toString() { ... }
+    public int get(int i) { ... }
+    public int parent(int i) { ... }
+    public int left(int i) { ... }
+    public int right(int i) { ... }
+    public int checkProperty(int i) { ... }
+    void exchange(int i, int j) { ... }
+    
+    /** Ensures the entire subtree under index i is fixed */
+    void fixHeap(int i) {
+        int j = checkProperty(i);
+        if (i == j)  // arr[i] < arr[left(i)], arr[right(i)]
+            return;  // Nothing to do. Subtree under i is heap.
+        else {
+            exchange(i,j);  // can make subtree under j unstable
+            fixHeap(j);  // fix the underneath node j recursively
+        }
+    }
+
+    /** Start fixing from last parent till root */
+    void buildHeap() {
+        for (int i=(arr.length-2)/2; i>=0; i--)
+            fixHeap(i);
+    }
+```
+
+``` java
+// MinHeapTest.java
+
+public class MinHeapTest {
+    public static void main(String[] args) {
+        int[] keys = {5, 3, 8, 6, 2, 1, 7, 9, 4, 0};
+        MinHeap m = new MinHeap(keys);
+        m.print();  // prints 5 3 8 6 2 1 7 9 4 0
+
+        m.buildHeap(); // build the heap and print it
+        m.print();  // prints 0 2 1 4 3 8 7 9 6 5
+    }
+}
+```
+
+
+## 5. Add method extractMin to retrieve the (minimum) element
+
+The minimum element is sitting at the root. Once it is removed, 
