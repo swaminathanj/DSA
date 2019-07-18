@@ -453,12 +453,12 @@ public class MinHeapTest {
         MinHeap m = new MinHeap(keys);
         m.print();  // prints the above array
 
-        m.buildHeap();
+        m.buildHeap();  // prints 0 2 1 4 3 8 7 9 6 5
         m.print();
 
         System.out.println( m.extractMin() ); // prints 0
         m.print(); // prints 1 2 5 4 3 8 7 9 6
-                   // only 9 elements are printed
+                   // only 9 elements are printed now
     }
 }
 ```
