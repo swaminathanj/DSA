@@ -23,7 +23,7 @@ public class MinHeap {
         System.out.println();
     }
 
-    /** This overriden function is used to stringfy the object */
+    /** This overriden function is used to stringfy the contents of the object */
     @override
     public String toString() {
         StringBuffer sb = new StringBuffer();
