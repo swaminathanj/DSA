@@ -267,4 +267,4 @@ public class MinHeapTest {
 
 ## 5. Add method extractMin to retrieve the (minimum) element
 
-The minimum element is sitting at the root. Once it is removed, 
+The minimum element is sitting at the root. And the root is at index 0. Once the element at index 0 (root) is removed, the last element of the heap is put in the root's position. Since, this will cause the heap property to be lost at the root level, fixHeap(0) can be called to ensure the tree is turned into a heap. In other words, fixHeap(0) triggers some exchanges leading to the next minimum element reaching the root. 
