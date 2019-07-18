@@ -264,7 +264,55 @@ public class MinHeapTest {
 }
 ```
 
-
 ## 5. Add method extractMin to retrieve the (minimum) element
 
-The minimum element is sitting at the root. And the root is at index 0. Once the element at index 0 (root) is removed, the last element of the heap is put in the root's position. Since, this will cause the heap property to be lost at the root level, fixHeap(0) can be called to ensure the tree is turned into a heap. In other words, fixHeap(0) triggers some exchanges leading to the next minimum element reaching the root. 
+The minimum element is sitting at the root. i.e. index 0. Once the element at index 0 (root) is removed, the last element of the heap is put in the root's position. Since, this will cause the heap property to be lost at the root level, fixHeap(0) can be called to ensure the tree is turned into a heap once again. In other words, fixHeap(0) triggers some exchanges leading to the next minimum element reaching the root and the heap property satisfied by all nodes. 
+
+``` java
+// MinHeap.java
+
+public class MinHeap {
+    int[] arr;
+    int size; // Tracks the current size of the heap
+
+    public MinHeap(int[] keys) { ... }
+    public void print()  { ... }
+    public String toString() { ... }
+    public int get(int i) { ... }
+    public int parent(int i) { ... }
+    public int left(int i) { ... }
+    public int right(int i) { ... }
+    public int checkProperty(int i) { ... }
+    void exchange(int i, int j) { ... }
+    void fixHeap(int i) { ... }
+    void buildHeap() { ... }
+    
+    int extractMin() {
+        int val = arr[0];  // First copy the value at root
+        arr[0] = arr[arr.length-1];  // Bring last element to root
+		fixHeap(0);  // Fix the heap from the root
+
+        return val;
+    }    
+```
+
+``` java
+// MinHeapTest.java
+
+public class MinHeapTest {
+    public static void main(String[] args) {
+        int[] keys = {5, 3, 8, 6, 2, 1, 7, 9, 4, 0};
+        MinHeap m = new MinHeap(keys);
+        m.print();  // prints 5 3 8 6 2 1 7 9 4 0
+
+        m.buildHeap(); // build the heap and print it
+        m.print();  // prints 0 2 1 4 3 8 7 9 6 5
+        
+        System.out.println( m.extractMin() );
+        m.print();  // prints 1 2 5 4 3 8 7 9 6 5
+                    // The 5 at the end is duplicate and invalid
+    }
+}
+```
+**Note**: The extractMin causes the heap size to reduce by one. This implies, the last element of the arr is invalid. The print method, in its current implementation, will print it. Since there is no way to shrink arr, a way to handle this scenario is to define an attribute size to track the current heap size. As extractMin is called each time, the size is decremented. The print function can be modified to print elements upto size and not till arr.length. In fact, all methods that use arr.length must be modified to use **size** instead of arr.length. i.e. **print, toString, left, right, buildHeap and extractMin**.
+
