@@ -515,33 +515,51 @@ public class MinHeapRandomTest {
 ### Sample runs of the program
 
 C:\Users\swaminathanj\dsa\code>java MinHeapRandomTest
+
 66 8 71 36 67 81 3 4 39 50 45 85 76 39 67 38 15 59 94 89 93 31 51 38 62 89 2 56 16 20 81 4 54 10 90 18 50 98 30 71 49
+
 2 4 3 4 31 38 16 8 18 49 45 62 76 39 20 36 10 39 30 50 93 67 51 85 71 89 81 56 66 67 81 38 54 15 90 59 50 98 94 71 89
+
 Test passed
 
 C:\Users\swaminathanj\dsa\code>java MinHeapRandomTest
+
 26 12 94 43 95 81 79 94 8 53 8 7 36 80 7 39 12 92 76 46 29 92 2 61 86 6 70 90
+
 2 8 6 8 12 7 7 12 43 29 26 61 36 80 79 39 94 92 76 46 53 92 95 94 86 81 70 90
+
 Test passed
 
 C:\Users\swaminathanj\dsa\code>java MinHeapRandomTest
+
 26 63 31 65 37 29 51 85 20 60 36 18 49 34 14 15 53 3 53 55 47 13 66 20 8 30 45 50 80 20 60 42 75 56 95 47 91 51 18 6 62 33 50 62 3 0 95 34 96 29 96 0 11 95 92 28 16 5
+
 0 0 5 3 3 8 14 15 18 6 13 18 11 16 20 42 53 20 51 55 33 37 36 20 29 29 45 28 34 26 60 85 75 56 95 47 91 65 53 60 62 47 50 62 63 66 95 34 96 31 96 30 49 95 92 51 50 80
+
 Test passed
 
 C:\Users\swaminathanj\dsa\code>java MinHeapRandomTest
+
 8 58 52 25 55 83 73 16 58 6 91 79 37 63 95 31 68 65 50 98 92 21 4 40 56 39
+
 4 6 37 16 8 39 63 25 50 58 21 40 52 73 95 31 68 65 58 98 92 55 91 79 56 83
+
 Test passed
 
 C:\Users\swaminathanj\dsa\code>java MinHeapRandomTest
+
 42 92 9 57 53 67 49 35 56 49 85 81
+
 9 35 42 56 49 67 49 57 92 53 85 81
+
 Test passed
 
 C:\Users\swaminathanj\dsa\code>java MinHeapRandomTest
+
 0 67 3 37 92 35 10 50 75 79 38 12 16 17 46 15 19 88 19 80 29 7 64 42 99 61 86 71 64 52 56 53 79 66 62 87 30 46 2 94 26 56 8 33 91 52 61 8 6 8 83 2 46 49 4 54 61 87 72 28 9 15 52 2 8 66 89 57
+
 0 2 2 2 7 3 9 8 19 8 33 6 4 17 10 15 19 30 37 26 29 38 52 8 8 16 35 54 64 28 15 50 66 57 62 87 88 46 75 94 80 56 79 92 91 64 61 12 42 99 83 61 46 49 86 71 61 87 72 46 52 56 52 53 67 79 89 66
+
 Test passed
 
 C:\Users\swaminathanj\dsa\code>java MinHeapRandomTest
