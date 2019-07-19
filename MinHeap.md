@@ -453,12 +453,53 @@ public class MinHeapTest {
         MinHeap m = new MinHeap(keys);
         m.print();  // prints the above array
 
-        m.buildHeap();  // prints 0 2 1 4 3 8 7 9 6 5
-        m.print();
+        m.buildHeap();
+        m.print();  // prints 0 2 1 4 3 8 7 9 6 5
 
         System.out.println( m.extractMin() ); // prints 0
         m.print(); // prints 1 2 5 4 3 8 7 9 6
                    // only 9 elements are printed now
+    }
+}
+```
+
+## 7. Randomizing input array
+
+A way to test the program with different inputs is to use Random class to decide both the size and contents of the array. The test driver can be modified to this effect, so that every run of the program will greate a different series. Also, in order to check if the **buildHeap** really did construct the heap right, we can use the **checkProperty** on every internal node which should return the same index that it took as a parameter confirming parent < left, right always.
+
+``` java
+// MinHeapRandomTest.java
+
+import java.util.Random;
+
+public class MinHeapRandomTest {
+
+    public static void main(String[] args) {
+        //int[] keys = {5, 3, 8, 6, 2, 1, 7, 9, 4, 0};
+	
+	// Decide the size randomly
+	Random r = new Random();
+	int size = r.nextInt(100); // Any number less than 100
+	int[] keys = new int[size]; // creat an array of such size
+	
+	// Decide the element randomly
+	for (int i=0; i<size; i++)
+	    keys[i] = r.nextInt(100); // Any number less than 100
+	    
+        MinHeap m = new MinHeap(keys);
+        m.print();  // prints the above array
+
+        m.buildHeap();
+        m.print();  // prints 0 2 1 4 3 8 7 9 6 5
+	
+	// Check if every internal node holds heap property
+	for (int i=0; i<=(n-2)/2; i++) {
+	    if ( m.get(i) > m.get(m.left(i)) || m.get(i) > m.get(m.right(i)) ) {
+	        System.out.println("Test failed");
+		return;
+	    }
+	}
+	System.out.println("Test passed");
     }
 }
 ```
