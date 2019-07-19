@@ -477,29 +477,81 @@ public class MinHeapRandomTest {
     public static void main(String[] args) {
         //int[] keys = {5, 3, 8, 6, 2, 1, 7, 9, 4, 0};
 	
-	// Decide the size randomly
+	// 1. Decide the size randomly
 	Random r = new Random();
-	int size = r.nextInt(100); // Any number less than 100
+	int size = r.nextInt(100)+1; // Any number between 1-100
 	int[] keys = new int[size]; // creat an array of such size
 	
-	// Decide the element randomly
+	// 2. Populate the array by with random elements
 	for (int i=0; i<size; i++)
-	    keys[i] = r.nextInt(100); // Any number less than 100
-	    
-        MinHeap m = new MinHeap(keys);
+	    keys[i] = r.nextInt(100); // Any number between 0-99
+	MinHeap m = new MinHeap(keys);
         m.print();  // prints the above array
 
-        m.buildHeap();
+      	// 3. Build the heap
+	m.buildHeap();
         m.print();  // prints 0 2 1 4 3 8 7 9 6 5
 	
-	// Check if every internal node holds heap property
-	for (int i=0; i<=(n-2)/2; i++) {
-	    if ( m.get(i) > m.get(m.left(i)) || m.get(i) > m.get(m.right(i)) ) {
-	        System.out.println("Test failed");
-		return;
-	    }
+	// 4. Check if every internal node holds heap property
+	for (int i=0; i<=(size-2)/2; i++) {
+            if ( m.right(i) != -1 ) { // if both left and right child exists
+	        if ( m.get(i) > m.get(m.left(i)) || m.get(i) > m.get(m.right(i)) ) {
+	            System.out.println("Test failed");
+                    return;
+                }      
+            }
+            else { // if left child alone exists
+                if ( m.get(i) > m.get(m.left(i)) ) {
+	            System.out.println("Test failed");
+                    return;
+                }  
+            }
 	}
 	System.out.println("Test passed");
     }
 }
 ```
+
+### Sample runs of the program
+
+C:\Users\swaminathanj\dsa\code>java MinHeapRandomTest
+66 8 71 36 67 81 3 4 39 50 45 85 76 39 67 38 15 59 94 89 93 31 51 38 62 89 2 56 16 20 81 4 54 10 90 18 50 98 30 71 49
+2 4 3 4 31 38 16 8 18 49 45 62 76 39 20 36 10 39 30 50 93 67 51 85 71 89 81 56 66 67 81 38 54 15 90 59 50 98 94 71 89
+Test passed
+
+C:\Users\swaminathanj\dsa\code>java MinHeapRandomTest
+26 12 94 43 95 81 79 94 8 53 8 7 36 80 7 39 12 92 76 46 29 92 2 61 86 6 70 90
+2 8 6 8 12 7 7 12 43 29 26 61 36 80 79 39 94 92 76 46 53 92 95 94 86 81 70 90
+Test passed
+
+C:\Users\swaminathanj\dsa\code>java MinHeapRandomTest
+26 63 31 65 37 29 51 85 20 60 36 18 49 34 14 15 53 3 53 55 47 13 66 20 8 30 45 50 80 20 60 42 75 56 95 47 91 51 18 6 62 33 50 62 3 0 95 34 96 29 96 0 11 95 92 28 16 5
+0 0 5 3 3 8 14 15 18 6 13 18 11 16 20 42 53 20 51 55 33 37 36 20 29 29 45 28 34 26 60 85 75 56 95 47 91 65 53 60 62 47 50 62 63 66 95 34 96 31 96 30 49 95 92 51 50 80
+Test passed
+
+C:\Users\swaminathanj\dsa\code>java MinHeapRandomTest
+8 58 52 25 55 83 73 16 58 6 91 79 37 63 95 31 68 65 50 98 92 21 4 40 56 39
+4 6 37 16 8 39 63 25 50 58 21 40 52 73 95 31 68 65 58 98 92 55 91 79 56 83
+Test passed
+
+C:\Users\swaminathanj\dsa\code>java MinHeapRandomTest
+42 92 9 57 53 67 49 35 56 49 85 81
+9 35 42 56 49 67 49 57 92 53 85 81
+Test passed
+
+C:\Users\swaminathanj\dsa\code>java MinHeapRandomTest
+0 67 3 37 92 35 10 50 75 79 38 12 16 17 46 15 19 88 19 80 29 7 64 42 99 61 86 71 64 52 56 53 79 66 62 87 30 46 2 94 26 56 8 33 91 52 61 8 6 8 83 2 46 49 4 54 61 87 72 28 9 15 52 2 8 66 89 57
+0 2 2 2 7 3 9 8 19 8 33 6 4 17 10 15 19 30 37 26 29 38 52 8 8 16 35 54 64 28 15 50 66 57 62 87 88 46 75 94 80 56 79 92 91 64 61 12 42 99 83 61 46 49 86 71 61 87 72 46 52 56 52 53 67 79 89 66
+Test passed
+
+C:\Users\swaminathanj\dsa\code>java MinHeapRandomTest
+55 3 94 66 79 59 28 15 9 69 18 62 63 4 58 74 56 84 81 26 19 43 89 3 18 51 77 94 37 90 38 58 45 96 25 51 50 54 60 14 97 84 30 85 15 72 91 19 51 19 99 25 89 1 18 44 9 53 6 67 79 27 70 14 74 17 53 77
+1 3 3 9 14 18 4 14 50 19 15 18 25 6 27 15 25 51 54 26 30 18 72 19 19 51 59 9 28 67 38 58 17 77 56 66 84 81 60 69 97 84 79 85 43 89 91 62 51 94 99 55 89 77 63 44 94 53 37 90 79 58 70 74 74 45 53 96
+Test passed
+
+C:\Users\swaminathanj\dsa\code>java MinHeapRandomTest
+73 28 48 8 81 29 15 21 1 84 79 26 59 76 68 0 63 4 73 7 30 76 61 20 7 49 85 7 78 31 39 43 76 55 82 36 32 58 98 23 9 81 58 76 72 17 79 66 90 74 63 53 51 12 46 41 98 86 98 80 53 26 50
+0 1 7 4 7 7 15 8 28 9 17 20 12 41 26 21 55 32 58 23 30 72 61 29 26 49 46 48 78 31 39 43 76 63 82 36 73 73 98 81 84 81 58 76 76 79 79 66 90 74 63 53 51 85 59 76 98 86 98 80 53 68 50
+Test passed
+
+
