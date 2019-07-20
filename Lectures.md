@@ -126,6 +126,8 @@ class LinkedList {
 
 ### Implementation changes needed
   - insert and delete needs modification to set both **prev** and **next**
+  
+#### For the implementation of doubly linked list, visit [Doubly Linked List](DoublyLinkedList.md).
  
 ---
 
