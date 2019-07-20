@@ -54,7 +54,6 @@ public class DoublyLinkedList {
             curr = curr.next;
         }
         return s;
-
     }
 
     /** Insert at a given position */
