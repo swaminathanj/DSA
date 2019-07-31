@@ -526,8 +526,8 @@ class Node {
 class AVLTree extend BST {  
   Node root;  
 
-  void llRotate(Node n);
-  void rrRotate(Node n);
+  void lRotate(Node n);
+  void rRotate(Node n);
   void lrRotate(Node n);
   void rlRotate(Node n);
   boolean search(int d) { root.search(d); }  
@@ -542,3 +542,13 @@ class AVLTree extend BST {
 
 ### Problems
   1. Median of two sorted arrays
+
+## Disjoint-Set
+
+### What is it?
+
+A disjoint set is a collection items.
+
+### Properties
+ - Items are unordered
+ - No duplicates
