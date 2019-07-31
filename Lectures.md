@@ -549,6 +549,31 @@ class AVLTree extend BST {
 
 A disjoint set is a collection items.
 
-### Properties
+### Visualizing Disjoint-Set
+
+### Properties of Disjoint-Set
  - Items are unordered
  - No duplicates
+
+### Operations
+ - Union
+ - Find
+
+### Implementation
+
+```
+class Node {
+    int data;
+    Node parent;
+}
+```
+
+```
+class Set {
+    Node[] arr;
+
+    void makeSet();
+    int find(int key);
+    void union(int key1, int key2);
+}
+```
