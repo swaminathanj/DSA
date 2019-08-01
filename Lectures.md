@@ -500,10 +500,10 @@ class BST extend Binary Tree {
 ### Operations
   - insert, delete, search
   - preorder, inorder, postorder
-  - llrotate
+  - lrotate
   - lrrotate
   - lrrotate
-  - rrrotate
+  - rrotate
 
 ### Implementation
 ```
