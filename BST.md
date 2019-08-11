@@ -27,6 +27,7 @@ public class BSTNode {
 public class BST {
     protected BSTNode root;
 }
+```
 
 ``` java
 // BSTDriver.java
