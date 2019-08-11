@@ -360,6 +360,10 @@ public class BSTDriver {
 
 ## 6. Deleting Leaf Node
 
+**High level deletion strategy**: In order to delete a node, the parent of the to-be-deleted node must reassign the links. Therefore, for the parent to be in control, searching if data matches key is performed on left and right from the parent. If there is match, then links can be reassigned.
+
+If the to-be-deleted node is a leaf, the parent of the to-be-deleted node reassigns its link - left or right as the case may be - to null. In order to navigate to the to-be-deleted leaf node, recursion is used.
+
 ``` java
 // BSTNode.java
 
