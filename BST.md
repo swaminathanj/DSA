@@ -196,10 +196,11 @@ public class BST {
 public class BSTDriver {
     public static void main(String[] args) {
         BST b = new BST();
-        b.insert(50);
-        :
-	:
-        b.insert(95);
+	
+	int[] arr = {50, 20, 80, 10, 30, 5, 15, 25, 35, 70, 90, 65,75, 85, 95};
+	for (int i=0; i< arr.length; i++)
+	    b.insert(arr[i]);
+	    
 	System.out.println( b.search(43) );  // prints false
         System.out.println( b.search(70) );  // prints true
     }
@@ -290,10 +291,11 @@ public class BST {
 public class BSTDriver {
     public static void main(String[] args) {
         BST b = new BST();
-        b.insert(50);
-        :
-	:
-        b.insert(95);
+	
+	int[] arr = {50, 20, 80, 10, 30, 5, 15, 25, 35, 70, 90, 65,75, 85, 95};
+	for (int i=0; i< arr.length; i++)
+	    b.insert(arr[i]);
+	    
 	System.out.println( b.search(43) );  // prints false
         System.out.println( b.search(70) );  // prints true
 	b.inorder();  // prints 5 10 15 20 25 30 35 50 65 70 75 80 85 90 95
@@ -349,10 +351,11 @@ public class BST {
 public class BSTDriver {
     public static void main(String[] args) {
         BST b = new BST();
-        b.insert(50);
-        :
-	:
-        b.insert(95);
+	
+	int[] arr = {50, 20, 80, 10, 30, 5, 15, 25, 35, 70, 90, 65,75, 85, 95};
+	for (int i=0; i< arr.length; i++)
+	    b.insert(arr[i]);
+	    
 	System.out.println( b.search(43) );  // prints false
         System.out.println( b.search(70) );  // prints true
 	b.inorder();  // prints 5 10 15 20 25 30 35 50 65 70 75 80 85 90 95
