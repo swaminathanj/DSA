@@ -104,12 +104,12 @@ public class BSTDriver {
         BST b = new BST();
         b.insert(50);
         b.insert(20);
-		b.insert(80);
+	b.insert(80);
         b.insert(10);
         b.insert(30);
         b.insert(5);
-		b.insert(15);
-		b.insert(25);
+	b.insert(15);
+	b.insert(25);
         b.insert(35);
         b.insert(70);
         b.insert(90);
