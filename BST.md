@@ -362,3 +362,11 @@ public class BSTDriver {
     }
 }
 ```
+
+## 6. Deleting Leaf Node
+
+## 7. Deleting a Node that has either Left or Right
+
+## 8. Deleting a Node that has both Left and Right
+
+## 9. Deleting Root
