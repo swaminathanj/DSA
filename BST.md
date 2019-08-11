@@ -305,7 +305,7 @@ public class BSTDriver {
 
 ## 5. Defining level-order traversal
 
-Level order traversal visits the nodes in a top-to-bottom, left-to-right manner. Owing to its unconventional way of traversing the tree, recursion does not suit well. To achieve, level order traversal, a queue is necessary.
+Level order traversal visits the nodes in a top-to-bottom, left-to-right manner. Owing to its unconventional way of traversing the tree, recursion does not suit well. To achieve, level order traversal, a queue is necessary. We make use of **ArrayDeque** from Java Collections library.
 
 ``` java
 // BSTNode.java -- no changes, remains same as before
@@ -314,6 +314,8 @@ Level order traversal visits the nodes in a top-to-bottom, left-to-right manner.
 
 ``` java
 // BST.java
+
+import java.util.ArrayDeque;
 
 public class BST {
     protected BSTNode root;
