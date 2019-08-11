@@ -629,5 +629,5 @@ public class BSTDriver {
     }
 }
 ```
-## Compute height of the tree
+## 10. Compute height of the tree
 
