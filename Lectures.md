@@ -461,6 +461,8 @@ class BST extend Binary Tree {
 }
 ```
 
+#### For a step-by-step implementation of LinkedList, please refer to [Binary Search Tree implementation step-by-step](BST.md).
+
 ### Additional Information
 
   - **search**: traverse recursively taking appropriate path at each level until node containing search element is found or leaf node is reached
