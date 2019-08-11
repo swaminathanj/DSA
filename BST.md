@@ -4,7 +4,7 @@ We use recursion to implement the operations in an elegant manner. Implementing 
 
 **Note**: Recursion in object-oriented programming should exercise delegation of responsibilities from BST to root which in turn to its left or right, so on and so forth. For example, it is advised to avoid implementing **insert(root,key)** and rather implement as **root.insert(key)**.
 
-## Defining a BSTNode and BST
+## 1. Defining a BSTNode and BST
 
 ``` java
 // BSTNode.java
@@ -35,6 +35,7 @@ public class BST {
 public class BSTDriver {
     public static void main(String[] args) {
         BST b = new BST();
-        b.root = new BSTNode(5);
+        b.root = new BSTNode(50);
+        System.out.println(b.root.data);  // prints 50
 }
 ```
