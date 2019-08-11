@@ -208,6 +208,8 @@ public class BSTDriver {
 
 ## 4. Defining inorder, preorder, postorder traversals
 
+Traversal is an essential part of every data structure. But unlike linked list, traversing in a tree is not straightforward due to its non-linearity. Since every node in a binary search tree (or any binary tree for that matter) has at most two children, two paths are possible. In order to traverse the entire tree, a systematic mechanism is necessary. Four types of traversals are common: level order, inorder, preorder and postorder. The first one will be looked at later. 
+
 ``` java
 // BSTNode.java
 
@@ -301,3 +303,60 @@ public class BSTDriver {
 }
 ```
 
+## 5. Defining level-order traversal
+
+Level order traversal visits the nodes in a top-to-bottom, left-to-right manner. Owing to its unconventional way of traversing the tree, recursion does not suit well. To achieve, level order traversal, a queue is necessary.
+
+``` java
+// BSTNode.java -- no changes, remains same as before
+
+```
+
+``` java
+// BST.java
+
+public class BST {
+    protected BSTNode root;
+    
+    public void insert(int key) { ... }    
+    public boolean search(int key) { ... }
+    public void inorder() { ... }
+    public void preorder() { ... }
+    public void postorder() { ... }
+    
+    public void levelorder() {
+	ArrayDeque<BSTNode> deq = new ArrayDeque<BSTNode>();
+	deq.addLast(root);
+
+	while ( !deq.isEmpty() ) { // until queue is not empty
+	    BSTNode n = deq.removeFirst();
+	    System.out.print(n.data + " ");
+	    if (n.left != null)
+		deq.addLast(n.left);
+	    if (n.right != null)
+		deq.addLast(n.right);
+	}
+	System.out.println();
+    }
+}
+```
+
+``` java
+// BSTDriver.java
+
+public class BSTDriver {
+    public static void main(String[] args) {
+        BST b = new BST();
+        b.insert(50);
+        :
+	:
+        b.insert(95);
+	System.out.println( b.search(43) );  // prints false
+        System.out.println( b.search(70) );  // prints true
+	b.inorder();  // prints 5 10 15 20 25 30 35 50 65 70 75 80 85 90 95
+	b.preorder(); // prints 50 20 10 5 15 30 25 35 80 70 65 75 90 85 95
+	b.postorder(); // prints 5 15 10 25 35 30 20 65 75 70 85 95 90 80 50
+	b.levelorder(); // prints 50 20 80 10 30 70 90 5 15 25 35 65 75 85 95 
+    }
+}
+```
