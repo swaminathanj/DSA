@@ -160,7 +160,7 @@ public class BSTNode {
     
     public void insert(int key) { ... }
     
-        public boolean search(int key) {
+    public boolean search(int key) {
         if (key == data)
             return true;
         else if (key < data && left != null)
@@ -205,3 +205,99 @@ public class BSTDriver {
     }
 }
 ```
+
+## 4. Defining inorder, preorder, postorder traversals
+
+``` java
+// BSTNode.java
+
+public class BSTNode {
+    protected int data;
+    protected BSTNode left;
+    protected BSTNode right;
+
+    public BSTNode() { };
+    public BSTNode(int d) {
+        data = d;
+    }
+    
+    public void insert(int key) { ... }
+    public boolean search(int key) { ... }
+    
+    public void inorder() {
+        // Inorder traversal - traverse left, visit this, traverse right
+        if (left != null)  // traverse leftwards only if left subtree exists
+            left.inorder();
+        System.out.print(data + " ");
+        if (right != null)  // traverse rightwards only if right subtree exists
+            right.inorder();
+    }
+
+    public void preorder() {
+        // Preorder traversal - visit this, traverse left, traverse right
+
+	// Implement your logic here
+
+
+    }
+
+    public void postorder() {
+        // Postorder traversal - traverse left, traverse right, visit thiser
+
+
+	// Implement your logic here
+
+    }    
+}
+```
+
+``` java
+// BST.java
+
+public class BST {
+    protected BSTNode root;
+    
+    public void insert(int key) { ... }    
+    public boolean search(int key) { ... }
+    
+    public void inorder() {
+        if (root == null)
+            return false;
+        else
+            return root.inorder(key);
+    }
+    
+    public void preorder() {
+    	// Implement your logic here
+    
+    
+    }
+    
+    public void postorder() {
+    	// Implement your logic here
+    
+    
+    
+    }
+}
+```
+
+``` java
+// BSTDriver.java
+
+public class BSTDriver {
+    public static void main(String[] args) {
+        BST b = new BST();
+        b.insert(50);
+        :
+	:
+        b.insert(95);
+	System.out.println( b.search(43) );  // prints false
+        System.out.println( b.search(70) );  // prints true
+	b.inorder();  // prints 5 10 15 20 25 30 35 50 65 70 75 80 85 90 95
+	b.preorder(); // prints 50 20 10 5 15 30 25 35 80 70 65 75 90 85 95
+	b.postorder(); // prints 5 15 10 25 35 30 20 65 75 70 85 95 90 80 50
+    }
+}
+```
+
