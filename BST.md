@@ -37,6 +37,7 @@ public class BSTDriver {
         BST b = new BST();
         b.root = new BSTNode(50);
         System.out.println(b.root.data);  // prints 50
+    }
 }
 ```
 
@@ -117,6 +118,7 @@ public class BSTDriver {
         b.insert(75);
         b.insert(85);
         b.insert(95);
+    }
 }
 
 /*
