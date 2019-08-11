@@ -368,6 +368,70 @@ public class BSTDriver {
 
 ## 6. Deleting Leaf Node
 
+``` java
+// BSTNode.java
+
+public class BSTNode {
+    protected int data;
+    protected BSTNode left;
+    protected BSTNode right;
+
+    public BSTNode() { };
+    public BSTNode(int d) {
+        data = d;
+    }
+    
+    public void insert(int key) { ... }
+    public boolean search(int key) { ... }    
+    public void inorder() { ... }
+    public void preorder() { ... }
+    public void postorder() { ... }
+    
+    public void delete(int key) {
+    
+    
+    }
+```
+
+``` java
+// BST.java
+
+import java.util.ArrayDeque;
+
+public class BST {
+    protected BSTNode root;
+    
+    public void insert(int key) { ... }    
+    public boolean search(int key) { ... }
+    public void inorder() { ... }
+    public void preorder() { ... }
+    public void postorder() { ... }    
+    public void levelorder() { ... }
+    
+    public void delete(int key) {
+    
+    }
+}
+```
+
+``` java
+// BSTDriver.java
+
+public class BSTDriver {
+    public static void main(String[] args) {
+        BST b = new BST();
+	
+	int[] arr = {50, 20, 80, 10, 30, 5, 15, 25, 35, 70, 90, 65,75, 85, 95};
+	for (int i=0; i< arr.length; i++)
+	    b.insert(arr[i]);
+	    
+	b.inorder();  // prints 5 10 15 20 25 30 35 50 65 70 75 80 85 90 95
+	b.delete(15); // 15 is a leaf node
+	b.inorder();  // prints 5 10 20 25 30 35 50 65 70 75 80 85 90 95
+    }
+}
+```
+
 ## 7. Deleting a Node that has either Left or Right
 
 ## 8. Deleting a Node that has both Left and Right
