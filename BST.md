@@ -60,9 +60,7 @@ public class BSTNode {
     protected BSTNode right;
 
     public BSTNode() { };
-    public BSTNode(int d) {
-        data = d;
-    }
+    public BSTNode(int d) { ...  }
     
     public void insert(int key) {
         // Two cases - decide left or right
@@ -154,10 +152,7 @@ public class BSTNode {
     protected BSTNode right;
 
     public BSTNode() { };
-    public BSTNode(int d) {
-        data = d;
-    }
-    
+    public BSTNode(int d) { ... }
     public void insert(int key) { ... }
     
     public boolean search(int key) {
@@ -209,7 +204,7 @@ public class BSTDriver {
 
 ## 4. Defining inorder, preorder, postorder traversals
 
-Traversal is an essential part of every data structure. But unlike linked list, traversing in a tree is not straightforward due to its non-linearity. Since every node in a binary search tree (or any binary tree for that matter) has at most two children, two paths are possible. In order to traverse the entire tree, a systematic mechanism is necessary. Four types of traversals are common: level order, inorder, preorder and postorder. The first one will be looked at later. 
+Traversal is an essential part of every data structure. But unlike linked list, traversing in a tree is not straightforward due to its non-linearity. Since every node in a binary search tree (or any binary tree for that matter) has at most two children, two paths are possible. In order to traverse the entire tree, a systematic mechanism is necessary. Four types of traversals are common: level order, inorder, preorder and postorder. The first one will be looked at in the next section. 
 
 ``` java
 // BSTNode.java
@@ -220,10 +215,7 @@ public class BSTNode {
     protected BSTNode right;
 
     public BSTNode() { };
-    public BSTNode(int d) {
-        data = d;
-    }
-    
+    public BSTNode(int d) { ... }
     public void insert(int key) { ... }
     public boolean search(int key) { ... }
     
@@ -245,7 +237,7 @@ public class BSTNode {
     }
 
     public void postorder() {
-        // Postorder traversal - traverse left, traverse right, visit thiser
+        // Postorder traversal - traverse left, traverse right, visit this
 
 
 	// Implement your logic here
@@ -377,10 +369,7 @@ public class BSTNode {
     protected BSTNode right;
 
     public BSTNode() { };
-    public BSTNode(int d) {
-        data = d;
-    }
-    
+    public BSTNode(int d) { ...  }    
     public void insert(int key) { ... }
     public boolean search(int key) { ... }    
     public void inorder() { ... }
@@ -443,10 +432,7 @@ public class BSTNode {
     protected BSTNode right;
 
     public BSTNode() { };
-    public BSTNode(int d) {
-        data = d;
-    }
-    
+    public BSTNode(int d) { ... }    
     public void insert(int key) { ... }
     public boolean search(int key) { ... }    
     public void inorder() { ... }
@@ -509,9 +495,7 @@ public class BSTNode {
     protected BSTNode right;
 
     public BSTNode() { };
-    public BSTNode(int d) {
-        data = d;
-    }
+    public BSTNode(int d) { ... }
     
     public void insert(int key) { ... }
     public boolean search(int key) { ... }    
@@ -575,9 +559,7 @@ public class BSTNode {
     protected BSTNode right;
 
     public BSTNode() { };
-    public BSTNode(int d) {
-        data = d;
-    }
+    public BSTNode(int d) { ...  }
     
     public void insert(int key) { ... }
     public boolean search(int key) { ... }    
