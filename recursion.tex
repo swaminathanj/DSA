@@ -1,0 +1,91 @@
+%Periodical - 2  Question Paper - CP
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8x]{inputenc}
+\usepackage{ucs}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{moreverb}	% Used for indentation
+\usepackage{fancyhdr}	% Used for header
+\usepackage{graphicx}
+%\pagestyle{fancy}
+\lhead{}
+\chead{}
+\rhead{}
+\lfoot{}
+\cfoot{}
+\rfoot{\thepage}
+%\renewcommand{\headrulewidth}{0.4pt}
+%renewcommand{\footrulewidth}{0.4pt}
+\setlength{\topmargin}{0in}
+\setlength{\headheight}{0in}
+\setlength{\headsep}{0in}
+\setlength{\textheight}{9.5in}
+\setlength{\textwidth}{6.0in}
+\setlength{\oddsidemargin}{0in}
+\setlength{\evensidemargin}{0in}
+%\setlength{\parindent}{0.25in}
+%\setlength{\parskip}{0.25in}
+\author{Swaminathan J}
+\title{Periodical - 1}
+\begin{document}
+%\maketitle
+\begin{flushright}
+\end{flushright}
+\begin{center}
+{\bf 15CSE201 Data Structures and Algorithms}\\
+\end{center}
+
+\newcommand{\tab}{\hspace*{1.5em}}
+\newcommand{\twopartdef}[4]
+{
+	\left\{
+		\begin{array}{ll}
+			#1 & \mbox{if } #2 \\
+			#3 & \mbox{if } #4
+		\end{array}
+	\right.
+}
+
+\newcommand{\threepartdef}[6]
+{
+	\left\{
+		\begin{array}{ll}
+			#1 & \mbox{if } #2 \\
+			#3 & \mbox{if } #4 \\
+			#5 & \mbox{if } #6
+		\end{array}
+	\right.
+}
+
+\newcommand{\fourpartdef}[8]
+{
+	\left\{
+		\begin{array}{ll}
+			#1 & \mbox{if } #2 \\
+			#3 & \mbox{if } #4 \\
+			#5 & \mbox{if } #6 \\
+			#7 & \mbox{if } #8
+		\end{array}
+	\right.
+}
+
+\begin{enumerate}
+
+\item Insertion in a Binary Search Tree
+%A function {\tt f}: $\mathbb{N}$ x $\mathbb{N} \rightarrow \mathbb{N}$ is defined as 
+%$f(x, y) = \twopartdef { x } {y = 0} {f(y, x$(mod y)$)} {y > 0}$.
+
+bst.insert(key) = $\twopartdef {$ root $\leftarrow$ new Node(key) $} {$ root = null $}
+							{$ root.insert(key) $} {$ root $\neq$ null $}$
+
+node.insert(key) = $\fourpartdef 
+					{$ left $\leftarrow$ new Node(key) $} {$ key $<$ data \& left $=$ null $}
+					{$ left.insert(key) $} {$ key $<$ data \& left $\neq$ null $}
+					{$ right $\leftarrow$ new Node(key) $} {$ key $\geq$ data \& right $=$ null $}
+					{$ right.insert(key) $} {$ key $\geq$ data \& right $\neq$ null $}$
+
+
+\end{enumerate}
+\end{document}
+
