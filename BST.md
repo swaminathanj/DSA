@@ -51,11 +51,6 @@ Before we can do any search on a BST, we have to insert some keys into it. Let's
  - The BST instance creates root if it is not present. Otherwise, it invokes insert on root (i.e. delegates the insert responsibility to the root).
  - The root checks if the the key needs to inserted to its left or right. If it is not empty, root recursively delegates to its left or right.
               
-                   |- root = new Node(key)   if root == null
- BST.insert(key) = |
-                   |- root.insert(key)  otherwise
-	      
-
 ``` java
 // BSTNode.java
 
