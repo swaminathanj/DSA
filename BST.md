@@ -50,6 +50,8 @@ Before we can do any search on a BST, we have to insert some keys into it. Let's
  - The test driver invokes insert on BST instance.
  - The BST instance creates root if it is not present. Otherwise, it invokes insert on root (i.e. delegates the insert responsibility to the root).
  - The root checks if the the key needs to inserted to its left or right. If it is not empty, root recursively delegates to its left or right.
+ 
+![Recursive equation](insert.png)
               
 ``` java
 // BSTNode.java
