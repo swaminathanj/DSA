@@ -625,15 +625,19 @@ The complete code for BST can be accessed from [BST Implementation](src/BST.java
 ``` java
 // BSTNODE.java
 
-public class BST {
-    protected BSTNode root;
+public class BSTNode {
+    protected int data;
+    protected BSTNode left;
+    protected BSTNode right;
+
+    public BSTNode() { };
+    public BSTNode(int d) { ...  }
     
-    public void insert(int key) { ... }    
-    public boolean search(int key) { ... }
+    public void insert(int key) { ... }
+    public boolean search(int key) { ... }    
     public void inorder() { ... }
     public void preorder() { ... }
-    public void postorder() { ... }    
-    public void levelorder() { ... }
+    public void postorder() { ... }
     public void delete(int key) { ... }
 
     public int height() {
@@ -653,15 +657,28 @@ public class BST {
     	else
     		return b;
     }
+}
 ```
 
 ``` java
 // BST.java
 
-     public int height() {
+public class BST {
+    protected BSTNode root;
+    
+    public void insert(int key) { ... }    
+    public boolean search(int key) { ... }
+    public void inorder() { ... }
+    public void preorder() { ... }
+    public void postorder() { ... }    
+    public void levelorder() { ... }
+    public void delete(int key) { ... }
+
+    public int height() {
 	if (root == null)
 	    return 0;
 	else
 	    return root.height();
-     }
+    }
+}
 ```
