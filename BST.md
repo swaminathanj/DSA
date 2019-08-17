@@ -625,6 +625,17 @@ The complete code for BST can be accessed from [BST Implementation](src/BST.java
 ``` java
 // BSTNODE.java
 
+public class BST {
+    protected BSTNode root;
+    
+    public void insert(int key) { ... }    
+    public boolean search(int key) { ... }
+    public void inorder() { ... }
+    public void preorder() { ... }
+    public void postorder() { ... }    
+    public void levelorder() { ... }
+    public void delete(int key) { ... }
+
     public int height() {
     	if ( isLeaf() )
     		return 0;
@@ -632,7 +643,7 @@ The complete code for BST can be accessed from [BST Implementation](src/BST.java
     		return left.height() + 1;
     	else if (hasOnlyRight())
     		return right.height() + 1;
-		else
+	else
     		return max(left.height(), right.height()) + 1;
     }
 
