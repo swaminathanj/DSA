@@ -623,6 +623,28 @@ The complete code for BST can be accessed from [BST Implementation](src/BST.java
 ## 10. Compute height of the tree
 
 ``` java
+// BSTNODE.java
+
+    public int height() {
+    	if ( isLeaf() )
+    		return 0;
+    	else if (hasOnlyLeft()) 
+    		return left.height() + 1;
+    	else if (hasOnlyRight())
+    		return right.height() + 1;
+		else
+    		return max(left.height(), right.height()) + 1;
+    }
+
+    public int max(int a, int b) {
+    	if (a < b)
+    		return a;
+    	else
+    		return b;
+    }
+```
+
+``` java
 // BST.java
 
      public int height() {
