@@ -60,25 +60,25 @@ public class BST {
         }
     }
 
-	public void levelorder() {
-		ArrayDeque<BSTNode> deq = new ArrayDeque<BSTNode>();
-		deq.addLast(root);
+    public void levelorder() {
+	ArrayDeque<BSTNode> deq = new ArrayDeque<BSTNode>();
+	deq.addLast(root);
 
-		while ( !deq.isEmpty() ) { // until queue is not empty
-			BSTNode n = deq.removeFirst();
-			System.out.print(n.data + " ");
-			if (n.left != null)
-				deq.addLast(n.left);
-			if (n.right != null)
-				deq.addLast(n.right);
-		}
+	while ( !deq.isEmpty() ) { // until queue is not empty
+	    BSTNode n = deq.removeFirst();
+	    System.out.print(n.data + " ");
+	    if (n.left != null)
+		deq.addLast(n.left);
+	    if (n.right != null)
+		deq.addLast(n.right);
+	}
 		System.out.println();
-	}
+     }
 
-	public int height() {
-		if (root == null)
-			return 0;
-		else
-			return root.height();
-	}
+     public int height() {
+	if (root == null)
+	    return 0;
+	else
+	    return root.height();
+     }
 }
