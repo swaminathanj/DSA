@@ -26,7 +26,7 @@ public class BSTRandomTest {
 		System.out.println("height: " + b.height());	
 	}
 
-	public void incrTest() { // random input
+	public void incrTest() { // increasing input
 		BST b = new BST();
 		int[] arr = new int[100];
 		Random r = new Random();
