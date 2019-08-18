@@ -81,7 +81,7 @@ public class AVLDriver {
 		System.out.println("height: " + avl.root.height());	
 	}
 
-	public void incrTest() { // random input
+	public void incrTest() { // increasing input
 		AVLTree avl = new AVLTree();
 		int[] arr = new int[100];
 		Random r = new Random();
