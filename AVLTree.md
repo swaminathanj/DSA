@@ -3,8 +3,9 @@
 The implementation of AVL Tree builds on BST implementation. The enhancements to BST includes:
 
   - Definition of **balanceFactor** in Node class to keep track of balance at each node.
-  - Changes to **insert** and **delete** methods to recompute balanceFactor and trigger rotations to balance itself if the balanceFactor equals 2.
+  - Changes to **insert** and **delete** methods to recompute balanceFactor after insertion/deletion and trigger rotations to balance itself if the balanceFactor equals 2.
   - Defining rotations with **left** and **right** children.
+  - **insert** and **delete** will now return a node object since the rotations might cause the subtree rooted at a node to get changed.  
   
 In the code below, except for changes to**delete** method, all other changes are done. 
 
@@ -171,6 +172,8 @@ public class AVLNode {
     }
 }
 ```
+
+AVLTree.java (equivalent to BST.java) does not required any changes since detection of the need for rotations and triggering rotations are from the node itself.
 
 ``` java
 // AVLTree.java - remains the same as BST
