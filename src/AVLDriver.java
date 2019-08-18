@@ -84,7 +84,6 @@ public class AVLDriver {
 	public void incrTest() { // increasing input
 		AVLTree avl = new AVLTree();
 		int[] arr = new int[100];
-		Random r = new Random();
 
 		System.out.print("Insertion sequence: ");
 		for (int i=0; i<100; i++) {
