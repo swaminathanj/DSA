@@ -80,7 +80,7 @@ public class AVLNode {
         case 2:  // Left imbalance 
         	if (left.balanceFactor >= 0)  // Left-left imbalance
         		return rotateWithLeftChild();
-        		/*        15 (2)        10 (0)           15 (2)           10 (-1)
+                /*        15 (2)        10 (0)           15 (2)           10 (-1)
                          /             /  \              /                /  \
                        10 (1)    ==>  5    15          10 (0)    ==>     5    15 (1)
                       /                               /  \                   /
@@ -92,7 +92,7 @@ public class AVLNode {
         	else {                        // Left-right imbalance
         		left = left.rotateWithRightChild();
        			return rotateWithLeftChild();
-        		/*      15 (2)         15 (2)         12 (0)         15 (2)         15 (3)         12 (1) 
+        	/*      15 (2)         15 (2)         12 (0)         15 (2)         15 (3)         12 (1) 
                        /              /              /  \           /              /              /  \
                      10 (-1)  ==>   12 (1)   ==>  10    15        10 (0)  ==>     12 (2)   ==>  10    15
                        \            /                            /   \           /             /
