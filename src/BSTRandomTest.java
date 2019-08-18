@@ -23,7 +23,7 @@ public class BSTRandomTest {
 		System.out.println();
 		System.out.print("preorder: "); b.preorder();
 		System.out.print("inorder: "); b.inorder();	
-		System.out.println("height: " + b.root.height());	
+		System.out.println("height: " + b.height());	
 	}
 
 	public void incrTest() { // random input

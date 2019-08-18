@@ -13,6 +13,7 @@ public class AVLDriver {
 		driver.rlTest1();
 
 		driver.randomTest();
+		driver.incrTest();
 	}
 
 	public void llTest1() { // left-left imbalance
@@ -78,5 +79,21 @@ public class AVLDriver {
 		System.out.print("preorder: "); avl.preorder();
 		System.out.print("inorder: "); avl.inorder();	
 		System.out.println("height: " + avl.root.height());	
+	}
+
+	public void incrTest() { // random input
+		AVLTree avl = new AVLTree();
+		int[] arr = new int[100];
+		Random r = new Random();
+
+		System.out.print("Insertion sequence: ");
+		for (int i=0; i<100; i++) {
+			System.out.print(i + " ");
+			avl.insert( i );
+		}
+		System.out.println();
+		System.out.print("preorder: "); avl.preorder();
+		System.out.print("inorder: "); avl.inorder();	
+		System.out.println("height: " + avl.height());	
 	}
 }
