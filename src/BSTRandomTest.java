@@ -29,7 +29,6 @@ public class BSTRandomTest {
 	public void incrTest() { // increasing input
 		BST b = new BST();
 		int[] arr = new int[100];
-		Random r = new Random();
 
 		System.out.print("Insertion sequence: ");
 		for (int i=0; i<100; i++) {
