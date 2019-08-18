@@ -294,12 +294,12 @@ class Node {
   Node right;  
   
   Node(int d);  
-  boolean search(int d);  
-  boolean insert(int d);  
-  boolean delete(int d);  
-  void preorder(Node n);  
-  void inorder(Node n);  
-  void postorder(Node n);  
+  boolean search(int key);  
+  boolean insert(int key);  
+  boolean delete(int key);  
+  void preorder();  
+  void inorder();  
+  void postorder();  
 }
 ```
 
@@ -307,12 +307,12 @@ class Node {
 class BinaryTree {  
   Node root;  
  
-  boolean search(int d) { root.search(d); }   
-  boolean insert(int d) { root.insert(d); }  // Implementation depends on the type of binary tree
-  boolean delete(int d) { root.delete(d); }  // Implementation depends on the type of binary tree
-  void preorder() { preorder(root); }  
-  void inorder() { inorder(root); }  
-  void postorder() { postorder(root); }  
+  boolean search(int key) { root.search(key); }   
+  boolean insert(int key) { root.insert(key); }  // Implementation depends on the type of binary tree
+  boolean delete(int key) { root.delete(key); }  // Implementation depends on the type of binary tree
+  void preorder() { root.preorder(); }  
+  void inorder() { root.inorder(); }  
+  void postorder() { root.postorder(); }  
 }
 ```
 
@@ -439,29 +439,29 @@ class Node {
   Node right;  
   
   Node(int d);  
-  boolean search(int d);  
-  boolean insert(int d);  
-  boolean delete(int d);  
-  void preorder(Node n);  
-  void inorder(Node n);  
-  void postorder(Node n);  
+  boolean search(int key);  
+  boolean insert(int key);  
+  boolean delete(int key);  
+  void preorder();  
+  void inorder();  
+  void postorder();  
 }
 ```
 
 ```
-class BST extend Binary Tree {  
+class BST {  
   Node root;  
  
-  boolean search(int d) { root.search(d); }  
-  boolean insert(int d) { root.insert(d); }  
-  boolean delete(int d) { root.delete(d); }  
-  void preorder() { preorder(root); }  
-  void inorder() { inorder(root); }  
-  void postorder() { postorder(root); }  
+  boolean search(int key) { root.search(key); }  
+  boolean insert(int key) { root.insert(key); }  
+  boolean delete(int key) { root.delete(key); }  
+  void preorder() {root. preorder(); }  
+  void inorder() { root.inorder(); }  
+  void postorder() { root.postorder(); }  
 }
 ```
 
-#### For a step-by-step implementation of LinkedList, please refer to [Binary Search Tree implementation step-by-step](BST.md).
+#### For a step-by-step implementation of LinkedList, please refer to [Binary Search Tree implementation](BST.md).
 
 ### Additional Information
 
@@ -502,42 +502,41 @@ class BST extend Binary Tree {
 ### Operations
   - insert, delete, search
   - preorder, inorder, postorder
-  - lrotate
-  - lrrotate
-  - lrrotate
-  - rrotate
+  - rotateWithLeft
+  - rotateWithRight
+  - computeBalance
+  - height
 
 ### Implementation
 ```
 class Node {  
   int data;  
   Node left;  
-  Node right;  
+  Node right; 
+  int balanceFactor;
   
   Node(int d);  
-  boolean search(int d);  
-  boolean insert(int d);  
-  boolean delete(int d);  
-  void preorder(Node n);  
-  void inorder(Node n);  
-  void postorder(Node n);  
+  boolean search(int key);  
+  boolean insert(int key);  
+  boolean delete(int key);  
+  void preorder();  
+  void inorder();  
+  void postorder();  
+  void rotateWithLeft();
+  void rotateWithRight();
 }
 ```
 
 ```
-class AVLTree extend BST {  
+class AVLTree {  
   Node root;  
 
-  void lRotate(Node n);
-  void rRotate(Node n);
-  void lrRotate(Node n);
-  void rlRotate(Node n);
-  boolean search(int d) { root.search(d); }  
-  boolean insert(int d) { root.insert(d); }  
-  boolean delete(int d) { root.delete(d); }  
-  void preorder() { preorder(root); }  
-  void inorder() { inorder(root); }  
-  void postorder() { postorder(root); }  
+  boolean search(int key) { root.search(key); }  
+  boolean insert(int key) { root.insert(key); }  
+  boolean delete(int key) { root.delete(key); }  
+  void preorder() { root.preorder(); }  
+  void inorder() { root.inorder(); }  
+  void postorder() { root.postorder(); }  
 }
 ```
 
