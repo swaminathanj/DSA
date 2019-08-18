@@ -6,7 +6,9 @@ The implementation of AVL Tree builds on BST implementation. The enhancements to
   - Changes to **insert** and **delete** methods to recompute balanceFactor and trigger rotations to balance itself if the balanceFactor equals 2.
   - Defining rotations with **left** and **right** children.
   
-In the code below, except for changes to delete method, all other changes are done.
+In the code below, except for changes to**delete** method, all other changes are done. 
+
+To keep the BST and AVL implementations separate and distinguish them, the classes have been renamed as **AVLNode**, **AVLTree** and **AVLDriver**. The internal implementations are same except for the above mentioned changes to AVL.
 
 ``` java
 // AVLNode.java
@@ -188,6 +190,9 @@ public class AVLTree {
     public int height() { ... }
 }
 ```
+
+The driver covers test cases that trigger all rotation scenarios. Apart from them it also includes test cases for random and increasing sequences. Note that height is printed to check if it is about log n.
+
 ``` java
 // AVLDriver.java
 
