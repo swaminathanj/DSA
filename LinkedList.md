@@ -211,7 +211,7 @@ class LLTest {
 ```
 
 ## 6. Implement insert method which inserts a node at a particular position
-The search method scans through the linked list to find if a given key is present. If so, it returns the position. If not, it returns -1.
+Sometimes you may want to insert a data at a particular position rather than appending to the end. The procedure is to navigate to the prior position, insert the new node and re-assign the links appropriately.
 
 ``` java
 // Node.java  - same as above
