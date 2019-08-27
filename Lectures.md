@@ -544,7 +544,7 @@ class AVLTree {
 ### Problems
   1. Median of two sorted arrays
   
-## Graph
+## 10. Graph
 
 ### What is it?
 A non-linear data structure that contains a group of node/vertices where each node/vertex maintains a list of adjacent nodes.
@@ -607,3 +607,6 @@ class Set {
     void union(int key1, int key2);
 }
 ```
+
+## 12. Hashing/Map/Dictionary/Associative Array
+
