@@ -84,7 +84,7 @@ public class GraphDriver {
 }
 ```
 
-## 3. Print the adjacency list
+## 3. Print the adjacency list of each node of the graph
 
 Let's check if the adjacency list was rightly created by adding a print method to print the adjacency list of each node. Note that the call to print method of Graph delegates the printing of the adjacency list to the respective nodes. The driver invokes the print method of Graph to print the 
 
