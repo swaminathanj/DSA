@@ -543,8 +543,37 @@ class AVLTree {
 
 ### Problems
   1. Median of two sorted arrays
+  
+## Graph
 
-## Disjoint-Set
+### What is it?
+A non-linear data structure that contains a group of node/vertices where each node/vertex maintains a list of adjacent nodes.
+
+### Visualization
+
+
+### Representation
+  - Adjacency List
+  - Adjacency Matrix
+  - Edge List
+  - Incidence List
+  - Incidence Matrix
+  
+## Traversals
+  - Depth First Search (DFS)
+  - Breadth First Search (BFS)
+  
+## Implementation
+  - addEdge
+  - dfs
+  - bfs
+  - connectivity
+  - path, cycle
+  - components
+  
+For a step-by-step implementation of a graph, please refer
+
+## 11. Disjoint-Set
 
 ### What is it?
 
