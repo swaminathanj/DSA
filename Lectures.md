@@ -571,7 +571,7 @@ A non-linear data structure that contains a group of node/vertices where each no
   - path, cycle
   - components
   
-For a step-by-step implementation of a graph, please refer
+For a step-by-step implementation of a graph, please refer [Graph Implementation](Graph.md).
 
 ## 11. Disjoint-Set
 
