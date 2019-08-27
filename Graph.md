@@ -47,7 +47,7 @@ Next, we define the Graph class which contains an array of nodes. Given the numb
 ```
 
 ``` java
-// Aum Amma
+// Graph.java
 
 public class Graph {
     GraphNode[] node;
@@ -67,6 +67,8 @@ public class Graph {
 ```
 
 ``` java
+// GraphDriver.java
+
 public class GraphDriver {
     public static void main(String[] args) {
         Graph g = new Graph(5);
@@ -105,7 +107,7 @@ public class GraphNode {
 ```
 
 ``` java
-// Aum Amma
+// Graph.java
 
 public class Graph {
     GraphNode[] node;
@@ -116,9 +118,9 @@ public class Graph {
 
     public void print() {
         for (int i=0; i<size; i++) {
-            System.out.print(i + ": ");
-            node[i].print(); 
-            System.out.println();
+            System.out.print(i + ": "); // print the node label
+            node[i].print();   // print its adjacency list (delegated to the node)
+            System.out.println();  // print newline
         }
     }
 }
