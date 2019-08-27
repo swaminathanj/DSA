@@ -40,7 +40,7 @@ public class GraphNodeDriver {
 
 ## 2. Define Graph
 
-Next, we define the Graph class which contains an array of nodes. Given the number of vertices (passed via constructor), it creates and initializes the nodes. It also includes addEdge method that is used to add the edges.
+Next, we define the Graph class which contains an array of nodes. Given the number of vertices (passed via constructor), it creates and initializes the nodes. It also includes addEdge method that is used to add the edges. The driver program uses this method to populate the adjacency lists of the nodes.
 
 ``` java
 // GraphNode.java -- remains same
@@ -78,6 +78,48 @@ public class GraphDriver {
         g.addEdge(2,4);
         g.addEdge(3,2);
         g.addEdge(3,4);
+    }
+}
+```
+
+## 3. Print the adjacency list
+
+Let's check if the adjacency list was rightly created by adding a print method to print the adjacency list of each node. Note that the call to print method of Graph delegates the printing of the adjacency list to the respective nodes.
+
+``` java
+// GraphNode
+
+import java.util.ArrayList;
+
+public class GraphNode {
+    int label;
+    ArrayList<GraphNode> adjList;
+
+    GraphNode(int l) { ... }
+
+    public void print() {
+        for (int j=0; j<adjList.size(); j++)
+            System.out.print(adjList.get(j).label + "->");
+    }
+}
+```
+
+``` java
+// Aum Amma
+
+public class Graph {
+    GraphNode[] node;
+    int size;
+
+    public Graph(int n) { ... }
+    public void addEdge(int from, int to) { ... }
+
+    public void print() {
+        for (int i=0; i<size; i++) {
+            System.out.print(i + ": ");
+            node[i].print(); 
+            System.out.println();
+        }
     }
 }
 ```
