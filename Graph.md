@@ -84,7 +84,7 @@ public class GraphDriver {
 
 ## 3. Print the adjacency list
 
-Let's check if the adjacency list was rightly created by adding a print method to print the adjacency list of each node. Note that the call to print method of Graph delegates the printing of the adjacency list to the respective nodes.
+Let's check if the adjacency list was rightly created by adding a print method to print the adjacency list of each node. Note that the call to print method of Graph delegates the printing of the adjacency list to the respective nodes. The driver invokes the print method of Graph to print the 
 
 ``` java
 // GraphNode
@@ -122,4 +122,34 @@ public class Graph {
         }
     }
 }
+```
+
+``` java
+// GraphDriver.java
+
+public class GraphDriver {
+    public static void main(String[] args) {
+        Graph g = new Graph(5);
+        g.addEdge(0,1);
+        g.addEdge(0,2);
+        g.addEdge(0,3);
+        g.addEdge(1,4);
+        g.addEdge(2,1);
+        g.addEdge(2,4);
+        g.addEdge(3,2);
+        g.addEdge(3,4);
+
+        g.print();
+    }
+}
+```
+
+The expected output
+
+```
+0: 1->2->3->
+1: 4->
+2: 1->4->
+3: 2->4->
+4: 
 ```
