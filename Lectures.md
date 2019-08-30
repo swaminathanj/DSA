@@ -550,7 +550,7 @@ class AVLTree {
 A non-linear data structure that contains a group of node/vertices where each node/vertex maintains a list of adjacent nodes.
 
 ### Visualization
-
+![Graph](vgraph.png)
 
 ### Representation
   - Adjacency List
