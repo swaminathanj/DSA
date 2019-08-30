@@ -6,7 +6,7 @@ We use recursion to implement the operations. Recursive programs are simple, ele
 
 Let us now define a BSTNode and BST which contains root which is of BSTNode type.
 
-``` sage
+``` sagemath
 a = Matrix{[1,2,3]}
 
 ## 1. Defining a BSTNode and BST
