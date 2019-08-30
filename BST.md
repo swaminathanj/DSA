@@ -6,8 +6,8 @@ We use recursion to implement the operations. Recursive programs are simple, ele
 
 Let us now define a BSTNode and BST which contains root which is of BSTNode type.
 
-``` python
-a = [1,2,3,4]
+``` sage
+a = Matrix{[1,2,3]}
 
 ## 1. Defining a BSTNode and BST
 
