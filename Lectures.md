@@ -563,13 +563,14 @@ A non-linear data structure that contains a group of node/vertices where each no
   ```
   2. Adjacency Matrix
   ```
-  .|0|1|2|3|4|
   ------------
-  0|-|1|1|0|0|
-  1|0|-|0|0|1|
-  2|0|1|-|0|1|
-  3|1|0|1|-|1|
-  4|0|0|0|0|0|
+  .| 0 1 2 3 4 
+  ------------
+  0| - 1 1 0 0
+  1| 0 - 0 0 1
+  2| 0 1 - 0 1
+  3| 1 0 1 - 1
+  4| 0 0 0 0 -
   ------------
   ```
   3. Edge List
