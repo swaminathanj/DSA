@@ -319,6 +319,18 @@ class BinaryTree {
 ### Applications
   - Expression tree
   - Huffman encoding
+  
+## Problems from Leetcode
+  1. [Inorder traversal](https://leetcode.com/problems/binary-tree-inorder-traversal/)
+  2. [Preorder traversal](https://leetcode.com/problems/binary-tree-preorder-traversal)
+  3. [Level order traversal](https://leetcode.com/problems/binary-tree-level-order-traversal)
+  4. [Same tree](https://leetcode.com/problems/same-tree/)
+  5. [Symmetric tree](https://leetcode.com/problems/symmetric-tree/)
+  6. [Max depth](https://leetcode.com/problems/maximum-depth-of-binary-tree/)
+  7. [Diameter](https://leetcode.com/problems/diameter-of-binary-tree)
+  8. [Lowest common ancestor](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree)
+  9. [Longest univalue path](https://leetcode.com/problems/longest-univalue-path)
+  10. [Construct BT from preorder & inorder](https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal)
 
 ---
 
