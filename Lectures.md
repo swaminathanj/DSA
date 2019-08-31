@@ -566,11 +566,11 @@ A non-linear data structure that contains a group of node/vertices where each no
   ------------
   .| 0 1 2 3 4 
   ------------
-  0| - 1 1 0 0
-  1| 0 - 0 0 1
-  2| 0 1 - 0 1
-  3| 1 0 1 - 1
-  4| 0 0 0 0 -
+  0| x 1 1 0 0
+  1| 0 x 0 0 1
+  2| 0 1 x 0 1
+  3| 1 0 1 x 1
+  4| 0 0 0 0 x
   ------------
   ```
   3. Edge List
@@ -583,6 +583,17 @@ A non-linear data structure that contains a group of node/vertices where each no
   4: 1 -> 2 -> 3
   ```
   5. Incidence Matrix
+  ```
+  ------------
+  .| 0 1 2 3 4 
+  ------------
+  0| x 0 0 1 0
+  1| 1 x 1 0 0
+  2| 1 0 x 1 0
+  3| 0 0 0 x 0
+  4| 0 1 1 1 x
+  ------------
+  ```
   
 ## Traversals
   - Depth First Search (DFS)
