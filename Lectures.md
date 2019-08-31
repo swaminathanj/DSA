@@ -601,7 +601,10 @@ A non-linear data structure that contains a group of node/vertices where each no
   
 ## Traversals
   - Depth First Search (DFS)
+  ![DFS Traversal](vdfs.png)
+
   - Breadth First Search (BFS)
+  ![BFS Traversal](vbfs.png)
   
 ## Implementation
   - addEdge
