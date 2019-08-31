@@ -628,7 +628,7 @@ A non-linear data structure that contains a group of node/vertices where each no
   
 For a step-by-step implementation of a graph, please refer [Graph Implementation](Graph.md).
 
-## Problems from Leetcode
+## Problems from Leetcode & Hackerrank
   1. [Find eventual safe states](https://leetcode.com/problems/find-eventual-safe-states/)
   2. [Clone graph](https://leetcode.com/problems/clone-graph/)
   3. [Course schedule](https://leetcode.com/problems/course-schedule/)
