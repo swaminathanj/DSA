@@ -553,11 +553,18 @@ A non-linear data structure that contains a group of node/vertices where each no
 ![Graph](vgraph.png)
 
 ### Representation
-  - Adjacency List
-  - Adjacency Matrix
-  - Edge List
-  - Incidence List
-  - Incidence Matrix
+  1. Adjacency List
+  ```
+  0: 1 -> 2
+  1: 4
+  2: 1 -> 4
+  3: 0 -> 2 -> 4
+  4: 
+  ```
+  2. Adjacency Matrix
+  3. Edge List
+  4. Incidence List
+  5. Incidence Matrix
   
 ## Traversals
   - Depth First Search (DFS)
