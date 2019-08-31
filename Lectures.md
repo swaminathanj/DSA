@@ -574,6 +574,7 @@ A non-linear data structure that contains a group of node/vertices where each no
   ------------
   ```
   3. Edge List
+  (0,1) (0,2) (1,4) (2,1) (2,4) (3,0) (3,2) (3,4)
   4. Incidence List
   ```
   0: 3
