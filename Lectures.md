@@ -484,17 +484,17 @@ class BST {
   - **inorder**: starting from root traverse in inorder(left), node, inorder(right) manner
   - **postorder**: starting from root traverse in postorder(left), postorder(right), node manner
 
-### Problems
-  1. Compute height of the tree
-  2. Compute height of the root's left subtree and root's right subtree
-  3. Compute height of every node of the tree
-  4. Compute weight of the tree
-  5. Compute weight of the root's left and root's right
-  6. Compute weight of every node of the tree
-  7. Compute the diameter of the tree
-  8. Compute the lowest common ancestor of two nodes
-  9. Count the number of internal and leaf nodes of the tree
-  10. Check if the tree is complete, perfect
+### Problems from Leet code
+  1. [Insert BST](https://leetcode.com/problems/insert-into-a-binary-search-tree)
+  2. [Search BST](https://leetcode.com/problems/search-in-a-binary-search-tree)
+  3. [Delete BST](https://leetcode.com/problems/delete-node-in-a-bst)
+  4. [Validate BST](https://leetcode.com/problems/validate-binary-search-tree)
+  5. [Trim BST](https://leetcode.com/problems/trim-a-binary-search-tree)
+  6. [Lowest Common Ancestor](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree)
+  7. [Sorted array to BST](https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree)
+  8. [Recover BST](https://leetcode.com/problems/recover-binary-search-tree)
+  9. [Find Mode in a BST](https://leetcode.com/problems/find-mode-in-binary-search-tree)
+  10. [Minimum distance between BST nodes](https://leetcode.com/problems/minimum-distance-between-bst-nodes)
 
 ## 9. AVL Tree
 
