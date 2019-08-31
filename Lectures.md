@@ -628,6 +628,18 @@ A non-linear data structure that contains a group of node/vertices where each no
   
 For a step-by-step implementation of a graph, please refer [Graph Implementation](Graph.md).
 
+## Problems from Leetcode
+  1. [Find eventual safe states](https://leetcode.com/problems/find-eventual-safe-states/)
+  2. [Clone graph](https://leetcode.com/problems/clone-graph/)
+  3. [Course schedule](https://leetcode.com/problems/course-schedule/)
+  4. [Reconstruct itinerary](https://leetcode.com/problems/reconstruct-itinerary/)
+  5. [Is graph bipartite](https://leetcode.com/problems/is-graph-bipartite/)
+  6. [Cheapest flight within K stops](https://leetcode.com/problems/cheapest-flights-within-k-stops/)
+  7. [Snake and ladder](https://leetcode.com/problems/snakes-and-ladders/)
+  8. [Connected component & cycle](https://www.hackerrank.com/contests/data-structure-tasks-binary-tree-union-find/challenges/connected-component)
+  9. [DFS Edges](https://www.hackerrank.com/challenges/dfs-edges/problem)
+  10. [Rotting oranges](https://leetcode.com/problems/rotting-oranges)
+
 ## 11. Disjoint-Set
 
 ### What is it?
