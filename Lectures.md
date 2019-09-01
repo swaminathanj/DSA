@@ -552,7 +552,7 @@ class AVLTree {
 }
 ```
 
-The AVL implementation is given [here](AVLTree.md)
+The AVL Tree implementation is given [here](AVLTree.md)
 
 ### Problems
   1. Median of two sorted arrays
