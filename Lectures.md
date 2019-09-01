@@ -661,8 +661,10 @@ A disjoint set is an unordered collection items without duplicates.
 
 ```
 class Node {
-    int data;
+    int label;
     Node parent;
+
+    Node(int l);
 }
 ```
 
@@ -670,11 +672,16 @@ class Node {
 class Set {
     Node[] arr;
 
-    void makeSet(int[] keys);
+    void makeSet(int size);
     int find(int key);
     void union(int key1, int key2);
 }
 ```
+
+For a step-by-step implementation of Disjoint-Set, please refer to [Disjoint-Set implementation](DisjointSet.md)
+
+### Problems from Leetcode
+
 
 ## 12. Hashing/Map/Dictionary/Associative Array
 
