@@ -261,7 +261,7 @@ public class BST {
         if (root == null)
             return;
         else
-            root.inorder(key);
+            root.inorder();
     }
     
     public void preorder() {
