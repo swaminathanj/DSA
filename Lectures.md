@@ -684,7 +684,7 @@ For a step-by-step implementation of Disjoint-Set, please refer to [Disjoint-Set
   
 
 
-## 12. Hashing/Map/Dictionary/Associative Array
+## 12. Hashtable/Map/Dictionary/Associative Array
 
 ### Problems from Leetcode
   1. [Contains Duplicate](https://leetcode.com/problems/contains-duplicate)
