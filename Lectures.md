@@ -681,7 +681,20 @@ class Set {
 For a step-by-step implementation of Disjoint-Set, please refer to [Disjoint-Set implementation](DisjointSet.md)
 
 ### Problems from Leetcode
+  
 
 
 ## 12. Hashing/Map/Dictionary/Associative Array
 
+### Problems from Leetcode
+  1. [Contains Duplicate](https://leetcode.com/problems/contains-duplicate)
+  2. [Happy number](https://leetcode.com/problems/happy-number)
+  3. [Repeated DNA sequences](https://leetcode.com/problems/repeated-dna-sequences/)
+  4. [Isomorphic strings](https://leetcode.com/problems/isomorphic-strings/)
+  5. [Fraction to recurring decimal](https://leetcode.com/problems/fraction-to-recurring-decimal)
+  6. [Valid anagram](https://leetcode.com/problems/valid-anagram/)
+  7. [Sort characters by frequency](https://leetcode.com/problems/sort-characters-by-frequency)
+  8. [Longest palindrome](https://leetcode.com/problems/longest-palindrome/)
+  9. [Implement magic dictionary](https://leetcode.com/problems/implement-magic-dictionary/)
+  10. [Design Hashmap](https://leetcode.com/problems/design-hashmap/)
+  
