@@ -174,3 +174,19 @@ public class DisjointSetTest {
     }
 }
 ```
+
+## 5. Optimizing Union-Find
+
+The find method determines the root of the tree starting from a given node. If the height of the tree is large (this can happen if union operation is done in a serial fashion), the find takes longer to get to the root. For instance, consider the worst case example when a tree is merged with a single node each time.
+
+```
+8        7                                       1  
+ \        \                                       \
+  9        8           ....................        2
+            \                                       \
+             9                                       \
+                                                      \
+                                                       9
+```
+
+An optimization technique that can reduce this effort is to make root the parent of every node on the find path. Whenever the root is returned, the getRoot method can set this.parent to root. This will help in reduced effort to get to the root during subsequent finds.
