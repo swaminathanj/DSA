@@ -645,7 +645,7 @@ For a step-by-step implementation of a graph, please refer [Graph Implementation
 
 ### What is it?
 
-A disjoint set is an unordered collection items without duplicates.
+A disjoint set data structure is a collection of sets that are disjoint with each other. Also, there are no duplicates in each set.
 
 ### Visualizing Disjoint-Set
 
