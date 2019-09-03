@@ -118,6 +118,8 @@ public class DisjointSetTest {
 
 ## 4. Implementing Union
 
+The union(x,y) merges the sets containing x and y. This is accomplished by making root of the tree containing y with the root of the tree containing x.
+
 ``` java
 // DSNode.java -- Definition remains the same
 ```
