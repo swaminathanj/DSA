@@ -181,28 +181,4 @@ public class DisjointSetTest {
 
 ## 5. Optimizing Union-Find
 
-The find method determines the root of the tree starting from a given node. If the height of the tree is large (this can happen if union operation is done in a serial fashion), the find takes longer to get to the root. For instance, consider the worst case example when a tree is merged with a single node each time. To find the root of 9 at merge(1,9) step, it would take a O(n) effort.
-
-```
-merge(8,9)  merge(7,9)   .......................  merge(1,9)
-   8            7                                       1  
-   |            |                                       |
-   9            8           ....................        2
-                |                                       |
-                9                                      / (3 all the way till 8}
-                                                       \
-                                                        |
-                                                        9
-```
-
-An optimization technique that can reduce this effort is to make root the parent of every node on the find path. Whenever the root is returned, the getRoot method can set this.parent to root. For example, during merge(7,9), 8 will be This will help in reduced effort to get to the root during subsequent finds.
-
-
-```
-merge(8,9)  merge(7,9)   
-   8        7         7  
-   |        |        / \
-   9        8  =>   8   9
-            |
-            9
-```
+Please refer to any standard Data Structures book for fast-find, fast-union and other optimizations. The long and short of it is that you can do a O(1) find + O(logn) union OR O(logn) find + O(1) union.
