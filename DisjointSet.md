@@ -48,6 +48,8 @@ public class DisjointSet {
     DSNode[] node;
     int size;
 
+    /* Traditionally makeSet is used for creating disjoint sets.
+       It can be done by the constructor as well. */
     public void makeSets(int n) {
        size = n;
        node = new DSNode[size];
