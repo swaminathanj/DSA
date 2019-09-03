@@ -71,12 +71,28 @@ public class DisjointSetTest {
 
 ## 3. Implementing Find
 
-  - The find(x) method determines the root of each node/set by navigating through the parent pointer until parent is null. 
+  - The find(key) method invokes getRoot() method of node[key] which determines the root the node by recursively invoking getRoot() of its parent until topmost node is reached. 
   - Note that initially the parent of each node is null. Therefore, each node is the root of itself. 
-  - Let's add a print() method to print each set and its root.
+  - The print() method is added to DisjointSet inorder to print each node and its root.
 
 ``` java
-// DSNode.java -- Definition remains the same
+// DSNode.java
+
+public class DSNode {
+    int label;
+    DSNode parent;
+
+    public DSNode(int l) {
+        label = l;
+    }
+
+    public DSNode getRoot() {
+        if (parent == null)
+            return this;
+        else
+            return parent.getRoot();
+    }
+}
 ```
 
 ``` java
@@ -89,10 +105,7 @@ public class DisjointSet {
     public void makeSets(int n) { ... }
     
     public DSNode find(int key) {
-        DSNode root = node[key];
-        while (root.parent != null)
-            root = root.parent;
-        return root;
+        return node[key].getRoot();
     }
 
     // Prints the labels of each node and its root
@@ -118,10 +131,10 @@ public class DisjointSetTest {
 
 ## 4. Implementing Union
 
-The union(x,y) merges the sets containing x and y. This is accomplished by making root of the tree containing y with the root of the tree containing x.
+The union(key1,key2) merges the sets containing key1 and key2. This is accomplished by making root of the tree containing key1 parent of the root of the tree containing key2.
 
 ``` java
-// DSNode.java -- Definition remains the same
+// DSNode.java -- Definition remains as above
 ```
 
 ``` java
