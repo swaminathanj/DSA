@@ -76,7 +76,7 @@ public class DisjointSetTest {
 ## 3. Implementing Find
 
   - The find(key) method invokes getRoot() method of node[key] which determines the root the node by recursively invoking getRoot() of its parent until topmost node is reached. 
-  - The print() method calls getRoot() of each node to determine its root.
+  - The print() method invokes find() of each node to determine its root.
   - Note that initially the parent of each node is null. Therefore, each node is the root of itself. 
 
 ``` java
