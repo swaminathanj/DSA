@@ -156,7 +156,7 @@ The expected output
 4: 
 ```
 
-## Implement Depth First Traversal (DFS)
+## 4. Implement Depth First Traversal (DFS)
 
   - In a depth first traversal, the nodes are visited in depth-first manner.
   - In order to know if a node is already visited, we mark the node as visited. To this end, a boolean attribute 'visited' is added to the GraphNode class. And whenever we encounter a node during traversal, we set 'visited' to true.
@@ -229,3 +229,5 @@ public class GraphDriver {
     }
 }
 ```
+
+## 5. Implement Breadth First Traversal (BFS)
