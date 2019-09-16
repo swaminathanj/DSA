@@ -232,3 +232,7 @@ public class GraphDriver {
 ```
 
 ## 5. Implement Breadth First Traversal (BFS)
+
+  - In a breadth first traversal, the nodes are visited in breadth-first manner. BFS traversal can be likened to level-order traversal on a binary tree.
+  - As in the case of Binary (Search) Tree, a queue is used to ensure the order.
+  - An utility method reset() is included to reset the 'visited' to false before initiating BFS.
