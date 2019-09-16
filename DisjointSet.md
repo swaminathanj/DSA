@@ -149,7 +149,7 @@ public class DisjointSet {
     DSNode[] node;
     int size;
 
-    public void makeSets(int n) { ... }
+    public void makeSet(int n) { ... }
     public DSNode find(int key) { ... }
     public void print() { ... }
     
