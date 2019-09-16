@@ -155,3 +155,77 @@ The expected output
 3: 2->4->
 4: 
 ```
+
+## Implement Depth First Traversal (DFS)
+
+  - In a depth first traversal, the nodes are visited in depth-first manner.
+  - In order to know if a node is already visited, we mark the node as visited. To this end, a boolean attribute 'visited' is added to the GraphNode class. And whenever we encounter a node during traversal, we set 'visited' to true.
+  - Depending on the graph, one may or may not be able to visit all the nodes from a given start node. In order to ensure DFS completes, we iterate through the nodes from 0 to n-1 and try to initiate a dfs traversal provided the nodes are not marked. 
+
+``` java
+// GraphNode.java
+
+import java.util.ArrayList;
+
+public class GraphNode {
+    int label;
+    ArrayList<GraphNode> adjList;
+    boolean visited;
+
+    GraphNode(int l) { ... }
+    public void print() { ... }
+
+    public void dfs() {
+
+        System.out.print(label + " ");
+        visited = true;
+
+        for (int j=0; j<adjList.size(); j++) {
+            if ( !adjList.get(j).visited )
+                adjList.get(j).dfs();
+        }
+    }
+}
+```
+
+``` java
+// Graph.java
+
+public class Graph {
+    GraphNode[] node;
+    int size;
+
+    public Graph(int n) { ... }
+    public void addEdge(int from, int to) { ... }
+    public void print() { ... }
+
+    public void dfs() {
+       for (int i=0; i<size; i++) {
+           if ( !node[i].visited )
+               node[i].dfs();
+       }
+    }
+}
+```
+
+``` java
+// GraphDriver.java
+
+
+public class GraphDriver {
+    public static void main(String[] args) {
+        Graph g = new Graph(5);
+        g.addEdge(0,1);
+        g.addEdge(0,2);
+        g.addEdge(0,3);
+        g.addEdge(1,4);
+        g.addEdge(2,1);
+        g.addEdge(2,4);
+        g.addEdge(3,2);
+        g.addEdge(3,4);
+
+        g.print();
+        g.dfs(); // prints 0 1 4 2 3
+    }
+}
+```
