@@ -13,5 +13,6 @@ public class GraphDriver {
         g.addEdge(3,4);
 
         g.print();
+        g.dfs();
     }
 }

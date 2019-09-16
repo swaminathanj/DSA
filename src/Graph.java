@@ -1,6 +1,6 @@
 // Aum Amma
 
-public class Graph{
+public class Graph {
     GraphNode[] node;
     int size;
 
@@ -22,4 +22,12 @@ public class Graph{
             System.out.println();
         }
     }
+
+    public void dfs() {
+       for (int i=0; i<size; i++) {
+           if ( !node[i].visited )
+               node[i].dfs();
+       }
+    }
 }
+
