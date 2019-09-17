@@ -74,10 +74,10 @@ public class GraphDriver {
         Graph g = new Graph(5);
         g.addEdge(0,1);
         g.addEdge(0,2);
-        g.addEdge(0,3);
         g.addEdge(1,4);
         g.addEdge(2,1);
         g.addEdge(2,4);
+        g.addEdge(3,0);
         g.addEdge(3,2);
         g.addEdge(3,4);
     }
@@ -134,10 +134,10 @@ public class GraphDriver {
         Graph g = new Graph(5);
         g.addEdge(0,1);
         g.addEdge(0,2);
-        g.addEdge(0,3);
         g.addEdge(1,4);
         g.addEdge(2,1);
         g.addEdge(2,4);
+        g.addEdge(3,0);
         g.addEdge(3,2);
         g.addEdge(3,4);
 
@@ -218,10 +218,10 @@ public class GraphDriver {
         Graph g = new Graph(5);
         g.addEdge(0,1);
         g.addEdge(0,2);
-        g.addEdge(0,3);
         g.addEdge(1,4);
         g.addEdge(2,1);
         g.addEdge(2,4);
+        g.addEdge(3,0);
         g.addEdge(3,2);
         g.addEdge(3,4);
 
@@ -231,7 +231,106 @@ public class GraphDriver {
 }
 ```
 
-## 5. Implement Breadth First Traversal (BFS)
+## 7. Inclue pre- and post-ordering information in DFS implementation
+
+The pre- and post-ordering information pertains to recording the first and last visit to a node respectively. 
+  - Whenever we visit a node for the first time, it is recorded in preorder. 
+  - And whenever we are finished processing the adjacency list of a node, it is recorded in postorder.
+
+This information is often useful to distinguish between two traversals that produce the same DFS visit order. It is possible to get the same DFS visit order if the graphs are slightly different or the adjacency lists are rearranged. In such circumstances, preorder and postorder information will be helpful.
+
+Implementation changes include
+ - dfs() method of GraphNode takes a parameter 'visitCount' that is incremented whenever a dfs() is invoked.
+ - dfs() method of GraphNode returns the changed 'visitCount' as the traversal progresses.
+ - Whenever a node is first visited, its preorder is set.
+ - Whenever a node is exited, its postorder is set.
+ - A new method printOrder() to print the pre- and post-orders of every node is added.
+ 
+ ``` java
+ // GraphNode.java
+
+import java.util.ArrayList;
+
+public class GraphNode {
+    int label;
+    ArrayList<GraphNode> adjList;
+    boolean visited;
+    int preorder;  // Records first visit to this node
+    int postorder; // Records final exit from this node
+
+    GraphNode(int l) { ... }
+    public void print() { ... }
+
+    /* Modified to include updates of preorder and postorder */
+    public int dfs(int visitCount) {
+
+        System.out.print(label + " ");
+        visited = true;
+        preorder = visitCount;
+
+        for (int j=0; j<adjList.size(); j++) {
+            if ( !adjList.get(j).visited )
+                visitCount = adjList.get(j).dfs(++visitCount);
+        }
+        postorder = ++visitCount;
+        return visitCount;
+    }
+}
+ ```
+ 
+ ``` java
+ // Graph.java
+
+public class Graph {
+    GraphNode[] node;
+    int size;
+
+    public Graph(int n) { ... }
+    public void addEdge(int from, int to) { ... }
+    public void print() { ... }
+
+    public void dfs() {
+        int visitCount = 0;
+        for (int i=0; i<size; i++) {
+            if ( !node[i].visited )
+               visitCount = node[i].dfs(++visitCount);
+       }
+       System.out.println();
+    }
+
+    public void printOrder() {
+        for (int i=0; i<size; i++)
+            System.out.print(node[i].label + " ("
+                            + node[i].preorder + ","
+                            + node[i].postorder + ") ");
+        System.out.println();
+    }
+}
+ ```
+ 
+ ``` java
+ // GraphDriver.java
+
+public class GraphDriver {
+    public static void main(String[] args) {
+        Graph g = new Graph(5);
+        g.addEdge(0,1);
+        g.addEdge(0,2);
+        g.addEdge(1,4);
+        g.addEdge(2,1);
+        g.addEdge(2,4);
+        g.addEdge(3,0);
+        g.addEdge(3,2);
+        g.addEdge(3,4);
+
+        g.print();
+        g.dfs(); // prints 0 1 4 2 3
+        g.printOrder(); // prints 0 (1,8) 1 (2,5) 2 (6,7) 3 (9,10) 4 (3,4)
+    }
+}
+ ```
+
+## 6. Implement Breadth First Traversal (BFS)
 
   - In a breadth first traversal, the nodes are visited in breadth-first manner. BFS traversal can be likened to level-order traversal on a binary tree.
   - As in the case of Binary (Search) Tree, a queue is used for BFS.
