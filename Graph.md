@@ -231,7 +231,7 @@ public class GraphDriver {
 }
 ```
 
-## 7. Inclue pre- and post-ordering information in DFS implementation
+## 5. Inclue pre- and post-ordering information in DFS implementation
 
 The pre- and post-ordering information pertains to recording the first and last visit to a node respectively. 
   - Whenever we visit a node for the first time, it is recorded in preorder. 
