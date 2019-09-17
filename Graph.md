@@ -159,7 +159,7 @@ The expected output
 ## 4. Implement Depth First Traversal (DFS)
 
   - In a depth first traversal, the nodes are visited in depth-first manner. DFS traversal can be likened to preorder/inorder/postorder traversals on a binary tree.
-  - Unlike trees, graphs do not have a specific starting point. Typically node[0] is treated as the starting point.
+  - Unlike trees, graphs do not have a specific starting point. Typically node[0] is treated as the starting point. And if we are not done with visiting all the nodes from node[0], we will restart from any of the remaining unvisited node.
   - In order to know if a node is already visited, we mark the node as visited. To this end, a boolean attribute 'visited' is added to the GraphNode class. And whenever we encounter a node during traversal, we set 'visited' to true.
   - Depending on the graph, one may or may not be able to visit all the nodes from a given start node. In order to ensure DFS completes, we iterate through the nodes from 0 to n-1 and try to initiate a dfs traversal provided the nodes are not marked. 
 
@@ -231,7 +231,7 @@ public class GraphDriver {
 }
 ```
 
-## 5. Inclue pre- and post-ordering information in DFS implementation
+## 5. Include pre- and post-ordering information in DFS implementation
 
 The pre- and post-ordering information pertains to recording the first and last visit to a node respectively. 
   - Whenever we visit a node for the first time, it is recorded in preorder. 
