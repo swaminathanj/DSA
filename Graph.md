@@ -387,6 +387,8 @@ public class Graph {
     public void reset() {
         for (int i=0; i<size; i++)
             node[i].visited = false;
+            node[i].preorder = 0;
+            node[i].postorder = 0;
     }
 
     public void bfs() {
