@@ -335,3 +335,95 @@ public class GraphDriver {
   - In a breadth first traversal, the nodes are visited in breadth-first manner. BFS traversal can be likened to level-order traversal on a binary tree.
   - As in the case of Binary (Search) Tree, a queue is used for BFS.
   - An utility method reset() is included to reset the 'visited' to false before initiating BFS.
+  
+  ``` java
+// GraphNode.java
+
+import java.util.ArrayDeque;
+import java.util.ArrayList;
+
+public class GraphNode {
+    int label;
+    ArrayList<GraphNode> adjList;
+    boolean visited;
+    int preorder;
+    int postorder;
+
+    GraphNode(int l) { ... }
+    public void print() { ... }
+    public int dfs(int visitCount) { ... }
+    
+    void bfs(ArrayDeque<GraphNode> q) {
+        while ( !q.isEmpty() ) {
+            GraphNode x = q.remove();
+            System.out.print(x.label + " ");
+            for (int j=0; j<x.adjList.size(); j++) {
+                GraphNode y = x.adjList.get(j);
+                if ( !y.visited ) {
+                    q.add(y);
+                    y.visited = true;
+                }
+            }
+        }
+    }
+}
+```
+
+``` java
+// Graph.java
+
+import java.util.ArrayDeque;
+
+public class Graph {
+    GraphNode[] node;
+    int size;
+
+    public Graph(int n) { ... }
+    public void addEdge(int from, int to) { ... }
+    public void print() { ... }
+    public void dfs() { ... }
+    public void printOrder() { ... }
+
+    public void reset() {
+        for (int i=0; i<size; i++)
+            node[i].visited = false;
+    }
+
+    public void bfs() {
+        reset(); // Set visited to false before starting bfs
+        System.out.print("BFS traversal: ");
+        ArrayDeque<GraphNode> q = new ArrayDeque<GraphNode>();
+        for (int i=0; i<size; i++) {
+            if ( !node[i].visited ){
+                q.add(node[i]);
+                node[i].visited = true;
+                node[i].bfs(q);
+            }
+        }
+    }
+}
+```
+
+``` java
+// GraphDriver.java
+
+public class GraphDriver {
+    public static void main(String[] args) {
+        Graph g = new Graph(5);
+        g.addEdge(0,1);
+        g.addEdge(0,2);
+        g.addEdge(1,4);
+        g.addEdge(2,1);
+        g.addEdge(2,4);
+        g.addEdge(3,0);
+        g.addEdge(3,2);
+        g.addEdge(3,4);
+
+        g.print();
+        g.dfs(); // prints 0 1 4 2 3
+        g.printOrder();
+
+        g.bfs(); // prints 0 1 2 4 3
+    }
+}
+```
