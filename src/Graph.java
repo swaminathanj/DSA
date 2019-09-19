@@ -1,5 +1,7 @@
 // Aum Amma
 
+import java.util.ArrayDeque;
+
 public class Graph {
     GraphNode[] node;
     int size;
@@ -24,10 +26,40 @@ public class Graph {
     }
 
     public void dfs() {
-       for (int i=0; i<size; i++) {
-           if ( !node[i].visited )
-               node[i].dfs();
+        reset(); // Set visited to false before starting dfs
+        System.out.print("DFS traversal: ");
+        int visitCount = 0;
+        for (int i=0; i<size; i++) {
+            if ( !node[i].visited )
+               visitCount = node[i].dfs(++visitCount);
        }
+       System.out.println();
+    }
+
+    public void printOrder() {
+        for (int i=0; i<size; i++)
+            System.out.print(node[i].label + " ("
+                            + node[i].preorder + ","
+                            + node[i].postorder + ") ");
+        System.out.println();
+    }
+
+    public void reset() {
+        for (int i=0; i<size; i++)
+            node[i].visited = false;
+    }
+
+    public void bfs() {
+        reset(); // Set visited to false before starting bfs
+        System.out.print("BFS traversal: ");
+        ArrayDeque<GraphNode> q = new ArrayDeque<GraphNode>();
+        for (int i=0; i<size; i++) {
+            if ( !node[i].visited ){
+                q.add(node[i]);
+                node[i].visited = true;
+                node[i].bfs(q);
+            }
+        }
     }
 }
 
