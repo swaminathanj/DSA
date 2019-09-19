@@ -181,4 +181,4 @@ public class DisjointSetTest {
 
 ## 5. Optimizing Union-Find
 
-Please refer to any standard Data Structures and Algorithms book for fast-find, fast-union and other optimizations. These  are really important to understand. The long and short of it is that you can implment a O(1) find + O(logn) union OR O(logn) find + O(1) union.
+Please refer to any standard Data Structures and Algorithms book for fast-find, fast-union and other optimizations. These  are really important to understand. The long and short of it is that you can implment a O(1) find or O(1) union but not both.
