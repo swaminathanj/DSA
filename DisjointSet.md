@@ -181,4 +181,4 @@ public class DisjointSetTest {
 
 ## 5. Optimizing Union-Find
 
-Please refer to any standard Data Structures and Algorithms book for fast-find, fast-union and other optimizations. These  are really important to understand. The long and short of it is that you can implment a O(1) find or O(1) union but not both.
+Please refer to any standard Data Structures and Algorithms book for fast-find, fast-union and other optimizations through **union-by-rank** and **path compression** techniques. These  are really important to understand. A good tutorial is found in [Hacker Earth Disjoint Set Notes](https://www.hackerearth.com/practice/notes/disjoint-set-union-union-find/) The long and short of it is that you can implment a O(1) find or O(1) union but not both.
