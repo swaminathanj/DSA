@@ -332,3 +332,129 @@ public class HashDriver {
 }
 ```
 
+## 9. Resolving collisions
+
+It is possible that for two keys, say k1 and k2, hash(k1) is same as hash(k2). In such a scenario, the existing <k1,v1> entry in the hash table will be replaced by <k2,v2>. This is because, the current implementation is defined to hold only one <key,value> entry at each index. This is a serious limitation.
+
+To overcome this limitation, instead of having a single HashNode at each index, we can instead have a LinkedList of HashNodes.
+  - To put a <key,value> pair, hash(key) is applied to reach the index i. Now the HashNode(key,value) is inserted into the linked list at harr[i].
+  - To get a value for a given key, hash(key) is applied to reach the index i. Now, the linked list at harr[i] is searched to check for the presence of key, and if found, the corresponding value is returned.
+  - Other methods, such as, contains, remove and print, are modified similarly.
+
+The resulting code is given below.
+
+``` java
+// HashNode.java
+
+public class HashNode {
+    int key; // It is not necessary that key and value
+    int value; // must be integers.
+
+    HashNode(int k, int v) {
+        key = k;
+        value = v;
+    }
+}
+```
+
+``` java
+// HashTable.java
+
+import java.util.LinkedList;
+
+public class HashTable {
+    int SIZE = 997; // typically a large enough prime number
+    LinkedList<HashNode>[] harr;
+
+    HashTable() {
+        harr = new LinkedList[SIZE];
+        for (int i=0; i<SIZE; i++)
+            harr[i] = new LinkedList<HashNode>();
+    }
+
+    public int hash(int x) {
+        return (x*x*x + 3*x*x + 1) % SIZE;
+    }
+
+    // Add a key-value pair to the hash table
+    public void put(int k, int v) {
+        int index = hash(k);
+        HashNode hn = new HashNode(k,v);
+        harr[index].add(hn);
+    }
+
+    // Check if the hashtable contains key k
+    public boolean contains(int k) {
+        LinkedList<HashNode> llhn = harr[hash(k)];
+        if ( llhn != null ) {
+            for (int i=0; i<llhn.size(); i++) {
+                if (llhn.get(i).key == k)
+                    return true;
+            }
+        }
+        return false;
+    }
+
+    // Retrieve a value from hashtable based on a key
+    public int get(int k) {
+        LinkedList<HashNode> llhn = harr[hash(k)];
+        if ( llhn != null ) {
+            for (int i=0; i<llhn.size(); i++) {
+                if (llhn.get(i).key == k)
+                    return llhn.get(i).value;
+            }
+        }
+        return Integer.MIN_VALUE;      
+    }
+
+    // Remove a key-value pair from hashtable given a key
+    public void remove(int k) {
+        LinkedList<HashNode> llhn = harr[hash(k)];
+        if ( llhn != null) {
+            for (int i=0; i<llhn.size(); i++) {
+                if (llhn.get(i).key == k)
+                    llhn.remove(i);
+            }
+        }
+    }
+
+    // Print the entries in the hashtable
+    public void print() {
+        for (int i=0; i<harr.length; i++) {
+            if ( harr[i] != null )
+                for (int j=0; j<harr[i].size(); i++)
+                    System.out.println(harr[i].get(j).key 
+                        + " : " + harr[i].get(j).value);
+        }
+            
+    }
+}
+```
+
+``` java
+// HashDriver.java
+
+public class HashDriver {
+    public static void main(String[] args) {
+        HashTable h = new HashTable();
+        System.out.println(h.hash(101));
+        System.out.println(h.hash(102));
+        System.out.println(h.hash(103));
+
+        h.put(10, 100);
+        h.put(8, 64);
+        h.put(6, 36);
+
+        if ( h.contains(10) )
+            System.out.println( h.get(10) );   // prints 100
+        if ( h.contains(50) )
+            System.out.println( h.get(50) );  // This statement is not executed
+
+        h.print();
+        h.remove(6);
+        h.print();
+    }
+}
+```
+
+To summarize, an operation on HashTable is a two-step process. Firstly, applying hash function and reaching the index. Followed by scanning of the linked list at that index. 
