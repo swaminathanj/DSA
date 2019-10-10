@@ -325,9 +325,9 @@ public class HashDriver {
         if ( h.contains(50) )
             System.out.println( h.get(50) );  // Statement not reached
         
-        h.print();
+        h.print();  // prints 3 entries (10, 100) (8, 64) and (6, 36) in arbitrary order
         h.remove(6);
-        h.print();
+        h.print();  // prints 3 entries (10, 100) (8, 64) in arbitrary order
     }
 }
 ```
