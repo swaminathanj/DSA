@@ -332,11 +332,11 @@ public class HashDriver {
 }
 ```
 
-## 9. Resolving collisions
+## 9. Handling collisions - Separate Chaining
 
-It is possible that for two keys, say k1 and k2, hash(k1) is same as hash(k2). In such a scenario, the existing <k1,v1> entry in the hash table will be replaced by <k2,v2>. This is because, the current implementation is defined to hold only one <key,value> entry at each index. This is a serious limitation.
+It is possible that for two keys, say k1 and k2, hash(k1) is same as hash(k2). This is referred to as **collision**. In such a scenario, the existing <k1,v1> entry in the hash table will be replaced by <k2,v2>. This is because, the current implementation is defined to hold only one <key,value> entry at each index. This is a serious limitation.
 
-To overcome this limitation, instead of having a single HashNode at each index, we can instead have a LinkedList of HashNodes.
+To overcome this limitation, instead of having a single HashNode at each index, we can have a LinkedList of HashNodes.
   - To put a <key,value> pair, hash(key) is applied to reach the index i. Now the HashNode(key,value) is inserted into the linked list at harr[i].
   - To get a value for a given key, hash(key) is applied to reach the index i. Now, the linked list at harr[i] is searched to check for the presence of key, and if found, the corresponding value is returned.
   - Other methods, such as, contains, remove and print, are modified similarly.
@@ -457,4 +457,6 @@ public class HashDriver {
 }
 ```
 
-To summarize, an operation on HashTable is a two-step process. Firstly, applying hash function and reaching the index. Followed by scanning of the linked list at that index. 
+To summarize, an operation on HashTable is a two-step process. Firstly, applying hash function and reaching the index. Followed by scanning of the linked list at that index. This affects the performance.
+
+**Worst case scenario**: In rare circumstances, it is possible that all the keys inserted into the hash table results in same index, causing all the <key,value> pairs to be inserted in the single linked list at that index. In such a scenario, retrieving a value degenerates to O(n) time instead of O(1) time. It is important that hash function is designed to be good enough to produce a wider spread indices.
