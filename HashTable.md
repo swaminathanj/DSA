@@ -72,9 +72,55 @@ public class HashTable {
 public class HashDriver {
     public static void main(String[] args) {
         HashTable h = new HashTable();
-        System.out.println(h.hash(100));  // prints 97
-        System.out.println(h.hash(101));  // prints 706
-        System.out.println(h.hash(102));  // prints 936
+        System.out.println(h.hash(101));  // prints 97
+        System.out.println(h.hash(102));  // prints 706
+        System.out.println(h.hash(103));  // prints 936
     }
 }
 ```
+
+## 4. Define put method
+
+The put method inserts a <key,value> pair to the hash table.
+
+``` java
+// HashNode.java  -- remains same
+```
+
+``` java
+// HashTable.java
+
+public class HashTable {
+    int SIZE = 997;   // typically a large enough prime number
+    HashNode[] harr = new HashNode[SIZE];
+    
+    public int hash(int x) { ... }
+    
+    // Add a key-value pair to the hash table
+    public void put(int k, int v) {
+        int index = hash(k);
+        HashNode hn = new HashNode(k,v);
+        harr[index] = hn;
+    }    
+}
+```
+
+``` java
+// HashDriver.java
+
+public class HashDriver {
+    public static void main(String[] args) {
+        HashTable h = new HashTable();
+        System.out.println(h.hash(101));  // prints 97
+        System.out.println(h.hash(102));  // prints 706
+        System.out.println(h.hash(103));  // prints 936
+        
+        h.put(10, 100);
+        h.put(8, 64);
+        h.put(6, 36);
+    }
+}
+```
+
+
+
