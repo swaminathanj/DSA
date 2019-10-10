@@ -124,8 +124,6 @@ public class HashDriver {
 
 ## 5. Implement get method
 
-## 4. Implement put method
-
 The put method inserts a <key,value> pair to the hash table.
 
 ``` java
@@ -168,7 +166,52 @@ public class HashDriver {
         h.put(6, 36);
         
         System.out.println( h.get(10) );  // prints 100
-        System.out.println( h.get(50) );  // NullPointerException since key 50 not present
+        System.out.println( h.get(50) );  // prints invalid value -2147483648
+    }
+}
+```
+
+## 6. Implement contains method
+
+The contains method checks if an entry with key k is present in the hash table. If so, it returns true. Otherwise false.
+
+The put method inserts a <key,value> pair to the hash table.
+
+``` java
+// HashNode.java  -- remains same
+```
+
+``` java
+// HashTable.java
+
+public class HashTable {
+    int SIZE = 997;   // typically a large enough prime number
+    HashNode[] harr = new HashNode[SIZE];
+    
+    public int hash(int x) { ... }
+    public void put(int k, int v) { ... }
+    public int get(int k) { ... }
+}
+```
+
+``` java
+// HashDriver.java
+
+public class HashDriver {
+    public static void main(String[] args) {
+        HashTable h = new HashTable();
+        System.out.println(h.hash(101));  // prints 97
+        System.out.println(h.hash(102));  // prints 706
+        System.out.println(h.hash(103));  // prints 936
+        
+        h.put(10, 100);
+        h.put(8, 64);
+        h.put(6, 36);
+        
+        if ( h.contains(10) )
+            System.out.println( h.get(10) );   // prints 100
+        if ( h.contains(50) )
+            System.out.println( h.get(50) );  // Statement not reached
     }
 }
 ```
