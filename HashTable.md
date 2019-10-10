@@ -34,6 +34,17 @@ public class HashTable {
     HashNode[] harr = new HashNode[SIZE];
 }
 ```
+
+``` java
+// HashDriver.java
+
+public class HashDriver {
+    public static void main(String[] args) {
+        HashTable h = new HashTable();
+    }
+}
+```
+
 ## 3. Define a hash function
 
 The purpose of hash function is to take the key as a parameter, apply some computation and return a number within the range 0 ... SIZE-1. The function should be good enough to return indices that uniformly distribute over the range 0 and SIZE-1. Essentially, the goal is to minimize collisions.
