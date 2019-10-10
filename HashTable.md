@@ -1,4 +1,4 @@
-# Step-by-step Implementation of (basic) Hash Table
+# Step-by-step Implementation of Hash Table
 
 ## 1. Define HashNode
 
