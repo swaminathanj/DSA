@@ -175,8 +175,6 @@ public class HashDriver {
 
 The contains method checks if an entry with key k is present in the hash table. If so, it returns true. Otherwise false.
 
-The put method inserts a <key,value> pair to the hash table.
-
 ``` java
 // HashNode.java  -- remains same
 ```
@@ -191,6 +189,14 @@ public class HashTable {
     public int hash(int x) { ... }
     public void put(int k, int v) { ... }
     public int get(int k) { ... }
+    
+    // Check if the hashtable contains key k
+    public boolean contains(int k) {
+        if ( harr[hash(k)] != null )
+            return true;
+        else
+            return false;
+    }
 }
 ```
 
@@ -216,4 +222,113 @@ public class HashDriver {
 }
 ```
 
+## 7. Implement remove method
+
+Given a key k, the remove method deletes the corresponding entry from the hash table.
+
+``` java
+// HashNode.java  -- remains same
+```
+
+``` java
+// HashTable.java
+
+public class HashTable {
+    int SIZE = 997;   // typically a large enough prime number
+    HashNode[] harr = new HashNode[SIZE];
+    
+    public int hash(int x) { ... }
+    public void put(int k, int v) { ... }
+    public int get(int k) { ... }
+    public boolean contains(int k) { ... }
+    
+    // Remove a key-value pair from hashtable given a key
+    public void remove(int k) {
+        int index = hash(k);
+        harr[index] = null;
+    }
+}
+```
+
+``` java
+// HashDriver.java
+
+public class HashDriver {
+    public static void main(String[] args) {
+        HashTable h = new HashTable();
+        System.out.println(h.hash(101));  // prints 97
+        System.out.println(h.hash(102));  // prints 706
+        System.out.println(h.hash(103));  // prints 936
+        
+        h.put(10, 100);
+        h.put(8, 64);
+        h.put(6, 36);
+        
+        if ( h.contains(10) )
+            System.out.println( h.get(10) );   // prints 100
+        if ( h.contains(50) )
+            System.out.println( h.get(50) );  // Statement not reached
+            
+        h.remove(6);
+    }
+}
+```
+
+## 8. Implement print method
+
+The print method prints the <key, value> pairs in the hash table. It scans through the harr from 0 and SIZE-1 and if the entry is not null, it prints the key and value of the entry.
+
+``` java
+// HashNode.java  -- remains same
+```
+
+``` java
+// HashTable.java
+
+public class HashTable {
+    int SIZE = 997;   // typically a large enough prime number
+    HashNode[] harr = new HashNode[SIZE];
+    
+    public int hash(int x) { ... }
+    public void put(int k, int v) { ... }
+    public int get(int k) { ... }
+    public boolean contains(int k) { ... }
+    public void remove(int k) { ... }
+    
+    // Print the entries in the hashtable
+    public void print() {
+        for (int i=0; i<harr.length; i++) {
+            if ( harr[i] != null )
+                System.out.println(harr[i].key 
+                        + " : " + harr[i].value 
+                        + " stored at index " + hash(harr[i].key));
+        }
+}
+```
+
+``` java
+// HashDriver.java
+
+public class HashDriver {
+    public static void main(String[] args) {
+        HashTable h = new HashTable();
+        System.out.println(h.hash(101));  // prints 97
+        System.out.println(h.hash(102));  // prints 706
+        System.out.println(h.hash(103));  // prints 936
+        
+        h.put(10, 100);
+        h.put(8, 64);
+        h.put(6, 36);
+        
+        if ( h.contains(10) )
+            System.out.println( h.get(10) );   // prints 100
+        if ( h.contains(50) )
+            System.out.println( h.get(50) );  // Statement not reached
+        
+        h.print();
+        h.remove(6);
+        h.print();
+    }
+}
+```
 
