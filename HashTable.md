@@ -30,7 +30,27 @@ A HashTable contains an array of HashNode. The size of the the array is initiali
 // HashTable.java
 
 public class HashTable {
-    int SIZE = 997; // typically a large prime number
+    int SIZE = 997;   // typically a large enough prime number
     HashNode[] harr = new HashNode[SIZE];
+}
+```
+## 3. Define a hash function
+
+The purpose of hash function is to take the key as a parameter, apply some computation and return a number within the range 0 ... SIZE-1. The function should be good enough to return indices that uniformly distribute over the range 0 and SIZE-1. Essentially, the goal is to minimize collisions.
+
+``` java
+// HashNode.java  -- remains same
+```
+
+``` java
+// HashTable.java
+
+public class HashTable {
+    int SIZE = 997;   // typically a large enough prime number
+    HashNode[] harr = new HashNode[SIZE];
+    
+    private int hash(int x) {
+        return (x*x*x + 3*x*x + 1) % SIZE;
+    }
 }
 ```
