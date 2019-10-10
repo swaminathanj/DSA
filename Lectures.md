@@ -669,7 +669,7 @@ class Node {
 ```
 
 ```
-class Set {
+class DisjointSet {
     Node[] arr;
 
     void makeSet(int size);
@@ -685,6 +685,43 @@ For a step-by-step implementation of Disjoint-Set, please refer to [Disjoint-Set
 
 
 ## 12. Hashtable/Map/Dictionary/Associative Array
+
+### What is it?
+A data structure that stores <key,value> pairs. 
+
+### Visualizing HashTable
+
+### Properties of HashTable
+
+### Operations
+  - put
+  - get
+  - remove
+  
+### Implementation
+
+```
+class Node {
+    int key;
+    int value;
+
+    Node(int k, int v);
+}
+```
+
+```
+class HashTable {
+    Node[] harr;
+
+    int hash(int key);
+    void put(int key, int val);
+    int get(int key);
+    boolean contains(int key);
+    void remove(int key);
+}
+```
+
+For a step-by-step implementation of HashTable, please refer to [Hash Table implementation](HashTable.md)
 
 ### Problems from Leetcode
   1. [Contains Duplicate](https://leetcode.com/problems/contains-duplicate)
