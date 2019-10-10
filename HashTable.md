@@ -49,8 +49,21 @@ public class HashTable {
     int SIZE = 997;   // typically a large enough prime number
     HashNode[] harr = new HashNode[SIZE];
     
-    private int hash(int x) {
+    public int hash(int x) {
         return (x*x*x + 3*x*x + 1) % SIZE;
+    }
+}
+```
+
+``` java
+// HashDriver.java
+
+public class HashDriver {
+    public static void main(String[] args) {
+        HashTable h = new HashTable();
+        System.out.println(h.hash(100));  // prints 97
+        System.out.println(h.hash(101));  // prints 706
+        System.out.println(h.hash(102));  // prints 936
     }
 }
 ```
