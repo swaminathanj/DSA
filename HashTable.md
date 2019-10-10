@@ -457,6 +457,9 @@ public class HashDriver {
 }
 ```
 
-To summarize, an operation on HashTable is a two-step process. Firstly, applying hash function and reaching the index. Followed by scanning of the linked list at that index. This affects the performance.
+To summarize, an operation on HashTable is now a two-step process. Firstly, applying hash function and reaching the index. Followed by scanning of the linked list at that index. This brings down the performance.
 
-**Worst case scenario**: In rare circumstances, it is possible that all the keys inserted into the hash table results in same index, causing all the <key,value> pairs to be inserted in the single linked list at that index. In such a scenario, retrieving a value degenerates to O(n) time instead of O(1) time. It is important that hash function is designed to be good enough to produce a wider spread indices.
+**Worst case scenario**: In rare circumstances, it is possible that all the keys inserted into the hash table results in same index, causing all the <key,value> pairs to be inserted in the single linked list at that index. In such a scenario, retrieving a value degenerates to O(n) time instead of O(1) time. 
+  - It is important that hash function is designed to be good enough to produce a wider spread indices. 
+  - Also, the size of the harr should be large enough.
+  
