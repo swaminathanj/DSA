@@ -79,7 +79,7 @@ public class HashDriver {
 }
 ```
 
-## 4. Define put method
+## 4. Implement put method
 
 The put method inserts a <key,value> pair to the hash table.
 
@@ -122,5 +122,55 @@ public class HashDriver {
 }
 ```
 
+## 5. Implement get method
+
+## 4. Implement put method
+
+The put method inserts a <key,value> pair to the hash table.
+
+``` java
+// HashNode.java  -- remains same
+```
+
+``` java
+// HashTable.java
+
+public class HashTable {
+    int SIZE = 997;   // typically a large enough prime number
+    HashNode[] harr = new HashNode[SIZE];
+    
+    public int hash(int x) { ... }
+    public void put(int k, int v) { ... }
+    
+    // Retrieve a value from hashtable based on a key
+    public int get(int k) {
+        HashNode n = harr[hash(k)];
+        if ( n == null)  // k is not present
+            return Integer.MAX_VALUE;
+        else
+            return n.value;
+    }    
+}
+```
+
+``` java
+// HashDriver.java
+
+public class HashDriver {
+    public static void main(String[] args) {
+        HashTable h = new HashTable();
+        System.out.println(h.hash(101));  // prints 97
+        System.out.println(h.hash(102));  // prints 706
+        System.out.println(h.hash(103));  // prints 936
+        
+        h.put(10, 100);
+        h.put(8, 64);
+        h.put(6, 36);
+        
+        System.out.println( h.get(10) );  // prints 100
+        System.out.println( h.get(50) );  // NullPointerException since key 50 not present
+    }
+}
+```
 
 
