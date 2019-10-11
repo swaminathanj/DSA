@@ -16,8 +16,8 @@ public class HashDriver {
         if ( h.contains(50) )
             System.out.println( h.get(50) );  // This statement is not executed
 
+        h.print();
         h.remove(6);
-
         h.print();
     }
 }

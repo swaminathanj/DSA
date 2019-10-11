@@ -1,8 +1,16 @@
+import java.util.LinkedList;
+
 // Aum Amma
 
 public class HashTable {
     int SIZE = 997; // typically a large enough prime number
-    HashNode[] harr = new HashNode[SIZE];
+    LinkedList<HashNode>[] harr;
+
+    HashTable() {
+        harr = new LinkedList[SIZE];
+        for (int i=0; i<SIZE; i++)
+            harr[i] = new LinkedList<HashNode>();
+    }
 
     public int hash(int x) {
         return (x*x*x + 3*x*x + 1) % SIZE;
@@ -12,39 +20,51 @@ public class HashTable {
     public void put(int k, int v) {
         int index = hash(k);
         HashNode hn = new HashNode(k,v);
-        harr[index] = hn;
+        harr[index].add(hn);
     }
 
     // Check if the hashtable contains key k
     public boolean contains(int k) {
-        if ( harr[hash(k)] != null )
-            return true;
-        else
-            return false;
+        LinkedList<HashNode> llhn = harr[hash(k)];
+        if ( llhn != null ) {
+            for (int i=0; i<llhn.size(); i++) {
+                if (llhn.get(i).key == k)
+                    return true;
+            }
+        }
+        return false;
     }
 
     // Retrieve a value from hashtable based on a key
     public int get(int k) {
-        HashNode n = harr[hash(k)];
-        if ( n == null)  // k is not present
-            return Integer.MIN_VALUE;
-        else
-            return n.value;
+        LinkedList<HashNode> llhn = harr[hash(k)];
+        if ( llhn != null ) {
+            for (int i=0; i<llhn.size(); i++) {
+                if (llhn.get(i).key == k)
+                    return llhn.get(i).value;
+            }
+        }
+        return Integer.MIN_VALUE;      
     }
 
     // Remove a key-value pair from hashtable given a key
     public void remove(int k) {
-        int index = hash(k);
-        harr[index] = null;
+        LinkedList<HashNode> llhn = harr[hash(k)];
+        if ( llhn != null) {
+            for (int i=0; i<llhn.size(); i++) {
+                if (llhn.get(i).key == k)
+                    llhn.remove(i);
+            }
+        }
     }
 
     // Print the entries in the hashtable
     public void print() {
         for (int i=0; i<harr.length; i++) {
             if ( harr[i] != null )
-                System.out.println(harr[i].key 
-                        + " : " + harr[i].value 
-                        + " stored at index " + hash(harr[i].key));
+                for (int j=0; j<harr[i].size(); i++)
+                    System.out.println(harr[i].get(j).key 
+                        + " : " + harr[i].get(j).value);
         }
             
     }
