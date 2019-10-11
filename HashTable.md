@@ -49,6 +49,8 @@ public class HashDriver {
 
 The purpose of hash function is to take the key as a parameter, apply some computation and return a number within the range 0 ... SIZE-1. The function should be good enough to return indices that uniformly distribute over the range 0 and SIZE-1. Essentially, the goal is to minimize collisions.
 
+Here we define hash function to be: hash(x) = x<sup>3</sup> + 3x<sup>2</sup> + 1.
+
 ``` java
 // HashNode.java  -- remains same
 ```
@@ -334,7 +336,7 @@ public class HashDriver {
 
 ## 9. Handling collisions - Separate Chaining
 
-It is possible that for two keys, say k1 and k2, hash(k1) is same as hash(k2). This is referred to as **collision**. In such a scenario, the existing <k1,v1> entry in the hash table will be replaced by <k2,v2>. This is because, the current implementation is defined to hold only one <key,value> entry at each index. This is a serious limitation.
+It is possible that for two keys, say k1 and k2, hash(k1) is same as hash(k2). This is referred to as **collision**. In such a scenario, the existing <k1,v1> pair in the hash table will be replaced by <k2,v2>. This is because, the current implementation is defined to hold only one <key,value> entry at each index. This is a serious limitation.
 
 To overcome this limitation, instead of having a single HashNode at each index, we can have a LinkedList of HashNodes.
   - To put a <key,value> pair, hash(key) is applied to reach the index i. Now the HashNode(key,value) is inserted into the linked list at harr[i].
