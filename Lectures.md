@@ -648,6 +648,7 @@ For a step-by-step implementation of a graph, please refer [Graph Implementation
 A disjoint set data structure is a collection of sets that are disjoint with each other. Also, there are no duplicates in each set.
 
 ### Visualizing Disjoint-Set
+![Disjoint Set](vdisjointset.png)
 
 ### Properties of Disjoint-Set
  - Items are unordered
