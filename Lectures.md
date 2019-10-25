@@ -691,8 +691,7 @@ For a step-by-step implementation of Disjoint-Set, please refer to [Disjoint-Set
 A data structure that stores <key,value> pairs. 
 
 ### Visualizing HashTable
-
-### Properties of HashTable
+![Hash Table](vhashtable.png)
 
 ### Operations
   - put
