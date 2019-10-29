@@ -134,6 +134,8 @@ public class DoublyLinkedList {
         // temp is the node to be deleted (next to curr)
         DNode temp = curr.next;
         curr.next = temp.next; // reassign the links
+        temp.next.prev=temp.prev; 
+        temp.prev=null;
         temp.next = null;
     }
 }
